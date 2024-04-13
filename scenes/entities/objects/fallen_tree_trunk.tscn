@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://c10hi6m5vrqwq"]
+
+[ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="1_mayse"]
+[ext_resource type="Script" path="res://scripts/interactions/open_timeline_interaction.gd" id="2_64h3e"]
+[ext_resource type="Resource" path="res://dialogic/timelines/first_timeline.dtl" id="3_m17o7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3rvf"]
+size = Vector2(40, 10)
+
+[sub_resource type="Resource" id="Resource_17gl4"]
+script = ExtResource("2_64h3e")
+timeline = ExtResource("3_m17o7")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ctnm"]
+radius = 5.0
+
+[node name="FallenTreeTrunk" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-20, -5, 20, -5, 20, 5, -20, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r3rvf")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("1_mayse")]
+interaction = SubResource("Resource_17gl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CircleShape2D_5ctnm")

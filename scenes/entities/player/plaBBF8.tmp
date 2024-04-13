@@ -16,9 +16,9 @@ height = 16.0
 script = ExtResource("1_apngc")
 
 [node name="InteractionComponent" parent="." instance=ExtResource("2_8fmyo")]
-position = Vector2(11.19, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionComponent"]
+position = Vector2(13, 0)
 shape = SubResource("CircleShape2D_arpns")
 
 [node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("2_lckbn")]

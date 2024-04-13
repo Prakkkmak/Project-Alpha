@@ -28,6 +28,11 @@ func set_character_body(character_body: CharacterBody2D) -> void:
 func set_direction(direction: Vector2) -> void:
 	_direction = direction
 
+
+func get_direction() -> Vector2:
+	return _direction
+
+
 func _get_configuration_warnings() -> PackedStringArray:
 	if !_character_body:
 		return ['Character body not set']
