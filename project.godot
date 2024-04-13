@@ -31,7 +31,7 @@ gdscript/warnings/unsafe_call_argument=2
 [dialogic]
 
 directories/dch_directory={
-"King": "res://dialogic/characters/King.dch"
+"king": "res://dialogic/characters/king.dch"
 }
 directories/dtl_directory={
 "first_timeline": "res://dialogic/timelines/first_timeline.dtl"
