@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwqjbw0edajrx"]
+
+[ext_resource type="Script" path="res://scenes/entities/player/player.gd" id="1_apngc"]
+[ext_resource type="PackedScene" uid="uid://c1xkbepvoxj68" path="res://scenes/components/move_component.tscn" id="2_lckbn"]
+[ext_resource type="PackedScene" uid="uid://gg1whodrsc2u" path="res://scenes/components/player_input_component.tscn" id="3_71j5u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5m30"]
+radius = 5.0
+height = 16.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_apngc")
+
+[node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("2_lckbn")]
+_character_body = NodePath("..")
+
+[node name="PlayerInputComponent" parent="." node_paths=PackedStringArray("_move_component") instance=ExtResource("3_71j5u")]
+_move_component = NodePath("../MoveComponent")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-5, -5, -5, 9, 5, 9, 5, -5, 0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_q5m30")

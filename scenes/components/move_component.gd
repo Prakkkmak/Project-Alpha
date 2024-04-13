@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 
 
 
-func set_character_body(character_body: CharacterBody2D):
+func set_character_body(character_body: CharacterBody2D) -> void:
 	_character_body = character_body
 
 
