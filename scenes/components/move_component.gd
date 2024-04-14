@@ -7,6 +7,10 @@ class_name MoveComponent extends Node
 @export var _character_body: CharacterBody2D
 
 
+var direction_string_v: String = "down"
+var direction_string_h: String = "right"
+
+
 var _velocity: Vector2 = Vector2.ZERO
 var _direction: Vector2 = Vector2.ZERO
 
@@ -20,18 +24,28 @@ func _physics_process(delta: float) -> void:
 	_velocity = _character_body.velocity
 
 
-
 func set_character_body(character_body: CharacterBody2D) -> void:
 	_character_body = character_body
 
 
 func set_direction(direction: Vector2) -> void:
 	_direction = direction
+	_update_direction_strings()
 
 
 func get_direction() -> Vector2:
 	return _direction
 
+
+func _update_direction_strings() -> void:
+	if _direction.x > 0:
+		direction_string_h = "right"
+	if _direction.x < 0:
+		direction_string_h = "left"
+	if _direction.y > 0:
+		direction_string_v = "down"
+	if _direction.y < 0:
+		direction_string_v = "up"
 
 func _get_configuration_warnings() -> PackedStringArray:
 	if !_character_body:

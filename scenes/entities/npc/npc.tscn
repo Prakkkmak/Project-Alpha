@@ -27,13 +27,10 @@ polygon = PackedVector2Array(-5, -5, -5, 9, 5, 9, 5, -5, 0, -15)
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_oaebe")
 
-[node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("1_waxr1")]
-_character_body = NodePath("")
+[node name="MoveComponent" parent="." instance=ExtResource("1_waxr1")]
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
 interaction = SubResource("Resource_fejxy")
-icon_position = null
-show_interact_key_on_hover = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_ql80v")

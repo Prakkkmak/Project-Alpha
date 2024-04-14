@@ -49,6 +49,18 @@ window/size/viewport_height=800
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "yellow",
+"res://debug/": "red",
+"res://dialogic/": "purple",
+"res://resources/": "orange",
+"res://scenes/": "blue",
+"res://scripts/": "pink"
+}
+
 [gui]
 
 theme/custom="res://resources/themes/main_theme.tres"
