@@ -1,0 +1,15 @@
+Most of the premade characters also include 'working' animations. 
+These layers are compatible with the animated workbenches included in Minifantasy - Crafting And Professions I and II
+
++ Crafting And Professions I
+- Alchemist: Laboratory
+- Blacksmith: Anvil
+- Carpenter: Wood Workshop
+- Jeweller: Jewelry Workshop
+
++ Crafting And Professions II
+- Butcher: Preparation Table
+- Cooker: Kitchen
+- Dyer: Dye Workshop
+- Furrier: Leather Workshop
+

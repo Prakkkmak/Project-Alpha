@@ -1,0 +1,67 @@
+Each folder contains all the layers you need to make the NPC animations indicated by the folder name.
+
+To Create generic NPCs, choose a character layer and then combine one layer from each of the outfit groups below.
+You can leave any group empty if you wish. For example, not adding gloves to your NPC.
+
+
+
++ Outfit base layers:
+
+	- Shirt
+	- Doublet
+
+
++ Chest layers:
+
+	- Blouse
+	- Jacket
+	- Shoulder pads
+	- Toga
+
+
++ Leg Layer:
+
+	- Trousers
+
+
++ Hands Layer:
+
+	- Gloves
+
+
++ Foot layer:
+
+	- Shoes
+
+
++ Hairstyle layers:
+
+	- Short
+	- Bubble
+	- Long
+	- Mane
+	- Bold
+	- Mohawk
+	- Pony Tail
+	- Toupee
+
+
++ Facial hair layers:
+
+	- Moustache
+	- Goatee
+	- Long Beard
+	- Chin Strap
+	- Chin Curtain
+
+
++ Hat layers:
+
+	- Fedora hat
+	- Hood
+	- Long hat
+	- Bandana
+	- Pompom Beanie
+	- Trapper hat
+	- Ranger hat
+	- Cowboy hat

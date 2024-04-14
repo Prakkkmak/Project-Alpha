@@ -1,0 +1,3 @@
+If you want your trees to have taller and more lush treetops,
+you can use 'TreeWall_Stackable_Treetop' tiles in multiple layers on top of your 'TreeWall' tiles.
+By stacking these tiles, you can create more exuberant and organic forest environments for your game.

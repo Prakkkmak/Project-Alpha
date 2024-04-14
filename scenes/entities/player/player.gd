@@ -1,10 +1,22 @@
 extends CharacterBody2D
 
+@export var idle_texture: Texture
+@export var walk_texture: Texture
 
 @onready var move_component: MoveComponent = $MoveComponent
 @onready var interaction_component: Area2D = $InteractionComponent
 @onready var interaction_distance: float = interaction_component.position.length()
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sprite: Sprite2D = $Sprite2D
 
+
+func _ready() -> void:
+	for anim_name: String in animation_player.get_animation_list():
+		var anim: Animation = animation_player.get_animation(anim_name)
+		if anim:
+			var track_no: int = anim.find_track("Sprite2D:texture", Animation.TYPE_VALUE)
+			print(track_no)
+			anim.track_insert_key(track_no, 0, idle_texture if "idle" in anim_name else walk_texture)
 
 
 func _input(event: InputEvent) -> void:

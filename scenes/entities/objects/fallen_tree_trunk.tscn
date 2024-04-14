@@ -1,31 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://c10hi6m5vrqwq"]
+[gd_scene load_steps=9 format=3 uid="uid://c10hi6m5vrqwq"]
 
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="1_mayse"]
+[ext_resource type="Texture2D" uid="uid://cyqwvrw6l6g4o" path="res://assets/packs/ancien_forest/Green Forest/Props/Props_green.png" id="1_qeqcp"]
 [ext_resource type="Script" path="res://scripts/interactions/open_timeline_interaction.gd" id="2_64h3e"]
 [ext_resource type="Resource" path="res://dialogic/timelines/first_timeline.dtl" id="3_m17o7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3rvf"]
-size = Vector2(40, 10)
+size = Vector2(17, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecwe0"]
+atlas = ExtResource("1_qeqcp")
+region = Rect2(232, 176, 24, 16)
 
 [sub_resource type="Resource" id="Resource_17gl4"]
 script = ExtResource("2_64h3e")
 timeline = ExtResource("3_m17o7")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5ctnm"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4i1ra"]
+size = Vector2(14, 2)
 
 [node name="FallenTreeTrunk" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 0
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-20, -5, 20, -5, 20, 5, -20, 5)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_r3rvf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ecwe0")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("1_mayse")]
 interaction = SubResource("Resource_17gl4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
-shape = SubResource("CircleShape2D_5ctnm")
+shape = SubResource("RectangleShape2D_4i1ra")

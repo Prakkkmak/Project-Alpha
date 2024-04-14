@@ -1,7 +1,7 @@
 extends State
 
 @export var move_component: MoveComponent
-@export var animated_sprite: AnimatedSprite2D
+@export var animated_player: AnimationPlayer
 @export var velocity_treshold: float = 0.2
 
 @export_group("Next States")
@@ -11,7 +11,7 @@ extends State
 var process_input: bool = false
 
 func _enter() -> void:
-	animated_sprite.play("walk_" + move_component.direction_string_v + "_" + move_component.direction_string_h)
+	animated_player.play("walk_" + move_component.direction_string_v + "_" + move_component.direction_string_h)
 
 
 func _exit() -> void:
@@ -21,7 +21,7 @@ func _exit() -> void:
 func _update(_delta: float) -> void:
 	var input_vector: Vector2 = _get_input_vector()
 	move_component.set_direction(input_vector)
-	animated_sprite.play("walk_" + move_component.direction_string_v + "_" + move_component.direction_string_h)
+	animated_player.play("walk_" + move_component.direction_string_v + "_" + move_component.direction_string_h)
 
 
 func set_process_input_enabled(new_process_input: bool) -> void:

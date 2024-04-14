@@ -1,14 +1,16 @@
 extends State
 
 @export var move_component: MoveComponent
-@export var animated_sprite: AnimatedSprite2D
+@export var animated_player: AnimationPlayer
 
 @export_group("Next States")
 @export var walk_state: State
 @export var interact_state: State
 
 func _enter() -> void:
-	animated_sprite.play("idle_" +  move_component.direction_string_v + "_" + move_component.direction_string_h)
+	print("run idle")
+	print("idle_" +  move_component.direction_string_v + "_" + move_component.direction_string_h)
+	animated_player.play("idle_" +  move_component.direction_string_v + "_" + move_component.direction_string_h)
 
 	
 func _input_process(event: InputEvent) -> void:
