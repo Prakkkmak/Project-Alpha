@@ -1,21 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwu1q6jxr4um6"]
+[gd_scene load_steps=6 format=3 uid="uid://bwu1q6jxr4um6"]
 
 [ext_resource type="PackedScene" uid="uid://dwqjbw0edajrx" path="res://scenes/entities/player/player.tscn" id="1_prgmk"]
 [ext_resource type="PackedScene" uid="uid://dqq6npkin56gd" path="res://scenes/camera/camera.tscn" id="2_e8vov"]
 [ext_resource type="Texture2D" uid="uid://cwy8gv65avcm7" path="res://icon.svg" id="3_7f0lc"]
+[ext_resource type="PackedScene" uid="uid://1sosporukdya" path="res://scenes/entities/npc/npc.tscn" id="3_yyypm"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="4_ntu16"]
 
 [node name="Main" type="Node"]
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("1_prgmk")]
+position = Vector2(-10.0732, 0)
+
+[node name="FallenTreeTrunk" parent="Entities" instance=ExtResource("4_ntu16")]
+position = Vector2(6, -30)
+
+[node name="Npc" parent="Entities" instance=ExtResource("3_yyypm")]
+position = Vector2(-31.555, 0)
+motion_mode = 1
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(222, -94)
 texture = ExtResource("3_7f0lc")
 
-[node name="Player" parent="." instance=ExtResource("1_prgmk")]
-position = Vector2(-10.0732, 0)
-
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
-target = NodePath("../Player")
-
-[node name="FallenTreeTrunk" parent="." instance=ExtResource("4_ntu16")]
-position = Vector2(6, -30)
+target = NodePath("../Entities/Player")

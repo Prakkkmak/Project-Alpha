@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://1sosporukdya"]
+
+[ext_resource type="PackedScene" uid="uid://c1xkbepvoxj68" path="res://scenes/components/move_component.tscn" id="1_waxr1"]
+[ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="2_gkgf2"]
+[ext_resource type="Script" path="res://scripts/interactions/open_timeline_interaction.gd" id="3_alluu"]
+[ext_resource type="Resource" path="res://dialogic/timelines/first_timeline.dtl" id="4_mj60y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oaebe"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="Resource" id="Resource_fejxy"]
+script = ExtResource("3_alluu")
+timeline = ExtResource("4_mj60y")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ql80v"]
+radius = 5.0
+
+[node name="Npc" type="CharacterBody2D"]
+collision_layer = 2
+motion_mode = 1
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-5, -5, -5, 9, 5, 9, 5, -5, 0, -15)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_oaebe")
+
+[node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("1_waxr1")]
+_character_body = NodePath("")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
+interaction = SubResource("Resource_fejxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CircleShape2D_ql80v")
