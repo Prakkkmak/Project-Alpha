@@ -40,6 +40,11 @@ layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=800
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
@@ -93,3 +98,7 @@ interact={
 2d_physics/layer_3="object"
 2d_physics/layer_4="pickup"
 2d_physics/layer_5="interactable"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

@@ -32,6 +32,8 @@ _character_body = NodePath("")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
 interaction = SubResource("Resource_fejxy")
+icon_position = null
+show_interact_key_on_hover = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_ql80v")

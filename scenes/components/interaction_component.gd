@@ -31,9 +31,11 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is InteractableComponent:
 		print("InteractableComponent added to nearby interactables")
 		nearby_interactables.append(area)
+		area.call("show_interact_key", true)
 
 
 func _on_area_exited(area: Area2D) -> void:
 	if area in nearby_interactables:
 		print("InteractableComponent deleted from nearby interactables")
 		nearby_interactables.erase(area)
+		area.call("show_interact_key", false)

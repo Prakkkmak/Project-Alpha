@@ -26,6 +26,8 @@ shape = SubResource("RectangleShape2D_r3rvf")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("1_mayse")]
 interaction = SubResource("Resource_17gl4")
+icon_position = null
+show_interact_key_on_hover = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_5ctnm")

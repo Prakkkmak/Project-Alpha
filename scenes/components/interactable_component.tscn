@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://4cjdwuasfwmu"]
+[gd_scene load_steps=3 format=3 uid="uid://4cjdwuasfwmu"]
 
 [ext_resource type="Script" path="res://scenes/components/interactable_component.gd" id="1_764xl"]
+[ext_resource type="Texture2D" uid="uid://dd1ys8g1bsbqe" path="res://assets/input/Keyboard & Mouse/Default/keyboard_e.png" id="2_fry2v"]
 
 [node name="InteractableComponent" type="Area2D"]
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_764xl")
+icon_sprite_texture = ExtResource("2_fry2v")
+icon_position = Vector2(0, -25)
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_fry2v")
