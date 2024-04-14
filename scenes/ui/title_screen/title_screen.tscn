@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://y5w5ax7wrlb1"]
+
+[ext_resource type="Script" path="res://scenes/ui/title_screen/title_screen.gd" id="1_v7oce"]
+[ext_resource type="PackedScene" uid="uid://d1eitwwemjsyw" path="res://scenes/ui/options_menu/options_menu.tscn" id="2_kvfxt"]
+[ext_resource type="Texture2D" uid="uid://b5iiug55wa6y5" path="res://assets/sprite_sheets/Modern_UI_Style_1_32x32.png" id="3_jifp4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu62w"]
+atlas = ExtResource("3_jifp4")
+region = Rect2(908, 650, 10, 14)
+
+[node name="TitleScreen" type="PanelContainer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -82.0
+offset_bottom = 82.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -0.00144258
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_v7oce")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="OptionsMenu" parent="MarginContainer" instance=ExtResource("2_kvfxt")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="MainMenu" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/MainMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play"
+icon = SubResource("AtlasTexture_pu62w")
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/MainMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Options"
+
+[node name="Button3" type="Button" parent="MarginContainer/MainMenu"]
+layout_mode = 2
+text = "Achievments"
+
+[node name="Button4" type="Button" parent="MarginContainer/MainMenu"]
+layout_mode = 2
+text = "Credits"

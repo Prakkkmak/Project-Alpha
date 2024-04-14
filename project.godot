@@ -49,6 +49,10 @@ window/size/viewport_height=800
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[gui]
+
+theme/custom="res://resources/themes/main_theme.tres"
+
 [input]
 
 move_left={

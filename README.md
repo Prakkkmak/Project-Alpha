@@ -30,7 +30,8 @@ Welcome to our submission for the GameDev.js Jam 2024, a unique opportunity to s
 
 This project is a collaborative effort by a talented group of individuals:
 
-- **Levy MARQUES** - Game Designer | Programmer - [GitHub](#)
+- **Levy "Prakkmak" MARQUES** - Game Designer | Programmer - [GitHub](#)
+- **Maureen "Hiily" PERON** - Game Designer | Programmer Artist
 
 ## Participating and Voting
 

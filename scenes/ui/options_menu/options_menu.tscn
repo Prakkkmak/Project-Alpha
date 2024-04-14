@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1eitwwemjsyw"]
+
+[ext_resource type="Script" path="res://scenes/ui/options_menu/options_menu.gd" id="1_w8iq4"]
+[ext_resource type="Texture2D" uid="uid://b5iiug55wa6y5" path="res://assets/sprite_sheets/Modern_UI_Style_1_32x32.png" id="2_y6sjo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vf0i2"]
+texture = ExtResource("2_y6sjo")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(898, 928, 28, 32)
+
+[sub_resource type="Theme" id="Theme_u6syx"]
+Button/styles/normal = SubResource("StyleBoxTexture_vf0i2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_va1b4"]
+atlas = ExtResource("2_y6sjo")
+region = Rect2(898, 928, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1gsf"]
+atlas = ExtResource("2_y6sjo")
+region = Rect2(962, 928, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2osxy"]
+atlas = ExtResource("2_y6sjo")
+region = Rect2(930, 928, 28, 32)
+
+[node name="OptionsMenu" type="VBoxContainer"]
+script = ExtResource("1_w8iq4")
+
+[node name="BackButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_u6syx")
+texture_normal = SubResource("AtlasTexture_va1b4")
+texture_pressed = SubResource("AtlasTexture_a1gsf")
+texture_hover = SubResource("AtlasTexture_2osxy")
