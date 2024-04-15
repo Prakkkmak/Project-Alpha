@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://1sosporukdya"]
+[gd_scene load_steps=19 format=3 uid="uid://1sosporukdya"]
 
 [ext_resource type="Script" path="res://scenes/entities/npc/npc.gd" id="1_4as06"]
 [ext_resource type="PackedScene" uid="uid://c1xkbepvoxj68" path="res://scenes/components/move_component.tscn" id="1_waxr1"]
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="2_gkgf2"]
-[ext_resource type="Texture2D" uid="uid://dg3q147uvleck" path="res://assets/characters/human/Idle.png" id="2_pu3jh"]
 [ext_resource type="Texture2D" uid="uid://dvay5k2cm28ib" path="res://assets/characters/human/Walk.png" id="3_858ek"]
 [ext_resource type="Script" path="res://scripts/interactions/talk_interaction.gd" id="6_kcih2"]
 
@@ -49,18 +48,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [4]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_pu3jh")]
-}
 
 [sub_resource type="Animation" id="Animation_bqkh3"]
 resource_name = "idle_down_left"
@@ -102,18 +89,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [4]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_pu3jh")]
 }
 
 [sub_resource type="Animation" id="Animation_if0lh"]
@@ -157,18 +132,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [4]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_pu3jh")]
-}
 
 [sub_resource type="Animation" id="Animation_wjfo5"]
 resource_name = "idle_up_left"
@@ -210,18 +173,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [4]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_pu3jh")]
 }
 
 [sub_resource type="Animation" id="Animation_d5bt7"]
@@ -265,18 +216,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [4]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_pu3jh")]
-}
 
 [sub_resource type="Animation" id="Animation_4fb2g"]
 resource_name = "walk_down_left"
@@ -317,18 +256,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_858ek")]
 }
 
 [sub_resource type="Animation" id="Animation_nk8hx"]
@@ -371,18 +298,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_858ek")]
-}
 
 [sub_resource type="Animation" id="Animation_q0nns"]
 resource_name = "walk_up_left"
@@ -423,18 +338,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3), Vector2i(3, 3)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_858ek")]
 }
 
 [sub_resource type="Animation" id="Animation_c8ahe"]
@@ -477,18 +380,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_858ek")]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ppw3p"]
 _data = {
@@ -520,7 +411,7 @@ shape = SubResource("CapsuleShape2D_oaebe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -3)
-texture = ExtResource("2_pu3jh")
+texture = ExtResource("3_858ek")
 hframes = 16
 vframes = 4
 

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1sosporukdya" path="res://scenes/entities/npc/npc.tscn" id="3_yyypm"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="4_ntu16"]
 [ext_resource type="Resource" uid="uid://dl4uyvc8t8bwn" path="res://resources/npc/hector/hector.tres" id="5_rmi66"]
-[ext_resource type="Resource" uid="uid://dvvlytaq48x3s" path="res://resources/npc/violet/violet.tres" id="6_bptnb"]
+[ext_resource type="Resource" uid="uid://cwgvdq4g86f7o" path="res://resources/npc/violet/violet.tres" id="6_bptnb"]
 
 [node name="Main" type="Node"]
 
@@ -36,15 +36,11 @@ position = Vector2(-10.0732, 0)
 position = Vector2(9, 44)
 
 [node name="Courtisane" parent="Entities" instance=ExtResource("3_yyypm")]
-position = Vector2(0, -1.65404)
+position = Vector2(-31, -26)
 data = ExtResource("6_bptnb")
 
 [node name="Npc" parent="Entities" instance=ExtResource("3_yyypm")]
-position = Vector2(-31.555, -1.65404)
-data = ExtResource("5_rmi66")
-
-[node name="Npc2" parent="Entities" instance=ExtResource("3_yyypm")]
-position = Vector2(-31.555, 0)
+position = Vector2(-8, -28)
 data = ExtResource("5_rmi66")
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
