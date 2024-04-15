@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccs06ovncl6tl"]
+
+[ext_resource type="Texture2D" uid="uid://bludqg6ir4abv" path="res://resources/images/ending_screen_bg.png" id="1_yur4d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqohu"]
+font_size = 46
+font_color = Color(0, 0, 0, 1)
+
+[node name="EndingScreen" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -400.0
+offset_right = 465.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_yur4d")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -218.0
+offset_top = 143.0
+offset_right = 240.0
+offset_bottom = 274.0
+grow_horizontal = 2
+text = "CONGRATULATIONS!
+YOU WON!"
+label_settings = SubResource("LabelSettings_cqohu")
+horizontal_alignment = 1

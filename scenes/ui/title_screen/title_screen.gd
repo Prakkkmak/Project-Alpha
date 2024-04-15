@@ -1,8 +1,8 @@
 extends PanelContainer
 
+@onready var main_menu: TextureRect = %MainMenu
 @onready var play_button: Button = %PlayButton
 @onready var options_button: Button = %OptionsButton
-@onready var main_menu: VBoxContainer = %MainMenu
 @onready var options_menu: OptionsMenu = %OptionsMenu
 
 
