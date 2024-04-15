@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var idle_texture: Texture
 @export var walk_texture: Texture
 
-
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 

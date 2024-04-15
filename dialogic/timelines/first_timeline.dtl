@@ -4,3 +4,4 @@ Teest
 <Empty Text Event>
 join king 1
 tezrzer
+if {} == "":

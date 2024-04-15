@@ -1,0 +1,12 @@
+narrator: Hector, a burly lumberjack with muscles rippling under his tunic, chops logs in the forest, unaware of the approaching figure. The rhythmic thud of his axe masks the soft footsteps of the Little King.
+little_king: Hello!
+hector: (surprised, turning around with a broad smile) Oh! Little King, what are you doing in the forest? I heard you need to retrieve the crown from the dungeon, but that’s far from here. What brings you to this place?
+- I was just wandering around.
+	hector: Ahah! Wonderful, if you need anything, you know where to find me. If you want to build some muscle, grab an axe and help me chop these logs, ahah!
+	little_king: I think I don't have the strength to help you, ahah, have a nice day.
+- Actually, I’m lost.
+	hector: Head back the way you came and turn left, that will bring you closer to your castle, sir.
+	little_king:  Thank you very much.
+- Don't ask indiscreet questions!
+	hector: Excuse me, sir. I'll get back to my work then.
+	little_king: ...

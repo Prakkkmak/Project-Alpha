@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GameState="*res://scripts/game_state.gd"
 
 [debug]
 
@@ -31,14 +32,42 @@ gdscript/warnings/unsafe_call_argument=2
 [dialogic]
 
 directories/dch_directory={
-"king": "res://dialogic/characters/king.dch"
+"hector": "res://dialogic/characters/hector.dch",
+"little_king": "res://dialogic/characters/little_king.dch",
+"narrator": "res://dialogic/characters/narrator.dch"
 }
 directories/dtl_directory={
-"first_timeline": "res://dialogic/timelines/first_timeline.dtl"
+"first_timeline": "res://dialogic/timelines/first_timeline.dtl",
+"hector_greetings": "res://dialogic/timelines/hector_greetings.dtl",
+"hector_help": "res://dialogic/timelines/hector_help.dtl",
+"hector_talk": "res://dialogic/timelines/hector_talk.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+translation/enabled=true
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
+text/autopauses={}
+variables={}
 
 [display]
 
