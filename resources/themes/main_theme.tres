@@ -29,6 +29,10 @@ texture_margin_bottom = 6.0
 region_rect = Rect2(1346, 928, 28, 32)
 
 [resource]
+Button/colors/font_color = Color(0.419608, 0.317647, 0.321569, 1)
+Button/colors/font_hover_color = Color(0.419608, 0.317647, 0.321569, 1)
+Button/colors/font_hover_pressed_color = Color(0.419608, 0.317647, 0.321569, 1)
+Button/colors/font_pressed_color = Color(0.419608, 0.317647, 0.321569, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_toiw0")
 Button/styles/hover = SubResource("StyleBoxTexture_qbwk4")
 Button/styles/normal = SubResource("StyleBoxTexture_to5lq")
