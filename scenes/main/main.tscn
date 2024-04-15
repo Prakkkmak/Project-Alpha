@@ -38,6 +38,10 @@ position = Vector2(6, -30)
 position = Vector2(-31.555, 0)
 data = ExtResource("5_rmi66")
 
+[node name="Npc2" parent="Entities" instance=ExtResource("3_yyypm")]
+position = Vector2(-31.555, 0)
+data = ExtResource("5_rmi66")
+
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
 zoom = Vector2(4, 4)
 target = NodePath("../Entities/Player")
