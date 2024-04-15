@@ -35,14 +35,15 @@ position = Vector2(-10.0732, 0)
 [node name="FallenTreeTrunk" parent="Entities" instance=ExtResource("4_ntu16")]
 position = Vector2(9, 44)
 
-[node name="Courtisane" parent="Entities" instance=ExtResource("3_yyypm")]
+[node name="Violet" parent="Entities" instance=ExtResource("3_yyypm")]
 position = Vector2(-31, -26)
 data = ExtResource("6_bptnb")
 
-[node name="Npc" parent="Entities" instance=ExtResource("3_yyypm")]
+[node name="Hector" parent="Entities" instance=ExtResource("3_yyypm")]
 position = Vector2(-8, -28)
 data = ExtResource("5_rmi66")
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
-zoom = Vector2(4, 4)
+zoom = Vector2(9, 9)
 target = NodePath("../Entities/Player")
+drag_force = 2.0

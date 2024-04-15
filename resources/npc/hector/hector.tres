@@ -9,10 +9,12 @@
 
 [resource]
 script = ExtResource("1_838y1")
+name = "Hector"
+description = ""
 idle_texture = ExtResource("3_8o3x7")
 walk_texture = ExtResource("6_5qoy6")
 greetings_timeline = ExtResource("1_26vqb")
 talk_timeline = ExtResource("5_x7j7i")
 help_timeline = ExtResource("2_r7cr8")
-true_conditions = Array[String]([])
+true_conditions = Array[String](["tree_fallen"])
 false_conditions = Array[String]([])

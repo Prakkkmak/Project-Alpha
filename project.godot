@@ -32,12 +32,12 @@ gdscript/warnings/unsafe_call_argument=2
 [dialogic]
 
 directories/dch_directory={
-"hector": "res://dialogic/characters/hector.dch",
-"little_king": "res://dialogic/characters/little_king.dch",
-"narrator": "res://dialogic/characters/narrator.dch"
+"hector": "res://resources/dialogic/characters/hector.dch",
+"little_king": "res://resources/dialogic/characters/little_king.dch",
+"narrator": "res://resources/dialogic/characters/narrator.dch"
 }
 directories/dtl_directory={
-"first_timeline": "res://dialogic/timelines/first_timeline.dtl",
+"first_timeline": "res://resources/dialogic/timelines/first_timeline.dtl",
 "hector_greetings": "res://resources/npc/hector/hector_greetings.dtl",
 "hector_help": "res://resources/npc/hector/hector_help.dtl",
 "hector_talk": "res://resources/npc/hector/hector_talk.dtl"
@@ -84,8 +84,8 @@ folder_colors={
 "res://addons/": "gray",
 "res://assets/": "yellow",
 "res://debug/": "red",
-"res://dialogic/": "purple",
 "res://resources/": "orange",
+"res://resources/dialogic/": "orange",
 "res://scenes/": "blue",
 "res://scripts/": "pink"
 }
