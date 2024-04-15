@@ -38,9 +38,9 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "first_timeline": "res://dialogic/timelines/first_timeline.dtl",
-"hector_greetings": "res://dialogic/timelines/hector_greetings.dtl",
-"hector_help": "res://dialogic/timelines/hector_help.dtl",
-"hector_talk": "res://dialogic/timelines/hector_talk.dtl"
+"hector_greetings": "res://resources/npc/hector/hector_greetings.dtl",
+"hector_help": "res://resources/npc/hector/hector_help.dtl",
+"hector_talk": "res://resources/npc/hector/hector_talk.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
