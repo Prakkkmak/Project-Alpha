@@ -6,7 +6,7 @@ const SAVE_PATH: String = "user://game_state.save"
 var _game_progress: Dictionary = {}
 
 # Définit un état dans le dictionnaire de progression
-func set_state(key: String, value: bool) -> void:
+func set_state(key: String, value: bool = true) -> void:
 	_game_progress[key] = value
 
 # Récupère un état du dictionnaire de progression. Retourne false si la clé n'existe pas.

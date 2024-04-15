@@ -1,5 +1,8 @@
 class_name NpcData extends Resource
 
+@export var name: String
+@export var description: String
+
 @export_category("Textures")
 @export var idle_texture: Texture
 @export var walk_texture: Texture

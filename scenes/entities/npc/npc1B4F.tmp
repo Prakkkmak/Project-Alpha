@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="2_gkgf2"]
 [ext_resource type="Texture2D" uid="uid://dg3q147uvleck" path="res://assets/characters/human/Idle.png" id="2_pu3jh"]
 [ext_resource type="Texture2D" uid="uid://dvay5k2cm28ib" path="res://assets/characters/human/Walk.png" id="3_858ek"]
-[ext_resource type="Script" path="res://scripts/interactions/talk_interaction.gd" id="6_kcih2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oaebe"]
 radius = 5.0
@@ -504,8 +503,17 @@ _data = {
 "walk_up_right": SubResource("Animation_c8ahe")
 }
 
-[sub_resource type="Resource" id="Resource_hygkn"]
-script = ExtResource("6_kcih2")
+[sub_resource type="GDScript" id="GDScript_t3yx0"]
+script/source = "class_name OpenTimelineInteraction extends Interaction
+
+@export var timeline: DialogicTimeline
+
+func perform_interaction(source: Area2D, target: Area2D) -> void:
+	Dialogic.start(timeline)
+"
+
+[sub_resource type="Resource" id="Resource_q15ds"]
+script = SubResource("GDScript_t3yx0")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xq8mk"]
 radius = 3.0
@@ -535,7 +543,7 @@ autoplay = "idle_down_right"
 _character_body = NodePath("..")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
-interaction = SubResource("Resource_hygkn")
+interaction = SubResource("Resource_q15ds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_xq8mk")

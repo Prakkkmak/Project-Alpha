@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwu1q6jxr4um6"]
+[gd_scene load_steps=7 format=3 uid="uid://bwu1q6jxr4um6"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/plains.tres" id="1_fkvmu"]
 [ext_resource type="PackedScene" uid="uid://dwqjbw0edajrx" path="res://scenes/entities/player/player.tscn" id="1_prgmk"]
 [ext_resource type="PackedScene" uid="uid://dqq6npkin56gd" path="res://scenes/camera/camera.tscn" id="2_e8vov"]
 [ext_resource type="PackedScene" uid="uid://1sosporukdya" path="res://scenes/entities/npc/npc.tscn" id="3_yyypm"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="4_ntu16"]
+[ext_resource type="Resource" uid="uid://dl4uyvc8t8bwn" path="res://resources/npc/hector/hector.tres" id="5_rmi66"]
 
 [node name="Main" type="Node"]
 
@@ -35,6 +36,7 @@ position = Vector2(6, -30)
 
 [node name="Npc" parent="Entities" instance=ExtResource("3_yyypm")]
 position = Vector2(-31.555, 0)
+data = ExtResource("5_rmi66")
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
 zoom = Vector2(4, 4)

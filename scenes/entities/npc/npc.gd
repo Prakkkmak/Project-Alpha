@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var interactable_component: InteractableComponent = $InteractableComponent
 
 
 func _ready() -> void:
@@ -14,3 +15,5 @@ func _ready() -> void:
 		if anim:
 			var track_no: int = anim.find_track("Sprite2D:texture", Animation.TYPE_VALUE)
 			anim.track_insert_key(track_no, 0, data.idle_texture if "idle" in anim_name else data.walk_texture)
+	if interactable_component.interaction is TalkInteraction:
+		(interactable_component.interaction as TalkInteraction).npc_data = data
