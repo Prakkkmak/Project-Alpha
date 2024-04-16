@@ -32,15 +32,19 @@ gdscript/warnings/unsafe_call_argument=2
 [dialogic]
 
 directories/dch_directory={
-"hector": "res://resources/dialogic/characters/hector.dch",
+"hector": "res://resources/npc/hector/hector.dch",
 "little_king": "res://resources/dialogic/characters/little_king.dch",
-"narrator": "res://resources/dialogic/characters/narrator.dch"
+"narrator": "res://resources/dialogic/characters/narrator.dch",
+"violet": "res://resources/npc/violet/violet.dch"
 }
 directories/dtl_directory={
 "first_timeline": "res://resources/dialogic/timelines/first_timeline.dtl",
 "hector_greetings": "res://resources/npc/hector/hector_greetings.dtl",
 "hector_help": "res://resources/npc/hector/hector_help.dtl",
-"hector_talk": "res://resources/npc/hector/hector_talk.dtl"
+"hector_talk": "res://resources/npc/hector/hector_talk.dtl",
+"violet_greetings": "res://resources/npc/violet/violet_greetings.dtl",
+"violet_help": "res://resources/npc/violet/violet_help.dtl",
+"violet_talk": "res://resources/npc/violet/violet_talk.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
