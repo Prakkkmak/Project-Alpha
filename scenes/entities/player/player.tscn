@@ -1127,6 +1127,7 @@ shape = SubResource("CircleShape2D_arpns")
 
 [node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("2_lckbn")]
 _character_body = NodePath("..")
+_frozen = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -3)

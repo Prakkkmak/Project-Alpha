@@ -420,6 +420,7 @@ autoplay = "idle_down_right"
 
 [node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("1_waxr1")]
 _character_body = NodePath("..")
+_frozen = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
