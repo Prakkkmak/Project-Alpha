@@ -1,0 +1,4 @@
+Keyboard and mouse control icons
+
+Every key has non-pushed and pushed versions.
+White outline versions included for highlighting keys.

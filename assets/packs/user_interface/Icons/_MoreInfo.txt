@@ -1,0 +1,33 @@
+Icons to be used in menus and placed next to relevant overlay elements such as HP bars. 
+From top to bottom, left to right:
+- Gear
+- Screen
+- Music note 1
+- Music note 2
+- Sound
+- Controller
+- Mouse
+- Keyboard
+- Map
+- Compass
+- Book
+- Scroll
+- Augment lens
+- Ink and pen
+- Ink and Feather
+- Box/Chest
+- Anvil
+- BluePrint
+- Needle and thread
+- Human/body
+- Crossed swords
+- Armor
+- Shield
+- Hammer
+- Backpack
+- heart
+- Magic Spark
+- Lightning
+- Stamina
+- Food
+-Water

@@ -1,0 +1,1 @@
+These are different selectors to navigate through menu options, items, abilities, etc.

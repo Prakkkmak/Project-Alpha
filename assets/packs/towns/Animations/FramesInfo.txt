@@ -1,0 +1,1 @@
+The size of the frames for Chick and Hen animations are 8x8px

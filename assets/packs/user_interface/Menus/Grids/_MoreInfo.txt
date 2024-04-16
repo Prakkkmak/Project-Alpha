@@ -1,0 +1,1 @@
+These sets are intended to make separations, boxes, and grids inside menu panels, inventories, journals, etc.

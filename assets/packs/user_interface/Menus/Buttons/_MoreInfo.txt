@@ -1,0 +1,10 @@
+There are two types of buttons, top to bottom: 
+- The first two rows, more protuberant buttons
+- The Last two rows, less protuberant buttons
+
+There are three states, left to right:
+- The first column, Neutral
+- The second column, Mouse-hovering
+- The third column, Pushed
+
+Highlighted outline for every Type/State button included

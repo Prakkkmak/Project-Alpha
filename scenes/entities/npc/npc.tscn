@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/entities/npc/npc.gd" id="1_4as06"]
 [ext_resource type="PackedScene" uid="uid://c1xkbepvoxj68" path="res://scenes/components/move_component.tscn" id="1_waxr1"]
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="2_gkgf2"]
-[ext_resource type="Texture2D" uid="uid://dvay5k2cm28ib" path="res://assets/characters/human/Walk.png" id="3_858ek"]
+[ext_resource type="Texture2D" uid="uid://b34xkhcan768v" path="res://assets/characters/npc/Premade_NPCs/Carpenter/Minifantasy_NPCsCarpenterIdle.png" id="2_lo55i"]
 [ext_resource type="Script" path="res://scripts/interactions/talk_interaction.gd" id="6_kcih2"]
 
 [sub_resource type="Animation" id="Animation_h30vq"]
@@ -394,7 +394,8 @@ _data = {
 radius = 2.0
 height = 6.0
 
-[sub_resource type="Resource" id="Resource_hygkn"]
+[sub_resource type="Resource" id="Resource_bi6bt"]
+resource_local_to_scene = true
 script = ExtResource("6_kcih2")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xq8mk"]
@@ -407,7 +408,7 @@ script = ExtResource("1_4as06")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -3)
-texture = ExtResource("3_858ek")
+texture = ExtResource("2_lo55i")
 hframes = 16
 vframes = 4
 
@@ -426,7 +427,7 @@ shape = SubResource("CapsuleShape2D_oaebe")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
 position = Vector2(0, -3)
-interaction = SubResource("Resource_hygkn")
+interaction = SubResource("Resource_bi6bt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_xq8mk")

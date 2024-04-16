@@ -1,0 +1,6 @@
+Radio buttons and checkboxes for option menus.
+
+First row, radio buttons.
+Second row, checkboxes.
+
+Buttons and checks in different colours and sizes.

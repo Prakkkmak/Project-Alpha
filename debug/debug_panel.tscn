@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcj2cuxunf7el"]
+
+[ext_resource type="Script" path="res://debug/debug_panel.gd" id="1_cf2q0"]
+
+[node name="DebugPanel" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cf2q0")
+
+[node name="GameStateValuesLabel" type="Label" parent="."]
+layout_mode = 2

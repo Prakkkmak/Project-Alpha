@@ -1,0 +1,1 @@
+Vertical and horizontal switches for your game options menus.

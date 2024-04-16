@@ -1,0 +1,15 @@
+Minifantasy - GUI doesn't include fonts.
+
+My suggestion is to use a low-resolution font of your liking to maintain the pixel art retro-feeling of the assets.  
+
+I recommend to check out the work of this fellow creator for nice low-res fonts, https://itch.io/profile/somepx, specially Humble Fonts Tiny I and II.
+
+For maximum reading clarity, I recommend using black colour for the texts. 
+If you want to use other colours, you can try dark shades of earth colors, maroon, navy blue, violet.
+
+As a general rule, do not use light and saturated colours for your font, it will be often hard to read. 
+If you need to highlight part of your text re-adjust the colour values to your liking, but keep in mind the readability of it. 
+
+DON'T BE TOO FUNKY! :P 
+
+;)

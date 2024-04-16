@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PickupData" load_steps=4 format=3 uid="uid://bthf417ysau0o"]
+
+[ext_resource type="Script" path="res://scripts/pickup_data.gd" id="1_vc317"]
+[ext_resource type="Texture2D" uid="uid://ckv338ker81sy" path="res://assets/packs/dungeon/Props/Props.png" id="2_s7i41"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viefg"]
+atlas = ExtResource("2_s7i41")
+region = Rect2(128, 8, 8, 8)
+
+[resource]
+script = ExtResource("1_vc317")
+name = "Gold"
+description = ""
+world_texture = SubResource("AtlasTexture_viefg")

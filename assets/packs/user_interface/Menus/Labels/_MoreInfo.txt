@@ -1,0 +1,5 @@
+Labels are good to make bookmarks and tabs for different sections in the same menu window.
+
+There are two different designs in many different colours with active and inactive states.
+
+White outline to highlight the labels.

@@ -8,8 +8,6 @@ extends State
 @export var interact_state: State
 
 func _enter() -> void:
-	print("run idle")
-	print("idle_" +  move_component.direction_string_v + "_" + move_component.direction_string_h)
 	animated_player.play("idle_" +  move_component.direction_string_v + "_" + move_component.direction_string_h)
 
 	

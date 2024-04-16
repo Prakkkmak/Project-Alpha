@@ -1,0 +1,28 @@
+Contextual cursors for different actions. From Left to right:
+- Arrow 1 L
+- Arrow 2 L
+- Arrow 3 L
+- Arrow 4 L
+- Arrow 1 S
+- Arrow 2 S
+- Arrow 3 S
+- Arrow 4 S
+- Grid 1
+- Grid 2
+- Grid 3
+- Grid 4
+- Hand 
+- Hand clicking
+- Melee Attack
+- Ranged Attack
+- Magic Attack
+- Hammer
+- Pick-axe
+- Axe
+- Sickle
+- Shovel
+- Hoe
+- Fishing rod
+- Gear
+- Purse
+- Conversation

@@ -1,0 +1,3 @@
+Two click Effects in different colours.
+- Collapsing in
+- Expanding out

@@ -1,5 +1,7 @@
 extends Node
 
+signal state_changed(state: String, value: bool)
+
 const SAVE_PATH: String = "user://game_state.save"
 
 # Dictionnaire pour garder une trace de l'état du jeu, spécifiquement avec des valeurs booléennes
@@ -8,6 +10,7 @@ var _game_progress: Dictionary = {}
 # Définit un état dans le dictionnaire de progression
 func set_state(key: String, value: bool = true) -> void:
 	_game_progress[key] = value
+	state_changed.emit(key, value)
 
 # Récupère un état du dictionnaire de progression. Retourne false si la clé n'existe pas.
 func get_state(key: String) -> bool:

@@ -1,0 +1,8 @@
+Top to bottom, assets to represent controls for: 
+- Xbox 
+- PlayStation 
+- Switch 
+
+The thumbstick controls are common to the three systems.
+Every button has non-pushed and pushed versions.
+White outline versions included for highlighting buttons.
