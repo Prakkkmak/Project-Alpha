@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://dwqjbw0edajrx"]
+[gd_scene load_steps=103 format=3 uid="uid://dwqjbw0edajrx"]
 
 [ext_resource type="Script" path="res://scenes/entities/player/player.gd" id="1_apngc"]
 [ext_resource type="PackedScene" uid="uid://bs6ihuu4rrfyn" path="res://scenes/components/interaction_component.tscn" id="2_8fmyo"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://e7advgemdetj" path="res://scenes/state_machine/state_machine.tscn" id="7_kgiuw"]
 [ext_resource type="PackedScene" uid="uid://bor5j3rof7jjg" path="res://scenes/state_machine/states/idle_state.tscn" id="8_lxhdt"]
 [ext_resource type="PackedScene" uid="uid://bc11jllqgs46j" path="res://scenes/state_machine/states/walk_state.tscn" id="9_h3n6b"]
+[ext_resource type="PackedScene" uid="uid://bhgjt1b5tm5ap" path="res://scenes/state_machine/states/interact_state.tscn" id="9_ry2wg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_arpns"]
 radius = 6.0
@@ -1159,10 +1160,14 @@ process_input = true
 move_component = NodePath("../../MoveComponent")
 animated_player = NodePath("../../AnimationPlayer")
 walk_state = NodePath("../WalkState")
-interact_state = NodePath(".")
+interact_state = NodePath("../InteractState")
 
 [node name="WalkState" parent="StateMachine" node_paths=PackedStringArray("move_component", "animated_player", "idle_state", "interact_state") instance=ExtResource("9_h3n6b")]
 move_component = NodePath("../../MoveComponent")
 animated_player = NodePath("../../AnimationPlayer")
 idle_state = NodePath("../IdleState")
-interact_state = NodePath("../IdleState")
+interact_state = NodePath("../InteractState")
+
+[node name="InteractState" parent="StateMachine" node_paths=PackedStringArray("interaction_component", "idle_state") instance=ExtResource("9_ry2wg")]
+interaction_component = NodePath("../../InteractionComponent")
+idle_state = NodePath("../IdleState")

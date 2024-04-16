@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhgjt1b5tm5ap"]
+
+[ext_resource type="Script" path="res://scenes/state_machine/states/interact_state.gd" id="1_e4ak4"]
+
+[node name="InteractState" type="Node"]
+script = ExtResource("1_e4ak4")

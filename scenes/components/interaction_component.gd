@@ -1,17 +1,12 @@
-extends Area2D
+class_name InteractionComponent extends Area2D
 
+signal interaction_ended
 
 var nearby_interactables: Array[Area2D] = []
-
 
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
-
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		interact()
 
 
 func interact() -> void:
@@ -19,6 +14,7 @@ func interact() -> void:
 	if get_interacted_object():
 		print("Interact with first interacted object")
 		get_interacted_object().call("interact", self)
+		(get_interacted_object() as InteractableComponent).interaction.ended.connect(_on_interationc_ended)
 
 
 func get_interacted_object() -> Area2D:
@@ -39,3 +35,7 @@ func _on_area_exited(area: Area2D) -> void:
 		print("InteractableComponent deleted from nearby interactables")
 		nearby_interactables.erase(area)
 		area.call("show_interact_key", false)
+
+
+func _on_interationc_ended() -> void:
+	interaction_ended.emit()
