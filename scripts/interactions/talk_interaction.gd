@@ -20,9 +20,7 @@ func perform_interaction(source: Area2D, target: Area2D) -> void:
 		_start_timeline(npc_data.talk_timeline, talked_state_name, source, target)
 
 func _start_timeline(timeline: DialogicTimeline, state_name: String, source: Area2D, target: Area2D) -> void:
-	var layout: TextBubbleLayoutBase = Dialogic.start(timeline)
-	layout.register_character(Globals.PLAYER_DIALOGIC_CHARACTER, source)
-	layout.register_character(npc_data.character, target)
+	Dialogic.start(timeline)
 	Dialogic.timeline_ended.connect(_on_timeline_ended.bind(state_name), ConnectFlags.CONNECT_ONE_SHOT)
 
 func _on_timeline_ended(state_to_update: String) -> void:
