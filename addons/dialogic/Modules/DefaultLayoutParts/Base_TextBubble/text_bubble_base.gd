@@ -1,5 +1,5 @@
 @tool
-extends DialogicLayoutBase
+class_name TextBubbleLayoutBase extends DialogicLayoutBase
 
 ## This layout won't do anything on it's own
 

@@ -7,7 +7,8 @@ class_name NpcData extends Resource
 @export var idle_texture: Texture
 @export var walk_texture: Texture
 
-@export_category("Timelines")
+@export_category("Dialogic")
+@export var character: DialogicCharacter
 @export var greetings_timeline: DialogicTimeline
 @export var talk_timeline: DialogicTimeline
 

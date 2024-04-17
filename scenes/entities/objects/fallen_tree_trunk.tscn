@@ -1,10 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://c10hi6m5vrqwq"]
+[gd_scene load_steps=4 format=3 uid="uid://c10hi6m5vrqwq"]
 
-[ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="1_mayse"]
 [ext_resource type="Texture2D" uid="uid://cyqwvrw6l6g4o" path="res://assets/packs/ancien_forest/Green Forest/Props/Props_green.png" id="1_qeqcp"]
-[ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="3_mpjwh"]
-[ext_resource type="Script" path="res://scripts/interactions/event_interaction.gd" id="3_xjmco"]
-[ext_resource type="Resource" path="res://resources/dialogic/timelines/first_timeline.dtl" id="4_swdor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3rvf"]
 size = Vector2(17, 5)
@@ -12,21 +8,6 @@ size = Vector2(17, 5)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecwe0"]
 atlas = ExtResource("1_qeqcp")
 region = Rect2(232, 176, 24, 16)
-
-[sub_resource type="Resource" id="Resource_n4q7j"]
-script = ExtResource("3_mpjwh")
-conditions = Array[Resource("res://scripts/game_state_condition.gd")]([])
-timeline = ExtResource("4_swdor")
-
-[sub_resource type="Resource" id="Resource_6gfo0"]
-script = ExtResource("3_xjmco")
-event_name = "tree_fallen"
-timeline = ExtResource("4_swdor")
-resolve_conditions = Array[ExtResource("3_mpjwh")]([SubResource("Resource_n4q7j")])
-delete_on_resolve = true
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4i1ra"]
-size = Vector2(14, 2)
 
 [node name="FallenTreeTrunk" type="StaticBody2D"]
 collision_layer = 4
@@ -38,9 +19,3 @@ shape = SubResource("RectangleShape2D_r3rvf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_ecwe0")
-
-[node name="InteractableComponent" parent="." instance=ExtResource("1_mayse")]
-interaction = SubResource("Resource_6gfo0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
-shape = SubResource("RectangleShape2D_4i1ra")

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=6 format=3 uid="uid://dl4uyvc8t8bwn"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=7 format=3 uid="uid://dl4uyvc8t8bwn"]
 
+[ext_resource type="Resource" path="res://resources/npc/hector/hector.dch" id="1_8rdnr"]
 [ext_resource type="Resource" path="res://resources/npc/hector/hector_greetings.dtl" id="1_26vqb"]
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_838y1"]
 [ext_resource type="Texture2D" uid="uid://b34xkhcan768v" path="res://assets/characters/npc/Premade_NPCs/Carpenter/Minifantasy_NPCsCarpenterIdle.png" id="3_8o3x7"]
@@ -12,6 +13,7 @@ name = "Hector"
 description = ""
 idle_texture = ExtResource("3_8o3x7")
 walk_texture = ExtResource("6_5qoy6")
+character = ExtResource("1_8rdnr")
 greetings_timeline = ExtResource("1_26vqb")
 talk_timeline = ExtResource("5_x7j7i")
 conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
