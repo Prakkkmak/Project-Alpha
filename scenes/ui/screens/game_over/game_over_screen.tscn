@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bidkofl6ndye4"]
+
+[ext_resource type="Script" path="res://scenes/ui/screens/game_over/game_over_screen.gd" id="1_fyd8q"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/end.dtl" id="3_2td2o"]
+[ext_resource type="Texture2D" uid="uid://rf8rh7skutmg" path="res://assets/victory.webp" id="4_1i2u3"]
+
+[node name="GameOverScreen" type="CanvasLayer"]
+script = ExtResource("1_fyd8q")
+timeline = ExtResource("3_2td2o")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("4_1i2u3")
+expand_mode = 4
+
+[node name="BlackScreen" type="ColorRect" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+color = Color(0, 0, 0, 1)

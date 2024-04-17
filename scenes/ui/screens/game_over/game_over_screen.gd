@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-@export var title_screen: PackedScene
 @export var timeline: DialogicTimeline
 
 @onready var black_screen: ColorRect = %BlackScreen
@@ -20,4 +19,4 @@ func _shade_off() -> void:
 	tween.tween_callback(black_screen.queue_free)
 
 func _on_timeline_ended() -> void:
-	get_tree().change_scene_to_packed(title_screen)
+	get_tree().change_scene_to_file("res://scenes/ui/screens/title_screen/title_screen.tscn")
