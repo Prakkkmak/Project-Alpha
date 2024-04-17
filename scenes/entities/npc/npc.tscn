@@ -394,7 +394,7 @@ _data = {
 radius = 2.0
 height = 6.0
 
-[sub_resource type="Resource" id="Resource_bi6bt"]
+[sub_resource type="Resource" id="Resource_r3ogp"]
 resource_local_to_scene = true
 script = ExtResource("6_kcih2")
 
@@ -428,7 +428,7 @@ shape = SubResource("CapsuleShape2D_oaebe")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
 position = Vector2(0, -3)
-interaction = SubResource("Resource_bi6bt")
+interaction = SubResource("Resource_r3ogp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_xq8mk")

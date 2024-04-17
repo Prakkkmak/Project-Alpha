@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=7 format=3 uid="uid://dl4uyvc8t8bwn"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=6 format=3 uid="uid://dl4uyvc8t8bwn"]
 
 [ext_resource type="Resource" path="res://resources/npc/hector/hector_greetings.dtl" id="1_26vqb"]
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_838y1"]
-[ext_resource type="Resource" path="res://resources/npc/hector/hector_help.dtl" id="2_r7cr8"]
 [ext_resource type="Texture2D" uid="uid://b34xkhcan768v" path="res://assets/characters/npc/Premade_NPCs/Carpenter/Minifantasy_NPCsCarpenterIdle.png" id="3_8o3x7"]
 [ext_resource type="Resource" path="res://resources/npc/hector/hector_talk.dtl" id="5_x7j7i"]
 [ext_resource type="Texture2D" uid="uid://2x021dw7srx6" path="res://assets/characters/npc/Premade_NPCs/Carpenter/Minifantasy_NPCsCarpenterWalk.png" id="6_5qoy6"]
@@ -15,6 +14,4 @@ idle_texture = ExtResource("3_8o3x7")
 walk_texture = ExtResource("6_5qoy6")
 greetings_timeline = ExtResource("1_26vqb")
 talk_timeline = ExtResource("5_x7j7i")
-help_timeline = ExtResource("2_r7cr8")
-true_conditions = Array[String](["tree_fallen"])
-false_conditions = Array[String]([])
+conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
