@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c10hi6m5vrqwq"]
+[gd_scene load_steps=12 format=3 uid="uid://c10hi6m5vrqwq"]
 
 [ext_resource type="Texture2D" uid="uid://cyqwvrw6l6g4o" path="res://assets/packs/ancien_forest/Green Forest/Props/Props_green.png" id="1_qeqcp"]
+[ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="2_w67ne"]
+[ext_resource type="Script" path="res://scripts/interactions/event_interaction.gd" id="3_c4yah"]
+[ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="3_llwqi"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/end.dtl" id="4_ju4ir"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/first_timeline.dtl" id="4_s1el7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3rvf"]
 size = Vector2(17, 5)
@@ -8,6 +13,21 @@ size = Vector2(17, 5)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecwe0"]
 atlas = ExtResource("1_qeqcp")
 region = Rect2(232, 176, 24, 16)
+
+[sub_resource type="Resource" id="Resource_a7pat"]
+script = ExtResource("3_llwqi")
+conditions = Array[Resource("res://scripts/game_state_condition.gd")]([])
+timeline = ExtResource("4_ju4ir")
+
+[sub_resource type="Resource" id="Resource_824j2"]
+script = ExtResource("3_c4yah")
+event_name = "tree_fallen"
+timeline = ExtResource("4_s1el7")
+resolve_conditions = Array[ExtResource("3_llwqi")]([SubResource("Resource_a7pat")])
+delete_on_resolve = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbrx3"]
+radius = 3.0
 
 [node name="FallenTreeTrunk" type="StaticBody2D"]
 collision_layer = 4
@@ -19,3 +39,9 @@ shape = SubResource("RectangleShape2D_r3rvf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_ecwe0")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_w67ne")]
+interaction = SubResource("Resource_824j2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CircleShape2D_pbrx3")

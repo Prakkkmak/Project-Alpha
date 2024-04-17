@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://y5w5ax7wrlb1"]
+[gd_scene load_steps=9 format=3 uid="uid://y5w5ax7wrlb1"]
 
 [ext_resource type="Script" path="res://scenes/ui/title_screen/title_screen.gd" id="1_v7oce"]
 [ext_resource type="Texture2D" uid="uid://bmic06qelt7ya" path="res://resources/images/title_screen_bg.png" id="2_ihf32"]
 [ext_resource type="PackedScene" uid="uid://d1eitwwemjsyw" path="res://scenes/ui/options_menu/options_menu.tscn" id="2_kvfxt"]
+[ext_resource type="PackedScene" uid="uid://bwu1q6jxr4um6" path="res://scenes/main/main.tscn" id="2_lm580"]
 [ext_resource type="Texture2D" uid="uid://b5iiug55wa6y5" path="res://assets/sprite_sheets/Modern_UI_Style_1_32x32.png" id="3_jifp4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu62w"]
@@ -17,7 +18,11 @@ region = Rect2(936, 586, 16, 16)
 atlas = ExtResource("3_jifp4")
 region = Rect2(870, 680, 20, 18)
 
-[node name="TitleScreen" type="PanelContainer"]
+[node name="TitleScreen" type="CanvasLayer"]
+script = ExtResource("1_v7oce")
+main_scene = ExtResource("2_lm580")
+
+[node name="TitleScreen" type="PanelContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -32,9 +37,8 @@ grow_vertical = 2
 rotation = -0.00144258
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_v7oce")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="TitleScreen"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/margin_left = 2
@@ -42,12 +46,12 @@ theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="MainMenu" type="TextureRect" parent="MarginContainer"]
+[node name="MainMenu" type="TextureRect" parent="TitleScreen/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("2_ihf32")
 
-[node name="MainMenuButtons" type="VBoxContainer" parent="MarginContainer/MainMenu"]
+[node name="MainMenuButtons" type="VBoxContainer" parent="TitleScreen/MarginContainer/MainMenu"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
@@ -58,32 +62,32 @@ offset_bottom = 483.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="PlayButton" type="Button" parent="MarginContainer/MainMenu/MainMenuButtons"]
+[node name="PlayButton" type="Button" parent="TitleScreen/MarginContainer/MainMenu/MainMenuButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 icon = SubResource("AtlasTexture_pu62w")
 
-[node name="Control2" type="Control" parent="MarginContainer/MainMenu/MainMenuButtons"]
+[node name="Control2" type="Control" parent="TitleScreen/MarginContainer/MainMenu/MainMenuButtons"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="OptionsButton" type="Button" parent="MarginContainer/MainMenu/MainMenuButtons"]
+[node name="OptionsButton" type="Button" parent="TitleScreen/MarginContainer/MainMenu/MainMenuButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Options"
 icon = SubResource("AtlasTexture_cdk01")
 
-[node name="Control" type="Control" parent="MarginContainer/MainMenu/MainMenuButtons"]
+[node name="Control" type="Control" parent="TitleScreen/MarginContainer/MainMenu/MainMenuButtons"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="CreditsButton" type="Button" parent="MarginContainer/MainMenu/MainMenuButtons"]
+[node name="CreditsButton" type="Button" parent="TitleScreen/MarginContainer/MainMenu/MainMenuButtons"]
 layout_mode = 2
 text = "Credits"
 icon = SubResource("AtlasTexture_jk7ag")
 
-[node name="OptionsMenu" parent="MarginContainer" instance=ExtResource("2_kvfxt")]
+[node name="OptionsMenu" parent="TitleScreen/MarginContainer" instance=ExtResource("2_kvfxt")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2

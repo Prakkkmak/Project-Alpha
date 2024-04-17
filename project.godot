@@ -39,6 +39,7 @@ directories/dch_directory={
 "violet": "res://resources/npc/violet/violet.dch"
 }
 directories/dtl_directory={
+"end": "res://resources/dialogic/timelines/end.dtl",
 "first_timeline": "res://resources/dialogic/timelines/first_timeline.dtl",
 "hector_greetings": "res://resources/npc/hector/hector_greetings.dtl",
 "hector_help": "res://resources/npc/hector/hector_help.dtl",

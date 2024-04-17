@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PickupData" load_steps=4 format=3 uid="uid://ds0xroj021trv"]
+
+[ext_resource type="Script" path="res://scripts/pickup_data.gd" id="1_wwetx"]
+[ext_resource type="Texture2D" uid="uid://dhydn16v7pole" path="res://assets/packs/castle/Props/Props.png" id="2_cs7px"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6cnm"]
+atlas = ExtResource("2_cs7px")
+region = Rect2(96, 8, 8, 16)
+
+[resource]
+script = ExtResource("1_wwetx")
+name = "Crown"
+description = ""
+world_texture = SubResource("AtlasTexture_x6cnm")
