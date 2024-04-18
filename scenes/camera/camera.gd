@@ -1,4 +1,4 @@
-extends Camera2D
+class_name MainCamera extends Camera2D
 
 @export var target: Node2D
 @export var drag_force: float = 4.0

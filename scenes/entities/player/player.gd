@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @export var idle_texture: Texture
 @export var walk_texture: Texture

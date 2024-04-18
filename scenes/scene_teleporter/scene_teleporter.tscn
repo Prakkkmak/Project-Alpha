@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drtht4cimvtrv"]
+
+[ext_resource type="Script" path="res://scenes/scene_teleporter/scene_teleporter.gd" id="1_507cw"]
+
+[node name="SceneTeleporter" type="Area2D"]
+script = ExtResource("1_507cw")
