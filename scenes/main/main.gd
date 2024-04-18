@@ -2,6 +2,7 @@ extends Node
 
 @export var end_screen: PackedScene
 @export var end_condition: String = "crown_acquired"
+@export var override_level: PackedScene
 
 @onready var current_level: Node2D = %Level
 @onready var player: Player = %Player
@@ -13,6 +14,8 @@ const ANIM_FADE_OFF: String = "fade_off"
 func _ready() -> void:
 	GameState.state_changed.connect(_on_state_changed)
 	_connect_level_teleporters()
+	if override_level:
+		_on_player_teleport_requested(override_level, Vector2.ZERO)
 
 
 func end_game() -> void:

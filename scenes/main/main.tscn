@@ -7,22 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c6qemvt56qj1q" path="res://scenes/levels/forest/forest_level.tscn" id="3_50in6"]
 [ext_resource type="PackedScene" uid="uid://dcj2cuxunf7el" path="res://debug/debug_panel.tscn" id="9_0gkj4"]
 
-[sub_resource type="Animation" id="Animation_p6htq"]
-resource_name = "fade_off"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_pl6qw"]
 length = 0.001
 tracks/0/type = "value"
@@ -52,6 +36,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p6htq"]
+resource_name = "fade_off"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_16u4i"]

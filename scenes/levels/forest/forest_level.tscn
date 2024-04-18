@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c6qemvt56qj1q"]
 
-[ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/plains.tres" id="1_fo3xp"]
+[ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_fo3xp"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="3_ecx5h"]
 [ext_resource type="PackedScene" uid="uid://1sosporukdya" path="res://scenes/entities/npc/npc.tscn" id="4_awr1i"]
 [ext_resource type="Resource" uid="uid://cwgvdq4g86f7o" path="res://resources/npc/violet/violet.tres" id="5_4nq54"]
@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="9_ysoya"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6xwr"]
-size = Vector2(42, 20)
+size = Vector2(28, 199)
 
-[node name="Level" type="Node2D"]
+[node name="ForestLevel" type="Node2D"]
 y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -50,8 +50,9 @@ position = Vector2(10, 65)
 pickup = ExtResource("8_f4g3a")
 
 [node name="SceneTeleporter" parent="." instance=ExtResource("9_ysoya")]
-position = Vector2(0, 120)
-new_level_path = "res://scenes/levels/forest/forest_level.tscn"
+new_level_path = "res://scenes/levels/castle_bedroom/castle_bedroom_level.tscn"
+starting_position = Vector2(-4, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter"]
+position = Vector2(326, 117)
 shape = SubResource("RectangleShape2D_x6xwr")
