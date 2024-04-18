@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6qemvt56qj1q"]
+[gd_scene load_steps=11 format=3 uid="uid://c6qemvt56qj1q"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_fo3xp"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="3_ecx5h"]
 [ext_resource type="PackedScene" uid="uid://1sosporukdya" path="res://scenes/entities/npc/npc.tscn" id="4_awr1i"]
 [ext_resource type="Resource" uid="uid://cwgvdq4g86f7o" path="res://resources/npc/violet/violet.tres" id="5_4nq54"]
 [ext_resource type="Resource" uid="uid://dl4uyvc8t8bwn" path="res://resources/npc/hector/hector.tres" id="6_30d06"]
+[ext_resource type="Resource" uid="uid://bd1xacgo7xki8" path="res://resources/npc/Eldrin/eldrin.tres" id="6_aqw4k"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="7_cjbdj"]
 [ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="8_f4g3a"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="9_ysoya"]
@@ -41,6 +42,9 @@ data = ExtResource("5_4nq54")
 [node name="Hector" parent="." instance=ExtResource("4_awr1i")]
 position = Vector2(-8, -28)
 data = ExtResource("6_30d06")
+
+[node name="Eldrin" parent="." instance=ExtResource("4_awr1i")]
+data = ExtResource("6_aqw4k")
 
 [node name="Coins" parent="." instance=ExtResource("7_cjbdj")]
 position = Vector2(25, -8)

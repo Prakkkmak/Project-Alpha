@@ -33,12 +33,17 @@ gdscript/warnings/unsafe_call_argument=2
 [dialogic]
 
 directories/dch_directory={
+"eldrin": "res://resources/npc/Eldrin/eldrin.dch",
 "hector": "res://resources/npc/hector/hector.dch",
 "little_king": "res://resources/dialogic/characters/little_king.dch",
 "narrator": "res://resources/dialogic/characters/narrator.dch",
 "violet": "res://resources/npc/violet/violet.dch"
 }
 directories/dtl_directory={
+"eldrin_greetings": "res://resources/npc/Eldrin/eldrin_greetings.dtl",
+"eldrin_help": "res://resources/npc/Eldrin/eldrin_help.dtl",
+"eldrin_no_help": "res://resources/npc/Eldrin/eldrin_no_help.dtl",
+"eldrin_talk": "res://resources/npc/Eldrin/eldrin_talk.dtl",
 "end": "res://resources/dialogic/timelines/end.dtl",
 "first_timeline": "res://resources/dialogic/timelines/first_timeline.dtl",
 "hector_greetings": "res://resources/npc/hector/hector_greetings.dtl",

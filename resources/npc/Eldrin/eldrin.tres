@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="NpcData" load_steps=7 format=3 uid="uid://bd1xacgo7xki8"]
+
+[ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin.dch" id="1_0rko3"]
+[ext_resource type="Texture2D" uid="uid://d5rhru3pa1rt" path="res://assets/characters/npc/Premade_NPCs/Tailor/Minifantasy_NPCsTailorIdle.png" id="1_a2hin"]
+[ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_nysx6"]
+[ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_greetings.dtl" id="2_r6qii"]
+[ext_resource type="Texture2D" uid="uid://chgeyl3cdj6bh" path="res://assets/characters/npc/Premade_NPCs/Tailor/Minifantasy_NPCsTailorWalk.png" id="3_3tglk"]
+[ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_talk.dtl" id="5_p80bd"]
+
+[resource]
+script = ExtResource("1_nysx6")
+name = ""
+description = ""
+idle_texture = ExtResource("1_a2hin")
+walk_texture = ExtResource("3_3tglk")
+character = ExtResource("1_0rko3")
+greetings_timeline = ExtResource("2_r6qii")
+talk_timeline = ExtResource("5_p80bd")
+conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
