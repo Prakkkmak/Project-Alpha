@@ -14,6 +14,7 @@ const ANIM_FADE_OFF: String = "fade_off"
 func _ready() -> void:
 	GameState.state_changed.connect(_on_state_changed)
 	_connect_level_teleporters()
+	remove_child(player)
 	if override_level:
 		_on_player_teleport_requested(override_level, Vector2.ZERO)
 
