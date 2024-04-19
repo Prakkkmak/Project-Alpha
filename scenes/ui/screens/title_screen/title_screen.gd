@@ -7,12 +7,15 @@ extends CanvasLayer
 @onready var play_button: Button = %PlayButton
 @onready var options_button: Button = %OptionsButton
 @onready var options_menu: OptionsMenu = %OptionsMenu
+@onready var music_button_disabled: TextureButton = %MusicButtonDisable
+@onready var main_music: AudioStreamPlayer = $MainMusic
 
 
 func _ready() -> void:
 	options_button.pressed.connect(_on_options_button_pressed)
 	options_menu.quitted.connect(_on_options_menu_quitted)
 	play_button.pressed.connect(_on_play_button_pressed)
+	music_button_disabled.toggled.connect(_on_music_button_disabled_toggled)
 	
 
 func _on_options_button_pressed() -> void:
@@ -25,3 +28,7 @@ func _on_options_menu_quitted() -> void:
 
 func _on_play_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+
+
+func _on_music_button_disabled_toggled(toggled_on: bool) -> void:
+	main_music.playing = !toggled_on
