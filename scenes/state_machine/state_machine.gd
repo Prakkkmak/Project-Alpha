@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		current_state._physics_update(delta)
 
 
+
 func _input(event: InputEvent) -> void:
 	if process_input && current_state:
 		current_state._input_process(event)

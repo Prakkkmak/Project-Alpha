@@ -11,14 +11,11 @@ var process_input: bool = false
 
 
 func _enter() -> void:
-	if !interaction_component:
+	if !interaction_component || !interaction_component.get_interacted_object():
 		transition_to(idle_state)
 		return
 	interaction_component.interaction_ended.connect(_on_interaction_ended)
-	print("Interact")
 	interaction_component.interact()
-	print("Interact completed")
-
 
 func _on_interaction_ended() -> void:
 	transition_to(idle_state)

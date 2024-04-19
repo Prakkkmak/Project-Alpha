@@ -10,9 +10,7 @@ func _ready() -> void:
 
 
 func interact() -> void:
-	print("Try to interact")
 	if get_interacted_object():
-		print("Interact with first interacted object")
 		get_interacted_object().call("interact", self)
 		(get_interacted_object() as InteractableComponent).interaction.ended.connect(_on_interationc_ended)
 
@@ -25,14 +23,12 @@ func get_interacted_object() -> Area2D:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is InteractableComponent:
-		print("InteractableComponent added to nearby interactables")
 		nearby_interactables.append(area)
 		area.call("show_interact_key", true)
 
 
 func _on_area_exited(area: Area2D) -> void:
 	if area in nearby_interactables:
-		print("InteractableComponent deleted from nearby interactables")
 		nearby_interactables.erase(area)
 		area.call("show_interact_key", false)
 

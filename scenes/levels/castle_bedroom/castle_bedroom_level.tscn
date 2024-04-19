@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c448eo12ftfhm"]
+[gd_scene load_steps=5 format=3 uid="uid://c448eo12ftfhm"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_3ud65"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="2_86vql"]
+[ext_resource type="AudioStream" uid="uid://44uer3r1cm7s" path="res://assets/sounds/Woodland Fantasy.mp3" id="3_cn567"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_df5nj"]
 size = Vector2(20, 6.5)
@@ -31,3 +32,7 @@ starting_position = Vector2(243, 140)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter"]
 position = Vector2(0, 28.25)
 shape = SubResource("RectangleShape2D_df5nj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cn567")
+autoplay = true
