@@ -3,8 +3,8 @@
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_3ud65"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="2_86vql"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pjx5i"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_df5nj"]
+size = Vector2(20, 6.5)
 
 [node name="CastleBedroomLevel" type="Node2D"]
 y_sort_enabled = true
@@ -26,8 +26,8 @@ layer_2/tile_data = PackedInt32Array(262143, 720903, 14, 131072, 851975, 13, 196
 
 [node name="SceneTeleporter" parent="." instance=ExtResource("2_86vql")]
 new_level_path = "res://scenes/levels/forest/forest_level.tscn"
-starting_position = Vector2(200, 120)
+starting_position = Vector2(243, 140)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter"]
-position = Vector2(-4, 20)
-shape = SubResource("CircleShape2D_pjx5i")
+position = Vector2(0, 28.25)
+shape = SubResource("RectangleShape2D_df5nj")
