@@ -21,9 +21,8 @@ apply_overrides_on_ready = true
 
 [node name="CustomTextboxLayer" parent="." instance=ExtResource("4_ct2ga")]
 box_panel = "res://scenes/ui/custom_dialogic_style/vn_textbox_default_panel.tres"
-box_color_use_global = null
-box_color_custom = null
 name_label_box_panel = "res://scenes/ui/custom_dialogic_style/vn_textbox_name_label_panel.tres"
+name_label_box_modulate = Color(0, 0, 0, 1)
 
 [node name="FullAdvanceInputLayer" parent="." instance=ExtResource("5_0oiq0")]
 apply_overrides_on_ready = true

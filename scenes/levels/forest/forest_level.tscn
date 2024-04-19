@@ -27,6 +27,7 @@ stream_1/weight = 1.0
 y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
+unique_name_in_owner = true
 y_sort_enabled = true
 scale = Vector2(1.12248, 0.927744)
 tile_set = ExtResource("1_fo3xp")

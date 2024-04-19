@@ -45,9 +45,9 @@ func _on_fade_off_finished(name: String, new_level: PackedScene, player_position
 	remove_child(current_level)
 	current_level.queue_free()
 	current_level = new_level.instantiate()
-	add_child(current_level)
 	player.global_position = player_position
 	current_level.add_child(player)
+	add_child(current_level)
 	animation_player.play("fade_in")
 	animation_player.animation_finished.connect(_on_fade_in_finished, ConnectFlags.CONNECT_ONE_SHOT)
 	
