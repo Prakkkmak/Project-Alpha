@@ -53,7 +53,7 @@ directories/dtl_directory={
 "violet_help": "res://resources/npc/violet/violet_help.dtl",
 "violet_talk": "res://resources/npc/violet/violet_talk.dtl"
 }
-layout/style_list=["res://resources/dialogic/style.tres"]
+layout/style_list=["res://resources/dialogic/style.tres", "res://resources/dialogic/style_2.tres"]
 layout/default_style="res://resources/dialogic/style.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01

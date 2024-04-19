@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwu1q6jxr4um6"]
+[gd_scene load_steps=11 format=3 uid="uid://bwu1q6jxr4um6"]
 
 [ext_resource type="PackedScene" uid="uid://dwqjbw0edajrx" path="res://scenes/entities/player/player.tscn" id="1_prgmk"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_siyhi"]
 [ext_resource type="PackedScene" uid="uid://dqq6npkin56gd" path="res://scenes/camera/camera.tscn" id="2_e8vov"]
 [ext_resource type="PackedScene" uid="uid://bidkofl6ndye4" path="res://scenes/ui/screens/game_over/game_over_screen.tscn" id="2_y14he"]
-[ext_resource type="PackedScene" uid="uid://c448eo12ftfhm" path="res://scenes/levels/castle_bedroom/castle_bedroom_level.tscn" id="3_5r2yv"]
 [ext_resource type="PackedScene" uid="uid://c6qemvt56qj1q" path="res://scenes/levels/forest/forest_level.tscn" id="3_50in6"]
 [ext_resource type="PackedScene" uid="uid://dcj2cuxunf7el" path="res://debug/debug_panel.tscn" id="9_0gkj4"]
 
@@ -66,7 +65,6 @@ _data = {
 process_mode = 3
 script = ExtResource("1_siyhi")
 end_screen = ExtResource("2_y14he")
-override_level = ExtResource("3_5r2yv")
 
 [node name="Level" parent="." instance=ExtResource("3_50in6")]
 unique_name_in_owner = true

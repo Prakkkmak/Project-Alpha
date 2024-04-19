@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6qemvt56qj1q"]
+[gd_scene load_steps=15 format=3 uid="uid://c6qemvt56qj1q"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_fo3xp"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="3_ecx5h"]
@@ -9,9 +9,19 @@
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="7_cjbdj"]
 [ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="8_f4g3a"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="9_ysoya"]
+[ext_resource type="AudioStream" uid="uid://bvw3f631cg56h" path="res://assets/sounds/best-adventure-ever-122726.mp3" id="10_k4mgt"]
+[ext_resource type="AudioStream" uid="uid://dv7p7kdqixmp0" path="res://assets/sounds/cheerful-chirping-of-birds_nature-sound-201697.mp3" id="11_cmcvb"]
+[ext_resource type="AudioStream" uid="uid://bkgynmwlm472u" path="res://assets/sounds/voices-of-nature_birds_nature-sound-201923.mp3" id="13_stroe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6xwr"]
 size = Vector2(46, 25.5)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1h40h"]
+streams_count = 2
+stream_0/stream = ExtResource("11_cmcvb")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("13_stroe")
+stream_1/weight = 1.0
 
 [node name="ForestLevel" type="Node2D"]
 y_sort_enabled = true
@@ -69,3 +79,13 @@ shape = SubResource("RectangleShape2D_x6xwr")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(243, 140)
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_k4mgt")
+autoplay = true
+bus = &"Music"
+
+[node name="ForestSfx" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_1h40h")
+autoplay = true
+bus = &"SFX"
