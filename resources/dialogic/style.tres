@@ -55,6 +55,9 @@ overrides = {}
 [resource]
 script = ExtResource("1_pxnym")
 name = "style"
-base_overrides = {}
-layers = Array[ExtResource("2_5b511")]([SubResource("Resource_baekk"), SubResource("Resource_q6ro8"), SubResource("Resource_houny"), SubResource("Resource_nkp45"), SubResource("Resource_48sm7"), SubResource("Resource_54522"), SubResource("Resource_3cn8b")])
-metadata/_latest_layer = 1
+base_overrides = {
+"global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)",
+"global_font_size": "30.0"
+}
+layers = Array[ExtResource("2_5b511")]([SubResource("Resource_baekk"), SubResource("Resource_yolrc"), SubResource("Resource_houny"), SubResource("Resource_nkp45"), SubResource("Resource_48sm7"), SubResource("Resource_54522"), SubResource("Resource_3cn8b")])
+metadata/_latest_layer = -1
