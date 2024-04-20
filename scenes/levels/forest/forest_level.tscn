@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bkgynmwlm472u" path="res://assets/sounds/voices-of-nature_birds_nature-sound-201923.mp3" id="13_stroe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6xwr"]
-size = Vector2(26, 13.375)
+size = Vector2(41, 13.375)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1h40h"]
 streams_count = 2
@@ -70,7 +70,7 @@ new_level_path = "res://scenes/levels/castle_bedroom/castle_bedroom_level.tscn"
 starting_position = Vector2(-4, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter"]
-position = Vector2(243, 73)
+position = Vector2(242.5, 73)
 shape = SubResource("RectangleShape2D_x6xwr")
 
 [node name="SceneTeleporter2" parent="." instance=ExtResource("9_ysoya")]
