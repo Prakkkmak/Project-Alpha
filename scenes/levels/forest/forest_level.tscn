@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6qemvt56qj1q"]
+[gd_scene load_steps=14 format=3 uid="uid://c6qemvt56qj1q"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_fo3xp"]
 [ext_resource type="PackedScene" uid="uid://c10hi6m5vrqwq" path="res://scenes/entities/objects/fallen_tree_trunk.tscn" id="3_ecx5h"]
@@ -7,7 +7,6 @@
 [ext_resource type="Resource" uid="uid://dl4uyvc8t8bwn" path="res://resources/npc/hector/hector.tres" id="6_30d06"]
 [ext_resource type="Resource" uid="uid://bd1xacgo7xki8" path="res://resources/npc/Eldrin/eldrin.tres" id="6_aqw4k"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="7_cjbdj"]
-[ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="8_f4g3a"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="9_ysoya"]
 [ext_resource type="AudioStream" uid="uid://bvw3f631cg56h" path="res://assets/sounds/best-adventure-ever-122726.mp3" id="10_k4mgt"]
 [ext_resource type="AudioStream" uid="uid://dv7p7kdqixmp0" path="res://assets/sounds/cheerful-chirping-of-birds_nature-sound-201697.mp3" id="11_cmcvb"]
@@ -65,10 +64,6 @@ data = ExtResource("6_aqw4k")
 
 [node name="Coins" parent="." instance=ExtResource("7_cjbdj")]
 position = Vector2(25, -8)
-
-[node name="Crown" parent="." instance=ExtResource("7_cjbdj")]
-position = Vector2(10, 65)
-pickup = ExtResource("8_f4g3a")
 
 [node name="SceneTeleporter" parent="." instance=ExtResource("9_ysoya")]
 new_level_path = "res://scenes/levels/castle_bedroom/castle_bedroom_level.tscn"

@@ -79,11 +79,6 @@ position = Vector2(-10.0732, 0)
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
 unique_name_in_owner = true
 zoom = Vector2(8, 8)
-limit_left = -300
-limit_top = -300
-limit_right = 300
-limit_bottom = 300
-limit_smoothed = true
 target = NodePath("../Player")
 drag_force = 8.0
 
