@@ -1,0 +1,10 @@
+*Frame size* 
+
+- Floor Fireplace: 16x16px
+- Wall Fireplace: 24x24px
+- Torches: 24x40px
+
+
+*Frame Duration*
+
+- 200ms

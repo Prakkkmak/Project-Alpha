@@ -80,7 +80,7 @@ shape = SubResource("RectangleShape2D_x6xwr")
 
 [node name="SceneTeleporter2" parent="." instance=ExtResource("9_ysoya")]
 new_level_path = "res://scenes/levels/dungeon/dungeon_level.tscn"
-starting_position = Vector2(40, 5)
+starting_position = Vector2(42, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter2"]
 position = Vector2(-274, 71)
@@ -98,3 +98,6 @@ bus = &"Music"
 stream = SubResource("AudioStreamRandomizer_1h40h")
 autoplay = true
 bus = &"SFX"
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(-275, 87)
