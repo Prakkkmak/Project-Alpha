@@ -5,6 +5,7 @@ signal player_teleport_requested(level_scene: PackedScene, position: Vector2)
 
 @export_file("*.tscn") var new_level_path: String
 @export var starting_position: Vector2
+@export var state_requirement: String
  
 var new_level_scene: PackedScene
 
@@ -14,12 +15,10 @@ func _ready() -> void:
 
 
 func teleport_to_scene() -> void:
-	player_teleport_requested.emit(new_level_scene, starting_position)
+	if !state_requirement || GameState.get_state(state_requirement):
+		player_teleport_requested.emit(new_level_scene, starting_position)
 
 
 func _on_body_entered(node: Node2D) -> void:
-	print("Entered")
-	print(position)
-	print(node.position)
 	if node is Player:
 		teleport_to_scene()

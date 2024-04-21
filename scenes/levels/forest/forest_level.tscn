@@ -65,19 +65,20 @@ data = ExtResource("6_aqw4k")
 [node name="Coins" parent="." instance=ExtResource("7_cjbdj")]
 position = Vector2(25, -8)
 
-[node name="SceneTeleporter" parent="." instance=ExtResource("9_ysoya")]
+[node name="CastleTeleporter" parent="." instance=ExtResource("9_ysoya")]
 new_level_path = "res://scenes/levels/castle_bedroom/castle_bedroom_level.tscn"
 starting_position = Vector2(-4, 6)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CastleTeleporter"]
 position = Vector2(242.5, 73)
 shape = SubResource("RectangleShape2D_x6xwr")
 
-[node name="SceneTeleporter2" parent="." instance=ExtResource("9_ysoya")]
+[node name="DungeonTeleporter" parent="." instance=ExtResource("9_ysoya")]
 new_level_path = "res://scenes/levels/dungeon/dungeon_level.tscn"
 starting_position = Vector2(42, -14)
+state_requirement = "guard_opened_dungeon"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonTeleporter"]
 position = Vector2(-274, 71)
 shape = SubResource("RectangleShape2D_x6xwr")
 
