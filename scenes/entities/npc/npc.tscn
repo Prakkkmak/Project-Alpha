@@ -6,6 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://b34xkhcan768v" path="res://assets/characters/npc/Premade_NPCs/Carpenter/Minifantasy_NPCsCarpenterIdle.png" id="2_lo55i"]
 [ext_resource type="Script" path="res://scripts/interactions/talk_interaction.gd" id="6_kcih2"]
 
+[sub_resource type="Resource" id="Resource_kujgd"]
+resource_local_to_scene = true
+script = ExtResource("6_kcih2")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xq8mk"]
+radius = 3.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oaebe"]
+radius = 2.0
+height = 6.0
+
 [sub_resource type="Animation" id="Animation_h30vq"]
 length = 0.001
 tracks/0/type = "value"
@@ -390,21 +401,21 @@ _data = {
 "walk_up_right": SubResource("Animation_c8ahe")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oaebe"]
-radius = 2.0
-height = 6.0
-
-[sub_resource type="Resource" id="Resource_qsjyo"]
-resource_local_to_scene = true
-script = ExtResource("6_kcih2")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_xq8mk"]
-radius = 3.0
-
 [node name="Npc" type="CharacterBody2D"]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_4as06")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
+position = Vector2(0, -3)
+interaction = SubResource("Resource_kujgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CircleShape2D_xq8mk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_oaebe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -3)
@@ -421,17 +432,6 @@ autoplay = "idle_down_right"
 [node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("1_waxr1")]
 _character_body = NodePath("..")
 _frozen = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
-shape = SubResource("CapsuleShape2D_oaebe")
-
-[node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
-position = Vector2(0, -3)
-interaction = SubResource("Resource_qsjyo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
-shape = SubResource("CircleShape2D_xq8mk")
 
 [node name="DebugName" type="Label" parent="."]
 unique_name_in_owner = true
