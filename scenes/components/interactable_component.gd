@@ -11,6 +11,7 @@ signal interaction_failed
 @export var show_interact_key_on_hover: bool = true
 
 @onready var icon: Sprite2D = $Icon
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	if icon_sprite_texture:
@@ -33,7 +34,11 @@ func interact(source: Area2D) -> void:
 func show_interact_key(show: bool) -> void:
 	if !show_interact_key_on_hover:
 		return
-	icon.visible = show
+	if show:
+		icon.visible = true
+		animation_player.play("pop_in")
+	else:
+		animation_player.play("pop_off")
 
 
 func _get_configuration_warnings() -> PackedStringArray:
