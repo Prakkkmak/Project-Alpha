@@ -7,6 +7,7 @@ extends Node
 @onready var current_level: Node2D = %Level
 @onready var player: Player = %Player
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var level_displayer: LevelDisplayer = %LevelDisplayer
 
 
 const ANIM_FADE_OFF: String = "fade_off"
@@ -54,4 +55,5 @@ func _on_fade_off_finished(name: String, new_level: PackedScene, player_position
 	_connect_level_teleporters()
 
 func _on_fade_in_finished(name: String) -> void:
+	level_displayer.display_level(current_level.name)
 	pass

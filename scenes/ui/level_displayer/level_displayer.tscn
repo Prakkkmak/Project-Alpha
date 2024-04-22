@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://0htvxv867h1p"]
+
+[ext_resource type="Script" path="res://scenes/ui/level_displayer/level_displayer.gd" id="1_nvune"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gw4sf"]
+font_size = 64
+
+[node name="LevelDisplayer" type="PanelContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 50)
+offset_right = 152.0
+offset_bottom = 63.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_nvune")
+
+[node name="LevelName" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Forest"
+label_settings = SubResource("LabelSettings_gw4sf")
+horizontal_alignment = 1
