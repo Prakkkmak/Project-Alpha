@@ -44,7 +44,6 @@ offset_right = 176.0
 offset_bottom = 85.5
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.00144258
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -67,7 +66,7 @@ layout_mode = 2
 
 [node name="MainMenuButtons" type="VBoxContainer" parent="TitleScreen/MarginContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
