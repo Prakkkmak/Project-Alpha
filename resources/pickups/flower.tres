@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PickupData" load_steps=4 format=3 uid="uid://bko72phh26yi"]
+
+[ext_resource type="Script" path="res://scripts/pickup_data.gd" id="1_o6b1d"]
+[ext_resource type="Texture2D" uid="uid://l1yn48pewk5y" path="res://assets/packs/forgotten_plains/props/Minifantasy_ForgottenPlainsProps.png" id="2_fclta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqlo0"]
+atlas = ExtResource("2_fclta")
+region = Rect2(80, 72, 8, 8)
+
+[resource]
+script = ExtResource("1_o6b1d")
+name = "flower"
+description = ""
+world_texture = SubResource("AtlasTexture_gqlo0")

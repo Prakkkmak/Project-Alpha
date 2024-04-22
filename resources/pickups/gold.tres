@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="PickupData" load_steps=4 format=3 uid="uid://bthf417ysau0o"]
 
 [ext_resource type="Script" path="res://scripts/pickup_data.gd" id="1_vc317"]
-[ext_resource type="Texture2D" uid="uid://ckv338ker81sy" path="res://assets/packs/dungeon/Props/Props.png" id="2_s7i41"]
+[ext_resource type="Texture2D" uid="uid://dhydn16v7pole" path="res://assets/packs/castle/Props/Props.png" id="2_vs60d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_viefg"]
-atlas = ExtResource("2_s7i41")
-region = Rect2(128, 8, 8, 8)
+atlas = ExtResource("2_vs60d")
+region = Rect2(96, 8, 8, 16)
 
 [resource]
 script = ExtResource("1_vc317")

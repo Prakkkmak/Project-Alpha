@@ -1,0 +1,10 @@
+edmund: Halt! Who approaches the gates? State your purpose.
+little_king: I am the ruler of this land. What keeps you vigilant ?
+edmund: My apologies, Your Majesty. We must guard against unknown threats. How may I assist you, sire?
+- How's the guard tonight?
+	edmund: All is calm, sire. We’ve had no disturbances and the men are alert.
+	little_king: Excellent. Your diligence ensures the kingdom’s peace. Continue with the good efforts
+	edmund: Thank you, sire. We’ll always stand watchful to protect the realm and keep it safe under your rule.
+- Any recent issues?
+	edmund: The night has been quiet so far, sire, but we remain on high alert. We’ve increased our patrols around the castle walls.
+	little_king: Good, proactive measures are essential for our safety. Ensure that all shifts are fully staffed.

@@ -75,7 +75,7 @@ position = Vector2(5, 5)
 [node name="Player" parent="." instance=ExtResource("1_prgmk")]
 unique_name_in_owner = true
 process_mode = 1
-position = Vector2(-10.0756, 2.47669)
+position = Vector2(12, -140)
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
 unique_name_in_owner = true

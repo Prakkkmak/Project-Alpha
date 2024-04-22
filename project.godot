@@ -34,6 +34,7 @@ gdscript/warnings/unsafe_call_argument=2
 [dialogic]
 
 directories/dch_directory={
+"edmund": "res://resources/npc/Edmund/edmund.dch",
 "eldrin": "res://resources/npc/Eldrin/eldrin.dch",
 "hector": "res://resources/npc/hector/hector.dch",
 "little_king": "res://resources/dialogic/characters/little_king.dch",
@@ -41,6 +42,7 @@ directories/dch_directory={
 "violet": "res://resources/npc/violet/violet.dch"
 }
 directories/dtl_directory={
+"edmund_greetings": "res://resources/npc/Edmund/edmund_greetings.dtl",
 "eldrin_greetings": "res://resources/npc/Eldrin/eldrin_greetings.dtl",
 "eldrin_help": "res://resources/npc/Eldrin/eldrin_help.dtl",
 "eldrin_no_help": "res://resources/npc/Eldrin/eldrin_no_help.dtl",
@@ -86,6 +88,8 @@ variables={}
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
 window/per_pixel_transparency/allowed=true
 
 [editor_plugins]
@@ -163,3 +167,5 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
