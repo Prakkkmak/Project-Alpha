@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://blaq2x4aj3wiw"]
+[gd_scene load_steps=7 format=3 uid="uid://blaq2x4aj3wiw"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_k8f4a"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="2_ihsyo"]
 [ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="3_dtlwx"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="4_7iu6l"]
+[ext_resource type="PackedScene" uid="uid://cbq8v36wxld3d" path="res://scenes/entities/enemies/monter.tscn" id="5_yl4c7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mu1"]
 size = Vector2(26, 13.375)
@@ -62,3 +63,6 @@ shape = SubResource("RectangleShape2D_y1mu1")
 
 [node name="Marker2D3" type="Marker2D" parent="."]
 position = Vector2(588, -111)
+
+[node name="Monter" parent="." instance=ExtResource("5_yl4c7")]
+position = Vector2(-43, -68)
