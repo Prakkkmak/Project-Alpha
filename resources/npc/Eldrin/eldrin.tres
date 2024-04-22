@@ -9,7 +9,7 @@
 
 [resource]
 script = ExtResource("1_nysx6")
-name = ""
+name = "Eldrin"
 description = ""
 idle_texture = ExtResource("1_a2hin")
 walk_texture = ExtResource("3_3tglk")

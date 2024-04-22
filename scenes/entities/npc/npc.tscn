@@ -394,7 +394,7 @@ _data = {
 radius = 2.0
 height = 6.0
 
-[sub_resource type="Resource" id="Resource_3wra7"]
+[sub_resource type="Resource" id="Resource_qsjyo"]
 resource_local_to_scene = true
 script = ExtResource("6_kcih2")
 
@@ -428,7 +428,16 @@ shape = SubResource("CapsuleShape2D_oaebe")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
 position = Vector2(0, -3)
-interaction = SubResource("Resource_3wra7")
+interaction = SubResource("Resource_qsjyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_xq8mk")
+
+[node name="DebugName" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -6.0
+offset_top = -17.0
+offset_right = 42.0
+offset_bottom = 11.0
+scale = Vector2(0.25, 0.25)
+text = "Test"

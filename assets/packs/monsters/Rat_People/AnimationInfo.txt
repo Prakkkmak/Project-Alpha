@@ -1,0 +1,10 @@
+*Frame size* 
+
+- 32x32px: For all the animations.
+
+
+*Frame Duration*
+
+- 100ms: Attack Diagonal, Attack Orthogonal, Dmg, Die and Rubbish Impact.
+
+- 200ms:  Idle, Walk and Begging Clemency.

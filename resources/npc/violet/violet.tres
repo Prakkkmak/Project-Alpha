@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("1_c4d2j")
-name = ""
+name = "Violet"
 description = ""
 idle_texture = ExtResource("1_nxckm")
 walk_texture = ExtResource("3_gw8td")

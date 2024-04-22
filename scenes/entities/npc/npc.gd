@@ -1,12 +1,19 @@
-extends CharacterBody2D
+@tool
+class_name Npc extends CharacterBody2D
 
 @export var data: NpcData
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var interactable_component: InteractableComponent = $InteractableComponent
+@onready var debug_name: Label = %DebugName
 
 func _ready() -> void:
+	if not Engine.is_editor_hint():
+		debug_name.hide()  
+	else:
+		debug_name.show()  
+		debug_name.text = data.name
 	# Initialisation de la texture du sprite
 	sprite.texture = data.idle_texture
 	# Connecter les signaux d'animation
@@ -28,3 +35,5 @@ func setup_interactable_component() -> void:
 	# Configuration spécifique si l'interaction est de type TalkInteraction
 	if interactable_component.interaction is TalkInteraction:
 		(interactable_component.interaction as TalkInteraction).npc_data = data
+
+

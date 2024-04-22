@@ -1,0 +1,12 @@
+*Frame size* 
+
+- 32x32px: For all the animations.
+
+
+*Frame Duration*
+
+- 100ms: Spores_Attack, Die, Dmg 
+
+- 200ms: Activation, Deactivation, Idle, Jump
+
+

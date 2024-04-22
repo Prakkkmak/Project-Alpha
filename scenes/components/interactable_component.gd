@@ -1,6 +1,9 @@
 @tool
 class_name InteractableComponent extends Area2D
 
+signal interaction_ended
+signal interaction_resolved
+signal interaction_failed
 
 @export var interaction: Interaction
 @export var icon_sprite_texture: Texture2D
@@ -19,6 +22,11 @@ func _ready() -> void:
 func interact(source: Area2D) -> void:
 	if !interaction:
 		return
+
+	interaction.ended.connect(func() -> void: interaction_ended.emit())
+	interaction.failed.connect(func() -> void: interaction_failed.emit())
+	interaction.resolved.connect(func() -> void: interaction_resolved.emit())
+
 	interaction.call("perform_interaction", source, self)
 
 

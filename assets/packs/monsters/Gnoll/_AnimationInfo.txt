@@ -1,0 +1,17 @@
+*Frame size* 
+
+- 32x32px: For all the animations.
+
+
+*Frame Duration*
+
+- 100ms: Attack, Die and Dmg 
+
+- 200ms: Idle and Walk.
+
+
+
+NOTES:
+Effect_F is to be placed/rendered over the character, and Effect_B is to be placed/rendered under the character.
+
+

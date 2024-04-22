@@ -1,0 +1,10 @@
+*Frame size* 
+
+- 32x32px: For all the animations.
+
+
+*Frame Duration*
+
+- 100ms: Attack, Dmg, Die and Projectile Impact
+
+- 200ms:  Idle and Walk.

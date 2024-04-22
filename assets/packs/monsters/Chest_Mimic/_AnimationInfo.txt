@@ -1,0 +1,14 @@
+*Frame size* 
+
+- 32x32px: For all the animations.
+
+
+*Frame Duration*
+
+- 100ms: Die, Dmg, Activation, Deactivatio nand Walk.
+
+- 200ms:  Idle
+
+
+Note: Aggressive chest mimic is constantly attacking (biting) in the walking and idle animation, 
+thus there is not a specific attack animation for it.

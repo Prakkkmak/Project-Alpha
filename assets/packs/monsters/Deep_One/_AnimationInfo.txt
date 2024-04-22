@@ -1,0 +1,10 @@
+*Frame size* 
+
+- 32x32px: For all the animations.
+
+
+*Frame Duration*
+
+- 100ms: Attack, Dmg, Emerge and Landing
+
+- 200ms:  Die, Idle and Walk.
