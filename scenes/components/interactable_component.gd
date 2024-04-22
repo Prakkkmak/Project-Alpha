@@ -31,10 +31,10 @@ func interact(source: Area2D) -> void:
 	interaction.call("perform_interaction", source, self)
 
 
-func show_interact_key(show: bool) -> void:
+func show_interact_key(value: bool) -> void:
 	if !show_interact_key_on_hover:
 		return
-	if show:
+	if value:
 		icon.visible = true
 		animation_player.play("pop_in")
 	else:

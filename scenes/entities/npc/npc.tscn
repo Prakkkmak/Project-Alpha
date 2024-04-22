@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b34xkhcan768v" path="res://assets/characters/npc/Premade_NPCs/Carpenter/Minifantasy_NPCsCarpenterIdle.png" id="2_lo55i"]
 [ext_resource type="Script" path="res://scripts/interactions/talk_interaction.gd" id="6_kcih2"]
 
-[sub_resource type="Resource" id="Resource_0to26"]
+[sub_resource type="Resource" id="Resource_mkr2v"]
 resource_local_to_scene = true
 script = ExtResource("6_kcih2")
 
@@ -405,10 +405,11 @@ _data = {
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_4as06")
+teleportation_location_on_resolve = null
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_gkgf2")]
 position = Vector2(0, -3)
-interaction = SubResource("Resource_0to26")
+interaction = SubResource("Resource_mkr2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_xq8mk")

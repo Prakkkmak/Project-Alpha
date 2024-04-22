@@ -6,8 +6,8 @@ class_name LevelDisplayer extends PanelContainer
 
 @onready var level_name: Label = %LevelName
 
-func display_level(name: String) -> void:
-	level_name.text = name
+func display_level(level_name_text: String) -> void:
+	level_name.text = level_name_text
 	modulate = Color.TRANSPARENT
 	
 	var tween: Tween = get_tree().create_tween()

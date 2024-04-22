@@ -4,5 +4,5 @@ signal ended
 signal failed
 signal resolved
 
-func perform_interaction(source: Area2D, target: Area2D) -> void:
+func perform_interaction(_source: Area2D, _target: Area2D) -> void:
 	pass

@@ -33,7 +33,7 @@ func _input(event: InputEvent) -> void:
 
 var last_ground_type: String = ""
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var new_interaction_component_position: Vector2 = move_component.get_direction() * interaction_distance
 	if new_interaction_component_position.length() > 0:
 		interaction_component.position = new_interaction_component_position

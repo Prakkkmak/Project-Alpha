@@ -9,7 +9,7 @@ class_name EventInteraction extends Interaction
 
 var target_area: Area2D
 
-func perform_interaction(source: Area2D, target: Area2D) -> void:
+func perform_interaction(_source: Area2D, target: Area2D) -> void:
 	target_area = target
 	if GameState.get_state(event_name):
 		# Vérifie et lance immédiatement la timeline si les conditions sont remplies

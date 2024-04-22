@@ -41,7 +41,7 @@ func _on_player_teleport_requested(new_level: PackedScene, player_position: Vect
 	animation_player.animation_finished.connect(_on_fade_off_finished.bind(new_level, player_position), ConnectFlags.CONNECT_ONE_SHOT)
 
 
-func _on_fade_off_finished(name: String, new_level: PackedScene, player_position: Vector2) -> void:
+func _on_fade_off_finished(_name: String, new_level: PackedScene, player_position: Vector2) -> void:
 	current_level.remove_child(player)
 	remove_child(current_level)
 	current_level.queue_free()
@@ -54,6 +54,6 @@ func _on_fade_off_finished(name: String, new_level: PackedScene, player_position
 	
 	_connect_level_teleporters()
 
-func _on_fade_in_finished(name: String) -> void:
+func _on_fade_in_finished(_name: String) -> void:
 	level_displayer.display_level(current_level.name)
 	pass

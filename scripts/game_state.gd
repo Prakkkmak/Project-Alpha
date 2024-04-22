@@ -18,17 +18,17 @@ func get_state(key: String) -> bool:
 
 # Sauvegarde l'état du jeu dans un fichier
 func save_game() -> void:
-	var save_game: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	var save_game_access: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var json_string: String = JSON.stringify(_game_progress)
-	save_game.store_line(json_string)
-	save_game.close()
+	save_game_access.store_line(json_string)
+	save_game_access.close()
 
 # Charge l'état du jeu depuis un fichier
 func load_game() -> void:
 	if !FileAccess.file_exists(SAVE_PATH):
 		return
-	var save_game: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.READ)
-	var text: String = save_game.get_as_text()
+	var save_game_access: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var text: String = save_game_access.get_as_text()
 	_game_progress = JSON.parse_string(text)
 
 

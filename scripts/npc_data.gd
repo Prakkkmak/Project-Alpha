@@ -14,3 +14,7 @@ class_name NpcData extends Resource
 
 @export_category("Conditions")
 @export var conditions: Array[TimelineCondition]
+
+@export_category("questline")
+@export var next_data: NpcData
+@export var new_position: Vector2

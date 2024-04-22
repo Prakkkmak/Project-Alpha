@@ -2,7 +2,7 @@ class_name PickupInteraction extends Interaction
 
 @export var pickup: PickupData
 
-func perform_interaction(source: Area2D, target: Area2D) -> void:
+func perform_interaction(_source: Area2D, _target: Area2D) -> void:
 	var timeline: DialogicTimeline = create_timeline()
 	Dialogic.start(timeline)
 	Dialogic.timeline_ended.connect(_on_timeline_ended, ConnectFlags.CONNECT_ONE_SHOT)
