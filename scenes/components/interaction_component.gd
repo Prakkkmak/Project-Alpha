@@ -11,8 +11,8 @@ func _ready() -> void:
 
 func interact() -> void:
 	if get_interacted_object():
+		(get_interacted_object() as InteractableComponent).interaction_ended.connect(_on_interationc_ended)
 		get_interacted_object().call("interact", self)
-		(get_interacted_object() as InteractableComponent).interaction.ended.connect(_on_interationc_ended)
 
 
 func get_interacted_object() -> Area2D:

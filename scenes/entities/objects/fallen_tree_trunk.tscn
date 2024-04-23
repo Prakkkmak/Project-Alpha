@@ -25,6 +25,7 @@ event_name = "tree_fallen"
 timeline = ExtResource("4_s1el7")
 resolve_conditions = Array[ExtResource("3_llwqi")]([SubResource("Resource_a7pat")])
 delete_on_resolve = true
+condition = ""
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pbrx3"]
 radius = 3.0
@@ -42,6 +43,7 @@ texture = SubResource("AtlasTexture_ecwe0")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_w67ne")]
 interaction = SubResource("Resource_824j2")
+interaction_condition = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_pbrx3")

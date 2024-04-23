@@ -3,6 +3,33 @@
 [ext_resource type="Script" path="res://scenes/components/interactable_component.gd" id="1_764xl"]
 [ext_resource type="Texture2D" uid="uid://dd1ys8g1bsbqe" path="res://assets/input/Keyboard & Mouse/Default/keyboard_e.png" id="2_fry2v"]
 
+[sub_resource type="Animation" id="Animation_dxuuc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -25)]
+}
+
 [sub_resource type="Animation" id="Animation_8ewfl"]
 resource_name = "pop_in"
 length = 0.3
@@ -29,33 +56,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
 "values": [Vector2(0, -10), Vector2(0, -15)]
-}
-
-[sub_resource type="Animation" id="Animation_dxuuc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.1, 0.1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icon:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -25)]
 }
 
 [sub_resource type="Animation" id="Animation_c7ve4"]
@@ -99,6 +99,7 @@ collision_mask = 0
 script = ExtResource("1_764xl")
 icon_sprite_texture = ExtResource("2_fry2v")
 icon_position = Vector2(0, -25)
+interaction_condition = null
 
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false

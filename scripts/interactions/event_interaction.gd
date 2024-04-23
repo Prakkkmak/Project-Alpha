@@ -7,6 +7,7 @@ class_name EventInteraction extends Interaction
 @export var resolve_conditions: Array[TimelineCondition]
 @export var delete_on_resolve: bool = true
 
+
 var target_area: Area2D
 
 func perform_interaction(_source: Area2D, target: Area2D) -> void:
@@ -26,6 +27,7 @@ func _on_timeline_ended() -> void:
 	GameState.set_state(event_name)
 	ended.emit()
 
+
 func _launch_resolved_timeline() -> bool:
 	for condition: TimelineCondition in resolve_conditions:
 		if condition.are_conditions_met():
@@ -33,6 +35,7 @@ func _launch_resolved_timeline() -> bool:
 			Dialogic.timeline_ended.connect(_on_ended_event, ConnectFlags.CONNECT_ONE_SHOT)
 			return true  # Retourne vrai dès qu'une timeline est lancée
 	return false  # Retourne faux si aucune condition n'est remplie
+
 
 func _on_ended_event() -> void:
 	if resolve_timeline:

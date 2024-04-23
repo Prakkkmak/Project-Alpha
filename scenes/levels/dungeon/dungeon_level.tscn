@@ -66,3 +66,7 @@ position = Vector2(588, -111)
 
 [node name="Monter" parent="." instance=ExtResource("5_yl4c7")]
 position = Vector2(-43, -68)
+
+[node name="Book" parent="." instance=ExtResource("2_ihsyo")]
+position = Vector2(-53, -85)
+condition = "monster_obstacle_resolved"

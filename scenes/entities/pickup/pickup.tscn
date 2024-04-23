@@ -13,6 +13,7 @@ region = Rect2(128, 8, 8, 8)
 [sub_resource type="Resource" id="Resource_x58kc"]
 script = ExtResource("4_ct8s0")
 pickup = ExtResource("4_h0qcc")
+condition = ""
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2iin6"]
 radius = 3.0
@@ -25,6 +26,7 @@ texture = SubResource("AtlasTexture_viulg")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_f1mh5")]
 interaction = SubResource("Resource_x58kc")
+interaction_condition = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_2iin6")
