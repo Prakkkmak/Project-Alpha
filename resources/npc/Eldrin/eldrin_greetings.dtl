@@ -1,5 +1,5 @@
 eldrin: Ah, greetings, noble young monarch. I am the keeper of knowledge here, buried often in books and ancient scrolls. What curious matters press you to visit this old scholar today?
-- I've heard you are a master of legends. What's the most fascinating one you know?
+- I've heard you are a master of legends.
 	eldrin: Ah, legends are many, but the tale of the Whispering Lake is particularly mesmerizing. Imagine a lake whose waters murmur forgotten truths under the moonlight! Are you intrigued, my young king?
 	little_king: Very intrigued! How can one hear these truths?
 	eldrin: One must listen with the heart as much as with the ear. Secrets only reveal themselves to those prepared to listen.
@@ -7,8 +7,8 @@ eldrin: Ah, greetings, noble young monarch. I am the keeper of knowledge here, b
 	eldrin: Ah, kingship is fraught with challenges. My advice? Be like the oak, sturdy and fair, but also like the willow, flexible and understanding. Listen before you judge, speak after you have listened.
 	little_king: It's a difficult balance to achieve.
 	eldrin: True, true, but a king who seeks balance is already on the right path. Wisdom, after all, is an endless quest.
-- I've heard you love riddles. Could you offer one for fun?
-	eldrin: With pleasure! Here's one\: I speak without a mouth and hear without ears. I have nobody, but I come alive with wind. What am I?
+- I've heard you love riddles.
+	eldrin: For sure ! Here's one\: I speak without a mouth and hear without ears. I have nobody, but I come alive with wind. What am I?
 	little_king: That’s a tough one... Can you tell me the answer?
 	eldrin: Ah, the answer is an echo! Riddles are a fine way to sharpen the mind, aren't they? Ready for another, or shall we chat about something else?
 	little_king: I think I'll ponder that a bit more on my own. Thank you for your wisdom, but I must continue my journey now. Farewell!

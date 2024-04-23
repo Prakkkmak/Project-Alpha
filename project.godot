@@ -43,6 +43,11 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "edmund_greetings": "res://resources/npc/Edmund/edmund_greetings.dtl",
+"edmund_help": "res://resources/npc/Edmund/edmund_help.dtl",
+"edmund_help_monster": "res://resources/npc/Edmund/edmund_help_monster.dtl",
+"edmund_no_help": "res://resources/npc/Edmund/edmund_no_help.dtl",
+"edmund_talk": "res://resources/npc/Edmund/edmund_talk.dtl",
+"edmund_talk_monster": "res://resources/npc/Edmund/edmund_talk_monster.dtl",
 "eldrin_greetings": "res://resources/npc/Eldrin/eldrin_greetings.dtl",
 "eldrin_help": "res://resources/npc/Eldrin/eldrin_help.dtl",
 "eldrin_no_help": "res://resources/npc/Eldrin/eldrin_no_help.dtl",
