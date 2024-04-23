@@ -54,6 +54,7 @@ directories/dtl_directory={
 "hector_talk": "res://resources/npc/hector/hector_talk.dtl",
 "violet_greetings": "res://resources/npc/violet/violet_greetings.dtl",
 "violet_help": "res://resources/npc/violet/violet_help.dtl",
+"violet_no_help": "res://resources/npc/violet/violet_no_help.dtl",
 "violet_talk": "res://resources/npc/violet/violet_talk.dtl"
 }
 layout/style_list=["res://resources/dialogic/style.tres", "res://resources/dialogic/style_2.tres"]
