@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://blaq2x4aj3wiw"]
+[gd_scene load_steps=12 format=3 uid="uid://blaq2x4aj3wiw"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_k8f4a"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="2_ihsyo"]
 [ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="3_dtlwx"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="4_7iu6l"]
 [ext_resource type="PackedScene" uid="uid://cbq8v36wxld3d" path="res://scenes/entities/enemies/monter.tscn" id="5_yl4c7"]
+[ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="6_2d5ye"]
+[ext_resource type="Script" path="res://scenes/levels/dungeon/crown_impossible.gd" id="6_84hhy"]
+[ext_resource type="Script" path="res://scripts/interactions/event_interaction.gd" id="7_ovhas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mu1"]
 size = Vector2(26, 13.375)
+
+[sub_resource type="Resource" id="Resource_dhi6k"]
+script = ExtResource("7_ovhas")
+event_name = ""
+resolve_conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
+delete_on_resolve = true
+condition = ""
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t34is"]
+radius = 6.0
 
 [node name="DungeonLevel" type="Node2D"]
 
@@ -70,3 +83,14 @@ position = Vector2(-43, -68)
 [node name="Book" parent="." instance=ExtResource("2_ihsyo")]
 position = Vector2(-53, -85)
 condition = "monster_obstacle_resolved"
+
+[node name="CrownImpossible" type="Node2D" parent="."]
+script = ExtResource("6_84hhy")
+
+[node name="InteractableComponent" parent="CrownImpossible" instance=ExtResource("6_2d5ye")]
+interaction = SubResource("Resource_dhi6k")
+interaction_condition = ""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrownImpossible/InteractableComponent"]
+position = Vector2(588, -181)
+shape = SubResource("CircleShape2D_t34is")

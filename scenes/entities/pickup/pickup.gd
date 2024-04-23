@@ -4,6 +4,7 @@ extends Node2D
 @export var show_hint: bool = true
 @export var condition: String
 
+
 @onready var interactable_component: InteractableComponent = $InteractableComponent
 @onready var sprite: Sprite2D = $Sprite2D
 
