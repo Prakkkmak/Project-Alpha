@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=38 format=3 uid="uid://bx0t4ntso4mo1"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=41 format=3 uid="uid://bx0t4ntso4mo1"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_dgfkp"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund.dch" id="1_vb453"]
@@ -71,10 +71,15 @@ script = ExtResource("2_cbunp")
 state = "monster_defeated_completed"
 value = false
 
+[sub_resource type="Resource" id="Resource_db343"]
+script = ExtResource("2_cbunp")
+state = "edmund_help_monster_gold_completed"
+value = false
+
 [sub_resource type="Resource" id="Resource_ksext"]
 script = ExtResource("3_t8sof")
 name = "no_help"
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if"), SubResource("Resource_h5s13"), SubResource("Resource_7a8cg"), SubResource("Resource_3wsgp")])
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if"), SubResource("Resource_h5s13"), SubResource("Resource_7a8cg"), SubResource("Resource_3wsgp"), SubResource("Resource_db343")])
 timeline = ExtResource("5_ngf0o")
 
 [sub_resource type="Resource" id="Resource_gbbhx"]
@@ -87,10 +92,15 @@ script = ExtResource("2_cbunp")
 state = "dungeon_opened"
 value = true
 
+[sub_resource type="Resource" id="Resource_2sc26"]
+script = ExtResource("2_cbunp")
+state = "edmund_help_monster_gold_completed"
+value = false
+
 [sub_resource type="Resource" id="Resource_lguts"]
 script = ExtResource("3_t8sof")
 name = "monster_completed"
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_gbbhx"), SubResource("Resource_2w2br")])
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_gbbhx"), SubResource("Resource_2w2br"), SubResource("Resource_2sc26")])
 timeline = ExtResource("8_2pa4v")
 
 [sub_resource type="Resource" id="Resource_yrtu2"]
@@ -103,10 +113,15 @@ script = ExtResource("2_cbunp")
 state = "dungeon_opened"
 value = true
 
+[sub_resource type="Resource" id="Resource_fyhcf"]
+script = ExtResource("2_cbunp")
+state = "edmund_help_monster_gold_completed"
+value = false
+
 [sub_resource type="Resource" id="Resource_ms1mg"]
 script = ExtResource("3_t8sof")
 name = "open_completed"
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_yrtu2"), SubResource("Resource_gt8wa")])
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_yrtu2"), SubResource("Resource_gt8wa"), SubResource("Resource_fyhcf")])
 timeline = ExtResource("8_2pa4v")
 
 [sub_resource type="Resource" id="Resource_ldok0"]
