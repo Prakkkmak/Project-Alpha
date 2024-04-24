@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=37 format=3 uid="uid://bx0t4ntso4mo1"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=38 format=3 uid="uid://bx0t4ntso4mo1"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_dgfkp"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund.dch" id="1_vb453"]
@@ -66,10 +66,15 @@ script = ExtResource("2_cbunp")
 state = "violet_help_monster_completed"
 value = false
 
+[sub_resource type="Resource" id="Resource_3wsgp"]
+script = ExtResource("2_cbunp")
+state = "monster_defeated_completed"
+value = false
+
 [sub_resource type="Resource" id="Resource_ksext"]
 script = ExtResource("3_t8sof")
 name = "no_help"
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if"), SubResource("Resource_h5s13"), SubResource("Resource_7a8cg")])
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if"), SubResource("Resource_h5s13"), SubResource("Resource_7a8cg"), SubResource("Resource_3wsgp")])
 timeline = ExtResource("5_ngf0o")
 
 [sub_resource type="Resource" id="Resource_gbbhx"]
