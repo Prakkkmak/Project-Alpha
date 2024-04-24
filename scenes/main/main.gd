@@ -12,6 +12,7 @@ extends Node
 @onready var player: Player = %Player
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var level_displayer: LevelDisplayer = %LevelDisplayer
+@onready var debug_panel: PanelContainer = $CanvasLayer/MarginContainer/DebugPanel
 
 
 const ANIM_FADE_OFF: String = "fade_off"
@@ -24,12 +25,16 @@ func _ready() -> void:
 	if override_level:
 		_on_player_teleport_requested(override_level, Vector2.ZERO)
 	if debug:
+		debug_panel.show()
 		for state_acquiered: String in states_acquiered:
 			GameState.set_state(state_acquiered, true)
+	else:
+		debug_panel.hide()
 
 
 func end_game() -> void:
 	get_tree().change_scene_to_packed(end_screen)
+	GameState.clear()
 
 
 func _connect_level_teleporters() -> void:

@@ -67,7 +67,8 @@ process_mode = 3
 script = ExtResource("1_siyhi")
 end_screen = ExtResource("2_y14he")
 states_acquiered = Array[String](["-gold_acquired", "-edmund_help_gold_completed", "-edmund_help_monster_gold_completed", "-eldrin_help_completed", "-edmund_greeted", "-eldrin_help_completed", "dungeon_opened", "monster_encountered", "-flower_acquired", "violet_help_monster_completed", "edmund_greeted"])
-debug = true
+debug = null
+end_condition = null
 
 [node name="Level" parent="." instance=ExtResource("3_50in6")]
 unique_name_in_owner = true
@@ -77,7 +78,7 @@ position = Vector2(5, 5)
 [node name="Player" parent="." instance=ExtResource("1_prgmk")]
 unique_name_in_owner = true
 process_mode = 1
-position = Vector2(217, 245)
+position = Vector2(12, -143)
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
 unique_name_in_owner = true
@@ -106,10 +107,10 @@ color = Color(0, 0, 0, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 27.0
-offset_right = -2.0
-offset_bottom = 27.0
+offset_left = -6.0
+offset_top = -40.0
+offset_right = -6.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
@@ -119,6 +120,7 @@ theme_override_constants/margin_bottom = 50
 metadata/_edit_use_anchors_ = true
 
 [node name="DebugPanel" parent="CanvasLayer/MarginContainer" instance=ExtResource("9_0gkj4")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0

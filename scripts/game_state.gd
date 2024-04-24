@@ -17,6 +17,11 @@ func set_state(key: String, value: bool = true) -> void:
 func get_state(key: String) -> bool:
 	return _game_progress.get(key.to_lower(), false)
 
+
+func clear() -> void:
+	_game_progress = {}
+
+
 func has_key(key: String) -> bool:
 	return _game_progress.find_key(key) != null
 
