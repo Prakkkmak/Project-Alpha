@@ -6,6 +6,7 @@ extends StaticBody2D
 
 
 func _ready() -> void:
+	animated_sprite_2d.play("idle")
 	interactable_component.interaction_resolved.connect(_on_event_resolved)
 
 

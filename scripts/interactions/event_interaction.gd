@@ -33,12 +33,14 @@ func _launch_resolved_timeline() -> bool:
 		if condition.are_conditions_met():
 			Dialogic.start(condition.timeline)
 			Dialogic.timeline_ended.connect(_on_ended_event, ConnectFlags.CONNECT_ONE_SHOT)
+			GameState.set_state(condition.name + "_completed")
 			return true  # Retourne vrai dès qu'une timeline est lancée
 	return false  # Retourne faux si aucune condition n'est remplie
 
 
 func _on_ended_event() -> void:
 	if resolve_timeline:
+		#FIXME Je crois que c'est a supprimer
 		Dialogic.start(resolve_timeline)
 		Dialogic.timeline_ended.connect(_on_resolve_resolve_ended, ConnectFlags.CONNECT_ONE_SHOT)
 		ended.emit()

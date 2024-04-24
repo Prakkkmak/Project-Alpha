@@ -14,6 +14,6 @@ func _ready() -> void:
 	sprite.texture = pickup.world_texture
 	if interactable_component.interaction is PickupInteraction:
 		(interactable_component.interaction as PickupInteraction).pickup = pickup
+		(interactable_component.interaction as PickupInteraction).ended.connect(queue_free)
 	interactable_component.show_interact_key_on_hover = show_hint
 	interactable_component.interaction_condition = condition
-	
