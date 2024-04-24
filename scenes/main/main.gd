@@ -2,6 +2,7 @@ extends Node
 
 @export var end_screen: PackedScene
 @export var override_level: PackedScene
+@export var states_acquiered: Array[String] = []
 
 @export_category("conditions")
 @export var end_condition: String = "crown_acquired"
@@ -26,6 +27,8 @@ func _ready() -> void:
 	current_level.add_child(player)
 	if override_level:
 		_on_player_teleport_requested(override_level, Vector2.ZERO)
+	for state_acquiered: String in states_acquiered:
+		GameState.set_state(state_acquiered, true)
 
 
 func end_game() -> void:
