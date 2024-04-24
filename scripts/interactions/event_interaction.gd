@@ -36,15 +36,15 @@ func _launch_resolved_timeline() -> bool:
 	for condition: TimelineCondition in resolve_conditions:
 		if condition.are_conditions_met():
 			Dialogic.start(condition.timeline)
-			Dialogic.timeline_ended.connect(_on_ended_event, ConnectFlags.CONNECT_ONE_SHOT)
-			GameState.set_state(condition.name + "_completed")
+			Dialogic.timeline_ended.connect(_on_ended_event.bind(condition.name), ConnectFlags.CONNECT_ONE_SHOT)
 			return true  # Retourne vrai dès qu'une timeline est lancée
 	return false  # Retourne faux si aucune condition n'est remplie
 
 
-func _on_ended_event() -> void:
+func _on_ended_event(condition_name: String) -> void:
 	if resolve_timeline:
 		#FIXME Je crois que c'est a supprimer
+		GameState.set_state(condition_name + "_completed")
 		resolved.emit()
 		ended.emit()
 		if delete_on_resolve and target_area and target_area.get_parent() is Node2D:

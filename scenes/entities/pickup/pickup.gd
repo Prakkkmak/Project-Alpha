@@ -9,6 +9,10 @@ extends Node2D
 @onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
+	print(pickup.name + "_acquired")
+	print(GameState.has_key(pickup.name + "_acquired"))
+	if GameState.has_key(pickup.name + "_acquired"):
+		queue_free()
 	if !pickup:
 		return
 	sprite.texture = pickup.world_texture

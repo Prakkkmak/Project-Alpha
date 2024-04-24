@@ -17,6 +17,10 @@ func set_state(key: String, value: bool = true) -> void:
 func get_state(key: String) -> bool:
 	return _game_progress.get(key.to_lower(), false)
 
+func has_key(key: String) -> bool:
+	return _game_progress.find_key(key) != null
+
+
 func use_state(state: String) -> void:
 	print("use state " + state)
 	#HACK Change the pickups to false
