@@ -21,6 +21,7 @@ scene = ExtResource("9_jwro6")
 overrides = {
 "box_color_custom": "Color(1, 1, 1, 1)",
 "box_color_use_global": "false",
+"box_margin_bottom": "30.0",
 "name_label_box_modulate": "Color(1, 1, 1, 1)",
 "name_label_box_use_global_color": "false",
 "text_custom_color": "Color(1, 1, 1, 0)",
@@ -57,4 +58,4 @@ script = ExtResource("1_pxnym")
 name = "style"
 base_overrides = {}
 layers = Array[ExtResource("2_5b511")]([SubResource("Resource_baekk"), SubResource("Resource_q6ro8"), SubResource("Resource_houny"), SubResource("Resource_nkp45"), SubResource("Resource_48sm7"), SubResource("Resource_54522"), SubResource("Resource_3cn8b")])
-metadata/_latest_layer = 1
+metadata/_latest_layer = 0
