@@ -68,7 +68,7 @@ directories/dtl_directory={
 "violet_no_help": "res://resources/npc/violet/violet_no_help.dtl",
 "violet_talk": "res://resources/npc/violet/violet_talk.dtl"
 }
-layout/style_list=["res://resources/dialogic/style.tres", "res://resources/dialogic/default_style.tres"]
+layout/style_list=["res://resources/dialogic/default_style.tres"]
 layout/default_style="res://resources/dialogic/default_style.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01

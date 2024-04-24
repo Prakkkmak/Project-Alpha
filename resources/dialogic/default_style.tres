@@ -54,6 +54,8 @@ overrides = {}
 [resource]
 script = ExtResource("10_775w4")
 name = "default_style"
-base_overrides = {}
+base_overrides = {
+"global_font_size": "24.0"
+}
 layers = Array[ExtResource("2_bppgg")]([SubResource("Resource_0njyp"), SubResource("Resource_t6lf2"), SubResource("Resource_ekuei"), SubResource("Resource_ns8se"), SubResource("Resource_bjyin"), SubResource("Resource_58ft4"), SubResource("Resource_6g1it"), SubResource("Resource_6nd0i")])
-metadata/_latest_layer = -1
+metadata/_latest_layer = 2
