@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=22 format=3 uid="uid://bx0t4ntso4mo1"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=26 format=3 uid="uid://bx0t4ntso4mo1"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_dgfkp"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund.dch" id="1_vb453"]
@@ -10,27 +10,8 @@
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_talk_monster.dtl" id="4_ooeb6"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_no_help.dtl" id="5_ngf0o"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_talk.dtl" id="5_qkmao"]
+[ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_help.dtl" id="5_tt71b"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_help_monster.dtl" id="6_aglml"]
-
-[sub_resource type="Resource" id="Resource_ax7s1"]
-script = ExtResource("2_cbunp")
-state = "tower_actived"
-value = true
-
-[sub_resource type="Resource" id="Resource_wlrd2"]
-script = ExtResource("3_t8sof")
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_ax7s1")])
-timeline = ExtResource("4_ooeb6")
-
-[sub_resource type="Resource" id="Resource_bk8if"]
-script = ExtResource("2_cbunp")
-state = "monster_encoutered"
-value = true
-
-[sub_resource type="Resource" id="Resource_ksext"]
-script = ExtResource("3_t8sof")
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if")])
-timeline = ExtResource("5_ngf0o")
 
 [sub_resource type="Resource" id="Resource_mv3vt"]
 script = ExtResource("2_cbunp")
@@ -44,12 +25,13 @@ value = true
 
 [sub_resource type="Resource" id="Resource_g0ne0"]
 script = ExtResource("3_t8sof")
+name = "help_monster_gold"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_mv3vt"), SubResource("Resource_binu0")])
 timeline = ExtResource("6_aglml")
 
 [sub_resource type="Resource" id="Resource_g12aq"]
 script = ExtResource("2_cbunp")
-state = "violet__completed"
+state = "violet_help_completed"
 value = true
 
 [sub_resource type="Resource" id="Resource_ld0ri"]
@@ -59,8 +41,47 @@ value = true
 
 [sub_resource type="Resource" id="Resource_wc621"]
 script = ExtResource("3_t8sof")
+name = "help_monster_violet"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_g12aq"), SubResource("Resource_ld0ri")])
 timeline = ExtResource("6_aglml")
+
+[sub_resource type="Resource" id="Resource_vxlf0"]
+script = ExtResource("2_cbunp")
+state = "gold_acquired"
+value = true
+
+[sub_resource type="Resource" id="Resource_sn5tm"]
+script = ExtResource("3_t8sof")
+name = "help_gold"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_vxlf0")])
+timeline = ExtResource("5_tt71b")
+
+[sub_resource type="Resource" id="Resource_ax7s1"]
+script = ExtResource("2_cbunp")
+state = "dungeon_opened"
+value = true
+
+[sub_resource type="Resource" id="Resource_rjljx"]
+script = ExtResource("2_cbunp")
+state = "monster_encoutered"
+value = false
+
+[sub_resource type="Resource" id="Resource_wlrd2"]
+script = ExtResource("3_t8sof")
+name = "talk_monster"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_ax7s1"), SubResource("Resource_rjljx")])
+timeline = ExtResource("4_ooeb6")
+
+[sub_resource type="Resource" id="Resource_bk8if"]
+script = ExtResource("2_cbunp")
+state = "monster_encoutered"
+value = true
+
+[sub_resource type="Resource" id="Resource_ksext"]
+script = ExtResource("3_t8sof")
+name = ""
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if")])
+timeline = ExtResource("5_ngf0o")
 
 [resource]
 script = ExtResource("1_dgfkp")
@@ -71,5 +92,5 @@ walk_texture = ExtResource("3_y3frh")
 character = ExtResource("1_vb453")
 greetings_timeline = ExtResource("2_j8lcn")
 talk_timeline = ExtResource("5_qkmao")
-conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_wlrd2"), SubResource("Resource_ksext"), SubResource("Resource_g0ne0"), SubResource("Resource_wc621")])
+conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_wc621"), SubResource("Resource_sn5tm"), SubResource("Resource_wlrd2"), SubResource("Resource_ksext")])
 new_position = Vector2(0, 0)

@@ -1,7 +1,8 @@
-king: Arf.. I can't cassé ce tronc d'arbre.
-king: If seulement someone can help me.
-Teest
-<Empty Text Event>
-join king 1
-tezrzer
-if {} == "":
+narrator: (On the forest path, a fallen trunk blocks the way. Beside it, an axe, abandoned yet inviting.)
+little_king: Perhaps this axe can clear our path.
+narrator: (You grasp the axe with both hands, feeling its weight and balance. With a hopeful glance at your companions, you position yourself before the imposing trunk)
+little_king: Here goes nothing!
+narrator: (You swing with all your might, but your inexperience shows. The axe head strikes the trunk awkwardly, barely making a dent.)
+little_king: It's tougher than it looks!
+narrator: (You try again, straining with each swing, but the trunk remains stubbornly in place. It's clear that brute strength alone won't solve this problem.)
+little_king: I guess chopping wood isn't as easy as it seems. We'll need another way around.

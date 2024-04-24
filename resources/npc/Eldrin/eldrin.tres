@@ -18,6 +18,7 @@ value = true
 
 [sub_resource type="Resource" id="Resource_5e8kh"]
 script = ExtResource("3_pwwpn")
+name = "no_help"
 conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_n7gnu")])
 timeline = ExtResource("5_6reic")
 
@@ -33,6 +34,7 @@ value = true
 
 [sub_resource type="Resource" id="Resource_cnwci"]
 script = ExtResource("3_pwwpn")
+name = "help"
 conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_fj04n"), SubResource("Resource_biy1q")])
 timeline = ExtResource("4_lg2i8")
 
@@ -45,5 +47,5 @@ walk_texture = ExtResource("3_3tglk")
 character = ExtResource("1_0rko3")
 greetings_timeline = ExtResource("2_r6qii")
 talk_timeline = ExtResource("5_p80bd")
-conditions = Array[ExtResource("3_pwwpn")]([SubResource("Resource_5e8kh"), SubResource("Resource_cnwci")])
+conditions = Array[ExtResource("3_pwwpn")]([SubResource("Resource_5e8kh"), SubResource("Resource_cnwci"), null])
 new_position = Vector2(0, 0)

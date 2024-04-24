@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://scripts/interactions/event_interaction.gd" id="3_c4yah"]
 [ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="3_llwqi"]
 [ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="3_ptnsq"]
-[ext_resource type="Resource" path="res://resources/dialogic/timelines/end.dtl" id="4_ju4ir"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/first_timeline.dtl" id="4_s1el7"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/fallen_tree_resolved.dtl" id="5_pqn57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3rvf"]
 size = Vector2(17, 5)
@@ -17,13 +17,14 @@ region = Rect2(232, 176, 24, 16)
 
 [sub_resource type="Resource" id="Resource_52s22"]
 script = ExtResource("3_ptnsq")
-state = "hector__completed"
+state = "hector_help_completed"
 value = true
 
 [sub_resource type="Resource" id="Resource_a7pat"]
 script = ExtResource("3_llwqi")
+name = ""
 conditions = Array[ExtResource("3_ptnsq")]([SubResource("Resource_52s22")])
-timeline = ExtResource("4_ju4ir")
+timeline = ExtResource("5_pqn57")
 
 [sub_resource type="Resource" id="Resource_824j2"]
 script = ExtResource("3_c4yah")

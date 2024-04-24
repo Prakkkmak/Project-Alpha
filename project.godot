@@ -53,6 +53,7 @@ directories/dtl_directory={
 "eldrin_no_help": "res://resources/npc/Eldrin/eldrin_no_help.dtl",
 "eldrin_talk": "res://resources/npc/Eldrin/eldrin_talk.dtl",
 "end": "res://resources/dialogic/timelines/end.dtl",
+"fallen_tree_resolved": "res://resources/dialogic/timelines/fallen_tree_resolved.dtl",
 "first_timeline": "res://resources/dialogic/timelines/first_timeline.dtl",
 "hector_greetings": "res://resources/npc/hector/hector_greetings.dtl",
 "hector_help": "res://resources/npc/hector/hector_help.dtl",
