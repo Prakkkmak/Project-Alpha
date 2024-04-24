@@ -45,9 +45,10 @@ func _launch_resolved_timeline() -> bool:
 func _on_ended_event() -> void:
 	if resolve_timeline:
 		#FIXME Je crois que c'est a supprimer
-		Dialogic.start(resolve_timeline)
-		Dialogic.timeline_ended.connect(_on_resolve_resolve_ended, ConnectFlags.CONNECT_ONE_SHOT)
+		resolved.emit()
 		ended.emit()
+		if delete_on_resolve and target_area and target_area.get_parent() is Node2D:
+			(target_area.get_parent() as Node2D).queue_free()
 	else:
 		_on_resolve_resolve_ended()
 	
@@ -56,5 +57,4 @@ func _on_ended_event() -> void:
 func _on_resolve_resolve_ended() -> void:
 	ended.emit()
 	resolved.emit()
-	if delete_on_resolve and target_area and target_area.owner is Node2D:
-		(target_area.owner as Node2D).queue_free()
+	

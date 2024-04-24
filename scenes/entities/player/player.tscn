@@ -1237,8 +1237,7 @@ position = Vector2(5, -2)
 shape = SubResource("CircleShape2D_arpns")
 
 [node name="MoveComponent" parent="." node_paths=PackedStringArray("_character_body") instance=ExtResource("2_lckbn")]
-_max_speed = 200.0
-_acceleration = 30.0
+_max_speed = 100.0
 _character_body = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

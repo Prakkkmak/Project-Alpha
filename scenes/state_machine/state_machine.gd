@@ -47,8 +47,6 @@ func transition(from_state: State, to_state: State) -> void:
 	to_state._enter()
 	
 	current_state = to_state
-	print("New state:" + current_state.name)
-
 
 func _on_child_transition(from_state: State, to_state: State) -> void:
 	transition.call_deferred(from_state, to_state)
