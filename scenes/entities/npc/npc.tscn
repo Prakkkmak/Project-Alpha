@@ -402,7 +402,7 @@ _data = {
 "walk_up_right": SubResource("Animation_c8ahe")
 }
 
-[node name="Npc" type="CharacterBody2D"]
+[node name="Npc" type="CharacterBody2D" groups=["npc"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_4as06")

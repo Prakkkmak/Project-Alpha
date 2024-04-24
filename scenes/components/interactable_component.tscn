@@ -99,7 +99,6 @@ collision_mask = 0
 script = ExtResource("1_764xl")
 icon_sprite_texture = ExtResource("2_fry2v")
 icon_position = Vector2(0, -25)
-interaction_condition = null
 
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false

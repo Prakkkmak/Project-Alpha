@@ -11,6 +11,10 @@ class_name EventInteraction extends Interaction
 var target_area: Area2D
 
 func perform_interaction(_source: Area2D, target: Area2D) -> void:
+	if !timeline:
+		push_error("No timeline")
+		ended.emit()
+		return
 	target_area = target
 	if GameState.get_state(event_name):
 		# Vérifie et lance immédiatement la timeline si les conditions sont remplies
