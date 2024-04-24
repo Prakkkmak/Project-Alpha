@@ -1282,6 +1282,7 @@ idle_state = NodePath("../IdleState")
 [node name="RunState" parent="StateMachine" node_paths=PackedStringArray("move_component", "animated_player", "idle_state", "walk_state") instance=ExtResource("18_0g43n")]
 move_component = NodePath("../../MoveComponent")
 animated_player = NodePath("../../AnimationPlayer")
+run_time = 0.5
 idle_state = NodePath("../IdleState")
 walk_state = NodePath("../WalkState")
 
