@@ -56,6 +56,17 @@ name = "help_gold"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_vxlf0")])
 timeline = ExtResource("5_tt71b")
 
+[sub_resource type="Resource" id="Resource_bk8if"]
+script = ExtResource("2_cbunp")
+state = "monster_encountered"
+value = true
+
+[sub_resource type="Resource" id="Resource_ksext"]
+script = ExtResource("3_t8sof")
+name = "no_help"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if")])
+timeline = ExtResource("5_ngf0o")
+
 [sub_resource type="Resource" id="Resource_ax7s1"]
 script = ExtResource("2_cbunp")
 state = "dungeon_opened"
@@ -72,17 +83,6 @@ name = "talk_monster"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_ax7s1"), SubResource("Resource_rjljx")])
 timeline = ExtResource("4_ooeb6")
 
-[sub_resource type="Resource" id="Resource_bk8if"]
-script = ExtResource("2_cbunp")
-state = "monster_encoutered"
-value = true
-
-[sub_resource type="Resource" id="Resource_ksext"]
-script = ExtResource("3_t8sof")
-name = ""
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if")])
-timeline = ExtResource("5_ngf0o")
-
 [resource]
 script = ExtResource("1_dgfkp")
 name = "Edmund"
@@ -92,5 +92,5 @@ walk_texture = ExtResource("3_y3frh")
 character = ExtResource("1_vb453")
 greetings_timeline = ExtResource("2_j8lcn")
 talk_timeline = ExtResource("5_qkmao")
-conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_wc621"), SubResource("Resource_sn5tm"), SubResource("Resource_wlrd2"), SubResource("Resource_ksext")])
+conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_wc621"), SubResource("Resource_sn5tm"), SubResource("Resource_ksext"), SubResource("Resource_wlrd2")])
 new_position = Vector2(103, 242)

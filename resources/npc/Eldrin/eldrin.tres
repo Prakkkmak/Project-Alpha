@@ -11,9 +11,25 @@
 [ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_no_help.dtl" id="5_6reic"]
 [ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_talk.dtl" id="5_p80bd"]
 
+[sub_resource type="Resource" id="Resource_biy1q"]
+script = ExtResource("2_ryejn")
+state = "book_acquired"
+value = true
+
+[sub_resource type="Resource" id="Resource_hcddk"]
+script = ExtResource("2_ryejn")
+state = "riddle_encoutered"
+value = true
+
+[sub_resource type="Resource" id="Resource_cnwci"]
+script = ExtResource("3_pwwpn")
+name = "help"
+conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_biy1q"), SubResource("Resource_hcddk")])
+timeline = ExtResource("4_lg2i8")
+
 [sub_resource type="Resource" id="Resource_n7gnu"]
 script = ExtResource("2_ryejn")
-state = "riddle_encountered"
+state = "riddle_encoutered"
 value = true
 
 [sub_resource type="Resource" id="Resource_5e8kh"]
@@ -21,22 +37,6 @@ script = ExtResource("3_pwwpn")
 name = "no_help"
 conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_n7gnu")])
 timeline = ExtResource("5_6reic")
-
-[sub_resource type="Resource" id="Resource_fj04n"]
-script = ExtResource("2_ryejn")
-state = "riddle_encoutered"
-value = true
-
-[sub_resource type="Resource" id="Resource_biy1q"]
-script = ExtResource("2_ryejn")
-state = "book_acquired"
-value = true
-
-[sub_resource type="Resource" id="Resource_cnwci"]
-script = ExtResource("3_pwwpn")
-name = "help"
-conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_fj04n"), SubResource("Resource_biy1q")])
-timeline = ExtResource("4_lg2i8")
 
 [resource]
 script = ExtResource("1_nysx6")
@@ -47,5 +47,5 @@ walk_texture = ExtResource("3_3tglk")
 character = ExtResource("1_0rko3")
 greetings_timeline = ExtResource("2_r6qii")
 talk_timeline = ExtResource("5_p80bd")
-conditions = Array[ExtResource("3_pwwpn")]([SubResource("Resource_5e8kh"), SubResource("Resource_cnwci")])
+conditions = Array[ExtResource("3_pwwpn")]([SubResource("Resource_cnwci"), SubResource("Resource_5e8kh")])
 new_position = Vector2(0, 0)
