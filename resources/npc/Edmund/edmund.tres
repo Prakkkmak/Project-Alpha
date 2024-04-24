@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=33 format=3 uid="uid://bx0t4ntso4mo1"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=36 format=3 uid="uid://bx0t4ntso4mo1"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_dgfkp"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund.dch" id="1_vb453"]
@@ -51,6 +51,22 @@ name = "help_gold"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_vxlf0"), SubResource("Resource_lj0vy")])
 timeline = ExtResource("5_tt71b")
 
+[sub_resource type="Resource" id="Resource_bk8if"]
+script = ExtResource("2_cbunp")
+state = "monster_encountered"
+value = true
+
+[sub_resource type="Resource" id="Resource_h5s13"]
+script = ExtResource("2_cbunp")
+state = "dungeon_opened"
+value = true
+
+[sub_resource type="Resource" id="Resource_ksext"]
+script = ExtResource("3_t8sof")
+name = "no_help"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if"), SubResource("Resource_h5s13")])
+timeline = ExtResource("5_ngf0o")
+
 [sub_resource type="Resource" id="Resource_gbbhx"]
 script = ExtResource("2_cbunp")
 state = "violet_help_monster_completed"
@@ -65,6 +81,22 @@ value = true
 script = ExtResource("3_t8sof")
 name = "monster_completed"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_gbbhx"), SubResource("Resource_2w2br")])
+timeline = ExtResource("8_2pa4v")
+
+[sub_resource type="Resource" id="Resource_yrtu2"]
+script = ExtResource("2_cbunp")
+state = "violet_help_open_completed"
+value = true
+
+[sub_resource type="Resource" id="Resource_gt8wa"]
+script = ExtResource("2_cbunp")
+state = "dungeon_opened"
+value = true
+
+[sub_resource type="Resource" id="Resource_ms1mg"]
+script = ExtResource("3_t8sof")
+name = "open_completed"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_yrtu2"), SubResource("Resource_gt8wa")])
 timeline = ExtResource("8_2pa4v")
 
 [sub_resource type="Resource" id="Resource_ldok0"]
@@ -82,22 +114,6 @@ script = ExtResource("3_t8sof")
 name = "monster_defeted"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_ldok0"), SubResource("Resource_bc8m8")])
 timeline = ExtResource("4_ooeb6")
-
-[sub_resource type="Resource" id="Resource_bk8if"]
-script = ExtResource("2_cbunp")
-state = "monster_encountered"
-value = true
-
-[sub_resource type="Resource" id="Resource_h5s13"]
-script = ExtResource("2_cbunp")
-state = "dungeon_opened"
-value = true
-
-[sub_resource type="Resource" id="Resource_ksext"]
-script = ExtResource("3_t8sof")
-name = "no_help"
-conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if"), SubResource("Resource_h5s13")])
-timeline = ExtResource("5_ngf0o")
 
 [sub_resource type="Resource" id="Resource_ax7s1"]
 script = ExtResource("2_cbunp")
@@ -124,5 +140,5 @@ walk_texture = ExtResource("3_y3frh")
 character = ExtResource("1_vb453")
 greetings_timeline = ExtResource("2_j8lcn")
 talk_timeline = ExtResource("5_qkmao")
-conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_sn5tm"), SubResource("Resource_lguts"), SubResource("Resource_eknrr"), SubResource("Resource_ksext"), SubResource("Resource_wlrd2")])
+conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_sn5tm"), SubResource("Resource_ksext"), SubResource("Resource_lguts"), SubResource("Resource_ms1mg"), SubResource("Resource_eknrr"), SubResource("Resource_wlrd2")])
 new_position = Vector2(103, 242)

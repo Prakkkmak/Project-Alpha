@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=23 format=3 uid="uid://cwgvdq4g86f7o"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=27 format=3 uid="uid://cwgvdq4g86f7o"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_c4d2j"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_greetings.dtl" id="1_ds0if"]
@@ -11,16 +11,27 @@
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_help.dtl" id="4_ixtn2"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_talk.dtl" id="5_wmr7y"]
 
-[sub_resource type="Resource" id="Resource_1oqf4"]
+[sub_resource type="Resource" id="Resource_q5gkq"]
 script = ExtResource("1_fciei")
-state = "violet_help_monster_completed"
+state = "violet_help_monter_completed"
 value = true
 
-[sub_resource type="Resource" id="Resource_dxhj4"]
+[sub_resource type="Resource" id="Resource_lao0h"]
 script = ExtResource("2_gdexm")
-name = "monster_completed"
-conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_1oqf4")])
-timeline = ExtResource("3_1fv12")
+name = "help_monster_achieved"
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_q5gkq")])
+timeline = ExtResource("5_wmr7y")
+
+[sub_resource type="Resource" id="Resource_5ektb"]
+script = ExtResource("1_fciei")
+state = "violet_help_open_completed"
+value = true
+
+[sub_resource type="Resource" id="Resource_jchyu"]
+script = ExtResource("2_gdexm")
+name = "help_open_achieved"
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_5ektb")])
+timeline = ExtResource("5_wmr7y")
 
 [sub_resource type="Resource" id="Resource_cfw3d"]
 script = ExtResource("1_fciei")
@@ -54,6 +65,17 @@ name = "help_open"
 conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_d2sc1"), SubResource("Resource_orwv7")])
 timeline = ExtResource("4_ixtn2")
 
+[sub_resource type="Resource" id="Resource_1oqf4"]
+script = ExtResource("1_fciei")
+state = "violet_help_monster_completed"
+value = true
+
+[sub_resource type="Resource" id="Resource_dxhj4"]
+script = ExtResource("2_gdexm")
+name = "monster_completed"
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_1oqf4")])
+timeline = ExtResource("3_1fv12")
+
 [sub_resource type="Resource" id="Resource_1c7tp"]
 script = ExtResource("1_fciei")
 state = "edmund_greeted"
@@ -84,5 +106,5 @@ idle_texture = ExtResource("1_nxckm")
 walk_texture = ExtResource("3_gw8td")
 greetings_timeline = ExtResource("1_ds0if")
 talk_timeline = ExtResource("5_wmr7y")
-conditions = Array[ExtResource("2_gdexm")]([SubResource("Resource_dxhj4"), SubResource("Resource_srf8x"), SubResource("Resource_sucw2"), SubResource("Resource_0plq1"), SubResource("Resource_jtr0f")])
+conditions = Array[ExtResource("2_gdexm")]([SubResource("Resource_lao0h"), SubResource("Resource_jchyu"), SubResource("Resource_srf8x"), SubResource("Resource_sucw2"), SubResource("Resource_dxhj4"), SubResource("Resource_0plq1"), SubResource("Resource_jtr0f")])
 new_position = Vector2(0, 0)
