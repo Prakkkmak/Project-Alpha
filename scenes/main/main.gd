@@ -1,8 +1,15 @@
 extends Node
 
 @export var end_screen: PackedScene
-@export var end_condition: String = "crown_acquired"
 @export var override_level: PackedScene
+
+@export_category("conditions")
+@export var end_condition: String = "crown_acquired"
+@export var dungeon_conditions: Array[String] = [
+	"edmund_help_gold_completed",
+	"violet_help_open_completed"
+]
+@export var dungeon_opened_event: String = "dungeon_opened"
 
 @onready var current_level: Node2D = %Level
 @onready var player: Player = %Player
@@ -34,6 +41,9 @@ func _connect_level_teleporters() -> void:
 func _on_state_changed(state: String, value: bool) -> void:
 	if state == end_condition && value:
 		end_game()
+	for dungeon_condition: String in dungeon_conditions:
+		if dungeon_condition == state:
+			GameState.set_state(dungeon_opened_event, true)
 
 
 func _on_player_teleport_requested(new_level: PackedScene, player_position: Vector2) -> void:

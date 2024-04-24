@@ -14,6 +14,9 @@ func perform_interaction(source: Area2D, target: Area2D) -> void:
 			if condition.are_conditions_met():
 				var state_name: String = npc_data.name + "_" + condition.name + "_completed"
 				_start_timeline(condition.timeline, state_name, source, target, true)
+				for c: GameStateCondition in condition.conditions:
+					if c.value:
+						GameState.use_state(c.state)
 				return
 		# Si aucune condition n'est remplie, lancer la timeline de conversation par défault
 		var talked_state_name: String = npc_data.name + "_talked"

@@ -1,6 +1,7 @@
 extends Node
 
 signal state_changed(state: String, value: bool)
+signal state_used(state: String)
 
 const SAVE_PATH: String = "user://game_state.save"
 
@@ -15,6 +16,12 @@ func set_state(key: String, value: bool = true) -> void:
 # Récupère un état du dictionnaire de progression. Retourne false si la clé n'existe pas.
 func get_state(key: String) -> bool:
 	return _game_progress.get(key.to_lower(), false)
+
+func use_state(state: String) -> void:
+	#HACK Change the pickups to false
+	state_used.emit(state)
+	if state.ends_with("acquiered"):
+		set_state(state, false)
 
 # Sauvegarde l'état du jeu dans un fichier
 func save_game() -> void:
