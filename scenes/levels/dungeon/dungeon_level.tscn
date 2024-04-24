@@ -23,7 +23,7 @@ value = true
 
 [sub_resource type="Resource" id="Resource_0ijav"]
 script = ExtResource("10_2x8dw")
-name = "crown_unlocked"
+name = "crown_acquired"
 conditions = Array[ExtResource("9_ljiyr")]([SubResource("Resource_108c8")])
 timeline = ExtResource("9_eslko")
 
