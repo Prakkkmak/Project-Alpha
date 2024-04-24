@@ -1,6 +1,6 @@
 class_name TimelineCondition extends Resource
 
-
+@export var name: String
 @export var conditions: Array[GameStateCondition]
 @export var timeline: DialogicTimeline
 

@@ -12,7 +12,7 @@ func perform_interaction(source: Area2D, target: Area2D) -> void:
 	else:
 		for condition: TimelineCondition in npc_data.conditions:
 			if condition.are_conditions_met():
-				var state_name: String = npc_data.name + "_" + condition.timeline.get_name() + "_completed"
+				var state_name: String = npc_data.name + "_" + condition.name + "_completed"
 				_start_timeline(condition.timeline, state_name, source, target, true)
 				return
 		# Si aucune condition n'est remplie, lancer la timeline de conversation par défault
