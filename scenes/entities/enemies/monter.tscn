@@ -251,7 +251,6 @@ script = ExtResource("4_21stj")
 event_name = "monster_obstacle"
 resolve_conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
 delete_on_resolve = false
-condition = ""
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w3kf0"]
 radius = 5.0
@@ -272,7 +271,6 @@ shape = SubResource("CircleShape2D_k35lh")
 [node name="InteractableComponent" parent="." instance=ExtResource("3_ifjje")]
 unique_name_in_owner = true
 interaction = SubResource("Resource_5kjes")
-interaction_condition = ""
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractableComponent"]
 position = Vector2(0, -3)

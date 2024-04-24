@@ -1,11 +1,40 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=7 format=3 uid="uid://bd1xacgo7xki8"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=16 format=3 uid="uid://bd1xacgo7xki8"]
 
 [ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin.dch" id="1_0rko3"]
 [ext_resource type="Texture2D" uid="uid://d5rhru3pa1rt" path="res://assets/characters/npc/Premade_NPCs/Tailor/Minifantasy_NPCsTailorIdle.png" id="1_a2hin"]
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_nysx6"]
 [ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_greetings.dtl" id="2_r6qii"]
+[ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="2_ryejn"]
 [ext_resource type="Texture2D" uid="uid://chgeyl3cdj6bh" path="res://assets/characters/npc/Premade_NPCs/Tailor/Minifantasy_NPCsTailorWalk.png" id="3_3tglk"]
+[ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="3_pwwpn"]
+[ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_help.dtl" id="4_lg2i8"]
+[ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_no_help.dtl" id="5_6reic"]
 [ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin_talk.dtl" id="5_p80bd"]
+
+[sub_resource type="Resource" id="Resource_n7gnu"]
+script = ExtResource("2_ryejn")
+state = "riddle_encountered"
+value = true
+
+[sub_resource type="Resource" id="Resource_5e8kh"]
+script = ExtResource("3_pwwpn")
+conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_n7gnu")])
+timeline = ExtResource("5_6reic")
+
+[sub_resource type="Resource" id="Resource_fj04n"]
+script = ExtResource("2_ryejn")
+state = "riddle_encoutered"
+value = true
+
+[sub_resource type="Resource" id="Resource_biy1q"]
+script = ExtResource("2_ryejn")
+state = "book_acquired"
+value = true
+
+[sub_resource type="Resource" id="Resource_cnwci"]
+script = ExtResource("3_pwwpn")
+conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_fj04n"), SubResource("Resource_biy1q")])
+timeline = ExtResource("4_lg2i8")
 
 [resource]
 script = ExtResource("1_nysx6")
@@ -16,5 +45,5 @@ walk_texture = ExtResource("3_3tglk")
 character = ExtResource("1_0rko3")
 greetings_timeline = ExtResource("2_r6qii")
 talk_timeline = ExtResource("5_p80bd")
-conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
+conditions = Array[ExtResource("3_pwwpn")]([SubResource("Resource_5e8kh"), SubResource("Resource_cnwci")])
 new_position = Vector2(0, 0)

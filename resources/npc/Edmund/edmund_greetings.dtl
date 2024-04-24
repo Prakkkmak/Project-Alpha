@@ -1,10 +1,6 @@
 edmund: Halt! Who goes there? Please state your purpose.
 little_king: It's me, your king. What's the news at this hour?
 edmund: All is secure, Your Majesty. However, I must inform you that entry to the tower is restricted
-- You mean to say even a king can't sneak a peek?
-	edmund: Even if you came cloaked in shadows, sire, my orders are clear. No entry, not even for shadows that wear crowns.
-	little_king: Excellent. Your diligence ensures the kingdom’s peace. Continue with the good efforts.
-	edmund: Thank you, Your Majesty. We’ll always stand watchful to protect the realm and keep it safe under your rule.
 - How's the guard?
 	edmund: All is calm, sire. We’ve had no disturbances and the men are alert.
 	little_king: Excellent. Your diligence ensures the kingdom’s peace. Continue with the good efforts.
@@ -12,7 +8,7 @@ edmund: All is secure, Your Majesty. However, I must inform you that entry to th
 - any recent issues?
 	edmund: The night has been quiet so far, sire, but we remain on high alert. We’ve increased our patrols around the castle walls.
 	little_king: Good, proactive measures are essential for our safety. Ensure that all shifts are fully staffed.
-	edmund: Understood, Your Majesty. 
+	edmund: Understood, Your Majesty.
 - Is there no secret king's entrance?
 	edmund: Even for a king, I must enforce the rules strictly, sire. No entry today.
 	little_king: Hmm, I must find a way. It's crucial.
