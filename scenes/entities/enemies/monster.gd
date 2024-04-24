@@ -6,6 +6,8 @@ extends StaticBody2D
 
 
 func _ready() -> void:
+	if GameState.get_state("monster_defeated"):
+		queue_free()
 	animated_sprite_2d.play("idle")
 	interactable_component.interaction_resolved.connect(_on_event_resolved)
 

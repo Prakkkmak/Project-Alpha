@@ -18,9 +18,10 @@ func get_state(key: String) -> bool:
 	return _game_progress.get(key.to_lower(), false)
 
 func use_state(state: String) -> void:
+	print("use state " + state)
 	#HACK Change the pickups to false
 	state_used.emit(state)
-	if state.ends_with("acquiered"):
+	if state.ends_with("acquired"):
 		set_state(state, false)
 
 # Sauvegarde l'état du jeu dans un fichier

@@ -16,4 +16,4 @@ func _ready() -> void:
 		(interactable_component.interaction as PickupInteraction).pickup = pickup
 		(interactable_component.interaction as PickupInteraction).ended.connect(queue_free)
 	interactable_component.show_interact_key_on_hover = show_hint
-	interactable_component.interaction_condition = condition
+	interactable_component.set_condition(condition)

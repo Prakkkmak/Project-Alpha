@@ -22,11 +22,19 @@ func _ready() -> void:
 		icon.texture = icon_sprite_texture
 	if icon_position:
 		icon.position = icon_position
-	if interaction.condition:
+	if !interaction_condition && interaction.condition:
 		interaction_condition = interaction.condition
 	if interaction_condition:
 		is_active = false
 	GameState.state_changed.connect(_on_game_state_changed)
+
+
+func set_condition(condition: String) -> void:
+	interaction_condition = condition
+	if interaction_condition:
+		is_active = false
+	else:
+		is_active = true
 
 
 func interact(source: Area2D) -> void:
