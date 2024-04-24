@@ -66,8 +66,7 @@ _data = {
 process_mode = 3
 script = ExtResource("1_siyhi")
 end_screen = ExtResource("2_y14he")
-states_acquiered = Array[String](["gold_acquired", "-edmund_help_gold_completed", "-edmund_help_monster_gold_completed", "-eldrin_help_completed", "-edmund_greeted", "violet_help_monster_completed", "crown_acquired"])
-debug = true
+states_acquiered = Array[String](["gold_acquired", "-edmund_help_gold_completed", "-edmund_help_monster_gold_completed", "-eldrin_help_completed", "-edmund_greeted", "violet_help_monster_completed"])
 
 [node name="Level" parent="." instance=ExtResource("3_50in6")]
 unique_name_in_owner = true

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=26 format=3 uid="uid://bx0t4ntso4mo1"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=31 format=3 uid="uid://bx0t4ntso4mo1"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_dgfkp"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund.dch" id="1_vb453"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_talk.dtl" id="5_qkmao"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_help.dtl" id="5_tt71b"]
 [ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_help_monster.dtl" id="6_aglml"]
+[ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_talk_violet_help_monster.dtl" id="8_2pa4v"]
 
 [sub_resource type="Resource" id="Resource_mv3vt"]
 script = ExtResource("2_cbunp")
@@ -67,6 +68,28 @@ name = "no_help"
 conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_bk8if")])
 timeline = ExtResource("5_ngf0o")
 
+[sub_resource type="Resource" id="Resource_ldok0"]
+script = ExtResource("2_cbunp")
+state = "monster_defeated"
+value = true
+
+[sub_resource type="Resource" id="Resource_eknrr"]
+script = ExtResource("3_t8sof")
+name = "monster_defeted"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_ldok0")])
+timeline = ExtResource("4_ooeb6")
+
+[sub_resource type="Resource" id="Resource_gbbhx"]
+script = ExtResource("2_cbunp")
+state = "violet_help_monster_completed"
+value = null
+
+[sub_resource type="Resource" id="Resource_lguts"]
+script = ExtResource("3_t8sof")
+name = "monster_completed"
+conditions = Array[ExtResource("2_cbunp")]([SubResource("Resource_gbbhx")])
+timeline = ExtResource("8_2pa4v")
+
 [sub_resource type="Resource" id="Resource_ax7s1"]
 script = ExtResource("2_cbunp")
 state = "dungeon_opened"
@@ -92,5 +115,5 @@ walk_texture = ExtResource("3_y3frh")
 character = ExtResource("1_vb453")
 greetings_timeline = ExtResource("2_j8lcn")
 talk_timeline = ExtResource("5_qkmao")
-conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_wc621"), SubResource("Resource_sn5tm"), SubResource("Resource_ksext"), SubResource("Resource_wlrd2")])
+conditions = Array[ExtResource("3_t8sof")]([SubResource("Resource_g0ne0"), SubResource("Resource_wc621"), SubResource("Resource_sn5tm"), SubResource("Resource_ksext"), SubResource("Resource_eknrr"), SubResource("Resource_lguts"), SubResource("Resource_wlrd2")])
 new_position = Vector2(103, 242)
