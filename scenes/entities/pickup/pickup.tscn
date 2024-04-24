@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/entities/pickup/pickup.gd" id="1_vuvdn"]
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="2_f1mh5"]
 [ext_resource type="Script" path="res://scripts/interactions/pickup_interaction.gd" id="4_ct8s0"]
-[ext_resource type="Resource" uid="uid://bthf417ysau0o" path="res://resources/pickups/gold.tres" id="4_h0qcc"]
+[ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="4_gg0ng"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_viulg"]
 atlas = ExtResource("1_cfuy5")
@@ -12,7 +12,7 @@ region = Rect2(128, 8, 8, 8)
 
 [sub_resource type="Resource" id="Resource_x58kc"]
 script = ExtResource("4_ct8s0")
-pickup = ExtResource("4_h0qcc")
+pickup = ExtResource("4_gg0ng")
 condition = ""
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2iin6"]
@@ -26,7 +26,6 @@ texture = SubResource("AtlasTexture_viulg")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_f1mh5")]
 interaction = SubResource("Resource_x58kc")
-interaction_condition = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
 shape = SubResource("CircleShape2D_2iin6")

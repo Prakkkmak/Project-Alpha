@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://blaq2x4aj3wiw"]
+[gd_scene load_steps=19 format=3 uid="uid://blaq2x4aj3wiw"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_k8f4a"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="2_ihsyo"]
@@ -9,14 +9,31 @@
 [ext_resource type="Resource" uid="uid://dd1uaj63cwwr3" path="res://resources/pickups/book.tres" id="6_68bpc"]
 [ext_resource type="Script" path="res://scenes/levels/dungeon/crown_impossible.gd" id="6_84hhy"]
 [ext_resource type="Script" path="res://scripts/interactions/event_interaction.gd" id="7_ovhas"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/riddle_resolved.dtl" id="9_eslko"]
+[ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="9_ljiyr"]
+[ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="10_2x8dw"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/riddle_encounter.dtl" id="11_ti2ij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mu1"]
 size = Vector2(26, 13.375)
 
+[sub_resource type="Resource" id="Resource_108c8"]
+script = ExtResource("9_ljiyr")
+state = "eldrin_help_completed"
+value = true
+
+[sub_resource type="Resource" id="Resource_0ijav"]
+script = ExtResource("10_2x8dw")
+name = ""
+conditions = Array[ExtResource("9_ljiyr")]([SubResource("Resource_108c8")])
+timeline = ExtResource("9_eslko")
+
 [sub_resource type="Resource" id="Resource_dhi6k"]
 script = ExtResource("7_ovhas")
 event_name = ""
-resolve_conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
+timeline = ExtResource("11_ti2ij")
+resolve_timeline = ExtResource("9_eslko")
+resolve_conditions = Array[ExtResource("10_2x8dw")]([SubResource("Resource_0ijav")])
 delete_on_resolve = true
 condition = ""
 
@@ -79,7 +96,7 @@ shape = SubResource("RectangleShape2D_y1mu1")
 [node name="Marker2D3" type="Marker2D" parent="."]
 position = Vector2(588, -111)
 
-[node name="Monter" parent="." instance=ExtResource("5_yl4c7")]
+[node name="Monster" parent="." instance=ExtResource("5_yl4c7")]
 position = Vector2(-43, -68)
 
 [node name="Book" parent="." instance=ExtResource("2_ihsyo")]
@@ -92,7 +109,6 @@ script = ExtResource("6_84hhy")
 
 [node name="InteractableComponent" parent="CrownImpossible" instance=ExtResource("6_2d5ye")]
 interaction = SubResource("Resource_dhi6k")
-interaction_condition = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrownImpossible/InteractableComponent"]
 position = Vector2(588, -181)

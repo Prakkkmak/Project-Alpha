@@ -6,11 +6,6 @@ extends Node
 
 @export_category("conditions")
 @export var end_condition: String = "crown_acquired"
-@export var dungeon_conditions: Array[String] = [
-	"edmund_help_gold_completed",
-	"violet_help_open_completed"
-]
-@export var dungeon_opened_event: String = "dungeon_opened"
 
 @onready var current_level: Node2D = %Level
 @onready var player: Player = %Player
@@ -44,15 +39,6 @@ func _connect_level_teleporters() -> void:
 func _on_state_changed(state: String, value: bool) -> void:
 	if state == end_condition && value:
 		end_game()
-	for dungeon_condition: String in dungeon_conditions:
-		if dungeon_condition == state:
-			GameState.set_state(dungeon_opened_event, true)
-			#HACK
-			var npcs: Array[Node] = get_tree().get_nodes_in_group("npc")
-			for node: Node in npcs:
-				var npc: Npc = node as Npc
-				if npc.data.name == "Edmund":
-					npc.position = npc.data.new_position
 
 
 func _on_player_teleport_requested(new_level: PackedScene, player_position: Vector2) -> void:
