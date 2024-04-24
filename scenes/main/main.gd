@@ -11,6 +11,7 @@ extends Node
 	"violet_help_open_completed"
 ]
 @export var dungeon_opened_event: String = "dungeon_opened"
+@export var edmund_guard: Npc
 
 @onready var current_level: Node2D = %Level
 @onready var player: Player = %Player
@@ -47,6 +48,8 @@ func _on_state_changed(state: String, value: bool) -> void:
 	for dungeon_condition: String in dungeon_conditions:
 		if dungeon_condition == state:
 			GameState.set_state(dungeon_opened_event, true)
+			if edmund_guard:
+				edmund_guard.global_position = edmund_guard.data.new_position
 
 
 func _on_player_teleport_requested(new_level: PackedScene, player_position: Vector2) -> void:
