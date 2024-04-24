@@ -1,10 +1,64 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=6 format=3 uid="uid://cwgvdq4g86f7o"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=20 format=3 uid="uid://cwgvdq4g86f7o"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_c4d2j"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_greetings.dtl" id="1_ds0if"]
+[ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="1_fciei"]
 [ext_resource type="Texture2D" uid="uid://c1ksg82g6krer" path="res://assets/characters/npc/Premade_NPCs/Alchemist/Minifantasy_NPCsAlchemistIdle.png" id="1_nxckm"]
+[ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="2_gdexm"]
 [ext_resource type="Texture2D" uid="uid://48cp2la3nx7e" path="res://assets/characters/npc/Premade_NPCs/Alchemist/Minifantasy_NPCsAlchemistWalk.png" id="3_gw8td"]
+[ext_resource type="Resource" path="res://resources/npc/violet/violet_no_help.dtl" id="3_lbta3"]
+[ext_resource type="Resource" path="res://resources/npc/violet/violet_help.dtl" id="4_ixtn2"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_talk.dtl" id="5_wmr7y"]
+
+[sub_resource type="Resource" id="Resource_1c7tp"]
+script = ExtResource("1_fciei")
+state = "edmund_greeted"
+value = true
+
+[sub_resource type="Resource" id="Resource_0plq1"]
+script = ExtResource("2_gdexm")
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_1c7tp")])
+timeline = ExtResource("3_lbta3")
+
+[sub_resource type="Resource" id="Resource_d2sc1"]
+script = ExtResource("1_fciei")
+state = "edmund_greeted"
+value = true
+
+[sub_resource type="Resource" id="Resource_orwv7"]
+script = ExtResource("1_fciei")
+state = "flower_acquired"
+value = true
+
+[sub_resource type="Resource" id="Resource_sucw2"]
+script = ExtResource("2_gdexm")
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_d2sc1"), SubResource("Resource_orwv7")])
+timeline = ExtResource("4_ixtn2")
+
+[sub_resource type="Resource" id="Resource_l5koo"]
+script = ExtResource("1_fciei")
+state = "edmund_no_help"
+value = true
+
+[sub_resource type="Resource" id="Resource_jtr0f"]
+script = ExtResource("2_gdexm")
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_l5koo")])
+timeline = ExtResource("3_lbta3")
+
+[sub_resource type="Resource" id="Resource_cfw3d"]
+script = ExtResource("1_fciei")
+state = "edmund_no_help"
+value = true
+
+[sub_resource type="Resource" id="Resource_fw436"]
+script = ExtResource("1_fciei")
+state = "flower_acquired"
+value = true
+
+[sub_resource type="Resource" id="Resource_srf8x"]
+script = ExtResource("2_gdexm")
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_cfw3d"), SubResource("Resource_fw436")])
+timeline = ExtResource("4_ixtn2")
 
 [resource]
 script = ExtResource("1_c4d2j")
@@ -14,5 +68,5 @@ idle_texture = ExtResource("1_nxckm")
 walk_texture = ExtResource("3_gw8td")
 greetings_timeline = ExtResource("1_ds0if")
 talk_timeline = ExtResource("5_wmr7y")
-conditions = Array[Resource("res://scripts/timeline_conditions.gd")]([])
+conditions = Array[ExtResource("2_gdexm")]([SubResource("Resource_0plq1"), SubResource("Resource_sucw2"), SubResource("Resource_jtr0f"), SubResource("Resource_srf8x")])
 new_position = Vector2(0, 0)
