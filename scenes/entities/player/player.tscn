@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://dwqjbw0edajrx"]
+[gd_scene load_steps=117 format=3 uid="uid://dwqjbw0edajrx"]
 
 [ext_resource type="Script" path="res://scenes/entities/player/player.gd" id="1_apngc"]
 [ext_resource type="PackedScene" uid="uid://bs6ihuu4rrfyn" path="res://scenes/components/interaction_component.tscn" id="2_8fmyo"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dydmabrjcvpny" path="res://assets/sounds/steps/wood03.ogg" id="9_s2i8f"]
 [ext_resource type="AudioStream" uid="uid://bs8p3jxlrwhi3" path="res://assets/sounds/steps/gravel.ogg" id="10_ot681"]
 [ext_resource type="AudioStream" uid="uid://cyxhtht5sfgyp" path="res://assets/sounds/steps/mud02.ogg" id="10_yw3bu"]
+[ext_resource type="PackedScene" uid="uid://c7snxr83pav26" path="res://scenes/state_machine/states/run_state.tscn" id="18_0g43n"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6k8kl"]
 streams_count = 2
@@ -1214,6 +1215,7 @@ radius = 2.0
 height = 4.0
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0.510283, -0.0700905)
 collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_apngc")
@@ -1267,15 +1269,22 @@ animated_player = NodePath("../../AnimationPlayer")
 walk_state = NodePath("../WalkState")
 interact_state = NodePath("../InteractState")
 
-[node name="WalkState" parent="StateMachine" node_paths=PackedStringArray("move_component", "animated_player", "idle_state", "interact_state") instance=ExtResource("9_h3n6b")]
+[node name="WalkState" parent="StateMachine" node_paths=PackedStringArray("move_component", "animated_player", "idle_state", "run_state", "interact_state") instance=ExtResource("9_h3n6b")]
 move_component = NodePath("../../MoveComponent")
 animated_player = NodePath("../../AnimationPlayer")
 idle_state = NodePath("../IdleState")
+run_state = NodePath("../RunState")
 interact_state = NodePath("../InteractState")
 
 [node name="InteractState" parent="StateMachine" node_paths=PackedStringArray("interaction_component", "idle_state") instance=ExtResource("9_ry2wg")]
 interaction_component = NodePath("../../InteractionComponent")
 idle_state = NodePath("../IdleState")
+
+[node name="RunState" parent="StateMachine" node_paths=PackedStringArray("move_component", "animated_player", "idle_state", "walk_state") instance=ExtResource("18_0g43n")]
+move_component = NodePath("../../MoveComponent")
+animated_player = NodePath("../../AnimationPlayer")
+idle_state = NodePath("../IdleState")
+walk_state = NodePath("../WalkState")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -3)

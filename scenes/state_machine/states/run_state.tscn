@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7snxr83pav26"]
+
+[ext_resource type="Script" path="res://scenes/state_machine/states/run_state.gd" id="1_yhdie"]
+
+[node name="RunState" type="Node"]
+script = ExtResource("1_yhdie")
+
+[node name="Timer" type="Timer" parent="."]
