@@ -48,6 +48,7 @@ directories/dtl_directory={
 "edmund_no_help": "res://resources/npc/Edmund/edmund_no_help.dtl",
 "edmund_talk": "res://resources/npc/Edmund/edmund_talk.dtl",
 "edmund_talk_monster": "res://resources/npc/Edmund/edmund_talk_monster.dtl",
+"edmund_talk_violet_help_monster": "res://resources/npc/Edmund/edmund_talk_violet_help_monster.dtl",
 "eldrin_greetings": "res://resources/npc/Eldrin/eldrin_greetings.dtl",
 "eldrin_help": "res://resources/npc/Eldrin/eldrin_help.dtl",
 "eldrin_no_help": "res://resources/npc/Eldrin/eldrin_no_help.dtl",

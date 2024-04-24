@@ -1,14 +1,26 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=20 format=3 uid="uid://cwgvdq4g86f7o"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=23 format=3 uid="uid://cwgvdq4g86f7o"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_c4d2j"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_greetings.dtl" id="1_ds0if"]
 [ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="1_fciei"]
 [ext_resource type="Texture2D" uid="uid://c1ksg82g6krer" path="res://assets/characters/npc/Premade_NPCs/Alchemist/Minifantasy_NPCsAlchemistIdle.png" id="1_nxckm"]
 [ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="2_gdexm"]
+[ext_resource type="Resource" path="res://resources/npc/Edmund/edmund_talk_monster.dtl" id="3_1fv12"]
 [ext_resource type="Texture2D" uid="uid://48cp2la3nx7e" path="res://assets/characters/npc/Premade_NPCs/Alchemist/Minifantasy_NPCsAlchemistWalk.png" id="3_gw8td"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_no_help.dtl" id="3_lbta3"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_help.dtl" id="4_ixtn2"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_talk.dtl" id="5_wmr7y"]
+
+[sub_resource type="Resource" id="Resource_1oqf4"]
+script = ExtResource("1_fciei")
+state = "violet_help_monster_completed"
+value = true
+
+[sub_resource type="Resource" id="Resource_dxhj4"]
+script = ExtResource("2_gdexm")
+name = "monster_completed"
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_1oqf4")])
+timeline = ExtResource("3_1fv12")
 
 [sub_resource type="Resource" id="Resource_cfw3d"]
 script = ExtResource("1_fciei")
@@ -72,5 +84,5 @@ idle_texture = ExtResource("1_nxckm")
 walk_texture = ExtResource("3_gw8td")
 greetings_timeline = ExtResource("1_ds0if")
 talk_timeline = ExtResource("5_wmr7y")
-conditions = Array[ExtResource("2_gdexm")]([SubResource("Resource_srf8x"), SubResource("Resource_sucw2"), SubResource("Resource_0plq1"), SubResource("Resource_jtr0f")])
+conditions = Array[ExtResource("2_gdexm")]([SubResource("Resource_dxhj4"), SubResource("Resource_srf8x"), SubResource("Resource_sucw2"), SubResource("Resource_0plq1"), SubResource("Resource_jtr0f")])
 new_position = Vector2(0, 0)
