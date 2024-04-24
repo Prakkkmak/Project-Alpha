@@ -6,7 +6,7 @@ extends Node
 @export var debug: bool = false
 
 @export_category("conditions")
-@export var end_condition: String = "crown_acquired"
+@export var end_condition: String = "crown_acquired_completed"
 
 @onready var current_level: Node2D = %Level
 @onready var player: Player = %Player
