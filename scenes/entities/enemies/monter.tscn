@@ -252,7 +252,7 @@ radius = 5.0
 
 [sub_resource type="Resource" id="Resource_n15gg"]
 script = ExtResource("5_qlfrx")
-state = "edmund_help_monster_gold_completed"
+state = "edmund_help_monster_completed"
 value = true
 
 [sub_resource type="Resource" id="Resource_qspl1"]
