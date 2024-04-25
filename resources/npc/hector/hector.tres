@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=12 format=3 uid="uid://dl4uyvc8t8bwn"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=13 format=3 uid="uid://dl4uyvc8t8bwn"]
 
 [ext_resource type="Resource" path="res://resources/npc/hector/hector.dch" id="1_8rdnr"]
 [ext_resource type="Resource" path="res://resources/npc/hector/hector_greetings.dtl" id="1_26vqb"]
@@ -15,10 +15,15 @@ script = ExtResource("2_sntda")
 state = "tree_fallen"
 value = true
 
+[sub_resource type="Resource" id="Resource_4vxk0"]
+script = ExtResource("2_sntda")
+state = "hector_help_completed"
+value = false
+
 [sub_resource type="Resource" id="Resource_x3wm6"]
 script = ExtResource("3_hp2ss")
 name = "help"
-conditions = Array[ExtResource("2_sntda")]([SubResource("Resource_ws167")])
+conditions = Array[ExtResource("2_sntda")]([SubResource("Resource_ws167"), SubResource("Resource_4vxk0")])
 timeline = ExtResource("4_ef26a")
 
 [resource]
