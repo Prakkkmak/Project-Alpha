@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Project Alpha"
-run/main_scene="res://scenes/main/main.tscn"
+config/name="Little King"
+run/main_scene="res://scenes/ui/screens/title_screen/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -99,9 +99,7 @@ variables={}
 
 window/size/viewport_width=800
 window/size/viewport_height=800
-window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="integer"
 
 [editor_plugins]
 

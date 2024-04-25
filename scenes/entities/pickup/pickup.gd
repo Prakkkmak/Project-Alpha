@@ -8,6 +8,7 @@ extends Node2D
 @onready var interactable_component: InteractableComponent = $InteractableComponent
 @onready var sprite: Sprite2D = $Sprite2D
 
+
 func _ready() -> void:
 	print(pickup.name + "_acquired")
 	print(GameState.has_key(pickup.name + "_acquired"))
