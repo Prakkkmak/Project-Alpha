@@ -35,7 +35,10 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
-text = "Welcome to Mestria, where each inhabitant possesses a unique power. As the tradition goes, every new king must retrieve the ancient crown from the Tower of Trials to prove their worth. Today, a young king, inexperienced but determined, takes up this challenge. And that king is you."
+text = "Welcome to Mestria, where each inhabitant possesses a unique power. As the tradition goes, every new king must retrieve the ancient crown from the Tower of Trials to prove their worth. Today, a young king, inexperienced but determined, takes up this challenge.
+
+ And that king is you."
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer"]
