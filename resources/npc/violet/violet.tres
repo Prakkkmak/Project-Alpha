@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=27 format=3 uid="uid://cwgvdq4g86f7o"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=29 format=3 uid="uid://cwgvdq4g86f7o"]
 
 [ext_resource type="Script" path="res://scripts/npc_data.gd" id="1_c4d2j"]
 [ext_resource type="Resource" path="res://resources/npc/violet/violet_greetings.dtl" id="1_ds0if"]
@@ -43,10 +43,15 @@ script = ExtResource("1_fciei")
 state = "flower_acquired"
 value = true
 
+[sub_resource type="Resource" id="Resource_bmn3r"]
+script = ExtResource("1_fciei")
+state = "monster_encountered"
+value = true
+
 [sub_resource type="Resource" id="Resource_srf8x"]
 script = ExtResource("2_gdexm")
 name = "help_monster"
-conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_cfw3d"), SubResource("Resource_fw436")])
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_cfw3d"), SubResource("Resource_fw436"), SubResource("Resource_bmn3r")])
 timeline = ExtResource("4_ixtn2")
 
 [sub_resource type="Resource" id="Resource_d2sc1"]
@@ -59,10 +64,15 @@ script = ExtResource("1_fciei")
 state = "flower_acquired"
 value = true
 
+[sub_resource type="Resource" id="Resource_8falo"]
+script = ExtResource("1_fciei")
+state = "dungeon_opened"
+value = false
+
 [sub_resource type="Resource" id="Resource_sucw2"]
 script = ExtResource("2_gdexm")
 name = "help_open"
-conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_d2sc1"), SubResource("Resource_orwv7")])
+conditions = Array[ExtResource("1_fciei")]([SubResource("Resource_d2sc1"), SubResource("Resource_orwv7"), SubResource("Resource_8falo")])
 timeline = ExtResource("4_ixtn2")
 
 [sub_resource type="Resource" id="Resource_1oqf4"]

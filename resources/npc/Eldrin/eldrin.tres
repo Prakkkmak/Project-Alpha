@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NpcData" load_steps=16 format=3 uid="uid://bd1xacgo7xki8"]
+[gd_resource type="Resource" script_class="NpcData" load_steps=17 format=3 uid="uid://bd1xacgo7xki8"]
 
 [ext_resource type="Resource" path="res://resources/npc/Eldrin/eldrin.dch" id="1_0rko3"]
 [ext_resource type="Texture2D" uid="uid://d5rhru3pa1rt" path="res://assets/characters/npc/Premade_NPCs/Tailor/Minifantasy_NPCsTailorIdle.png" id="1_a2hin"]
@@ -32,10 +32,15 @@ script = ExtResource("2_ryejn")
 state = "riddle_encoutered"
 value = true
 
+[sub_resource type="Resource" id="Resource_5re1r"]
+script = ExtResource("2_ryejn")
+state = "eldrin_help_completed"
+value = false
+
 [sub_resource type="Resource" id="Resource_5e8kh"]
 script = ExtResource("3_pwwpn")
 name = "no_help"
-conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_n7gnu")])
+conditions = Array[ExtResource("2_ryejn")]([SubResource("Resource_n7gnu"), SubResource("Resource_5re1r")])
 timeline = ExtResource("5_6reic")
 
 [resource]
