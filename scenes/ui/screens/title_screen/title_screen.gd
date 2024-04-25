@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-@export var main_scene: PackedScene
+@export_file("*.tscn") var scene_file: String = "res://scenes/ui/screens/intro/intro.tscn"
 
 @onready var main_menu: TextureRect = %MainMenu
 @onready var play_button: Button = %PlayButton
@@ -27,7 +27,7 @@ func _on_options_menu_quitted() -> void:
 	main_menu.show()
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+	get_tree().change_scene_to_file(scene_file)
 
 
 func _on_music_button_disabled_toggled(toggled_on: bool) -> void:

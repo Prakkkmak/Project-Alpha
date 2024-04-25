@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://y5w5ax7wrlb1"]
+[gd_scene load_steps=12 format=3 uid="uid://y5w5ax7wrlb1"]
 
 [ext_resource type="Script" path="res://scenes/ui/screens/title_screen/title_screen.gd" id="1_trgpu"]
-[ext_resource type="PackedScene" uid="uid://bwu1q6jxr4um6" path="res://scenes/main/main.tscn" id="2_47ntb"]
 [ext_resource type="Texture2D" uid="uid://bmic06qelt7ya" path="res://resources/images/title_screen_bg.png" id="3_2uee6"]
 [ext_resource type="Texture2D" uid="uid://b5iiug55wa6y5" path="res://assets/sprite_sheets/Modern_UI_Style_1_32x32.png" id="4_3vffk"]
 [ext_resource type="PackedScene" uid="uid://d1eitwwemjsyw" path="res://scenes/ui/options_menu/options_menu.tscn" id="5_iwjkx"]
@@ -30,7 +29,6 @@ region = Rect2(8, 24, 8, 8)
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_trgpu")
-main_scene = ExtResource("2_47ntb")
 
 [node name="TitleScreen" type="PanelContainer" parent="."]
 anchors_preset = 8
