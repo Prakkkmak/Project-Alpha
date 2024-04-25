@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bidkofl6ndye4"]
+[gd_scene load_steps=5 format=3 uid="uid://bidkofl6ndye4"]
 
 [ext_resource type="Script" path="res://scenes/ui/screens/game_over/game_over_screen.gd" id="1_fyd8q"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/end.dtl" id="3_2td2o"]
 [ext_resource type="Texture2D" uid="uid://rf8rh7skutmg" path="res://assets/victory.webp" id="4_1i2u3"]
+[ext_resource type="AudioStream" uid="uid://rfmtgty54sp8" path="res://assets/sounds/Lively Meadow (Victory Fanfare and Song).mp3" id="4_yrnst"]
 
 [node name="GameOverScreen" type="CanvasLayer"]
 script = ExtResource("1_fyd8q")
@@ -24,3 +25,8 @@ expand_mode = 4
 unique_name_in_owner = true
 layout_mode = 2
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yrnst")
+autoplay = true
+bus = &"Music"

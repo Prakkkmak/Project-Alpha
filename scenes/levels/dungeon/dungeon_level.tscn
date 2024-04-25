@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://blaq2x4aj3wiw"]
+[gd_scene load_steps=20 format=3 uid="uid://blaq2x4aj3wiw"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_k8f4a"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="2_ihsyo"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="9_ljiyr"]
 [ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="10_2x8dw"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/riddle_encounter.dtl" id="11_ti2ij"]
+[ext_resource type="AudioStream" uid="uid://ufkaqi8mytsk" path="res://assets/sounds/Blackmoor Colossus.mp3" id="13_ky2lh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mu1"]
 size = Vector2(26, 13.375)
@@ -110,3 +111,8 @@ interaction = SubResource("Resource_dhi6k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrownImpossible/InteractableComponent"]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_t34is")
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ky2lh")
+autoplay = true
+bus = &"Music"
