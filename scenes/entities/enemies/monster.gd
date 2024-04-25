@@ -13,5 +13,6 @@ func _ready() -> void:
 
 
 func _on_event_resolved() -> void:
+	interactable_component.queue_free()
 	animated_sprite_2d.play("die")
 	animated_sprite_2d.animation_looped.connect(queue_free)

@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_k8f4a"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="2_ihsyo"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="4_7iu6l"]
-[ext_resource type="PackedScene" uid="uid://cbq8v36wxld3d" path="res://scenes/entities/enemies/monter.tscn" id="5_yl4c7"]
+[ext_resource type="PackedScene" uid="uid://cbq8v36wxld3d" path="res://scenes/entities/enemies/monster.tscn" id="5_yl4c7"]
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="6_2d5ye"]
 [ext_resource type="Resource" uid="uid://dd1uaj63cwwr3" path="res://resources/pickups/book.tres" id="6_68bpc"]
 [ext_resource type="Texture2D" uid="uid://dhydn16v7pole" path="res://assets/packs/castle/Props/Props.png" id="6_pmixk"]
