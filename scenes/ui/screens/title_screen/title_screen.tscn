@@ -83,6 +83,7 @@ layout_mode = 2
 
 [node name="OptionsButton" type="Button" parent="TitleScreen/MarginContainer/MainMenuButtons"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Options"
 icon = SubResource("AtlasTexture_cdk01")
@@ -92,6 +93,7 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
 [node name="CreditsButton" type="Button" parent="TitleScreen/MarginContainer/MainMenuButtons"]
+visible = false
 layout_mode = 2
 text = "Credits"
 icon = SubResource("AtlasTexture_jk7ag")

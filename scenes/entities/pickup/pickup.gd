@@ -11,7 +11,7 @@ extends Node2D
 func _ready() -> void:
 	print(pickup.name + "_acquired")
 	print(GameState.has_key(pickup.name + "_acquired"))
-	if GameState.has_key(pickup.name + "_acquired"):
+	if GameState.has_key(pickup.name.to_lower() + "_acquired"):
 		queue_free()
 	if !pickup:
 		return

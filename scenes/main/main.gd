@@ -13,6 +13,7 @@ extends Node
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var level_displayer: LevelDisplayer = %LevelDisplayer
 @onready var debug_panel: PanelContainer = $CanvasLayer/MarginContainer/DebugPanel
+@onready var main_camera: MainCamera = %MainCamera
 
 
 const ANIM_FADE_OFF: String = "fade_off"
@@ -54,16 +55,17 @@ func _on_player_teleport_requested(new_level: PackedScene, player_position: Vect
 
 
 func _on_fade_off_finished(_name: String, new_level: PackedScene, player_position: Vector2) -> void:
-	current_level.remove_child(player)
-	remove_child(current_level)
-	current_level.queue_free()
-	current_level = new_level.instantiate()
+	if new_level:
+		current_level.remove_child(player)
+		remove_child(current_level)
+		current_level.queue_free()
+		current_level = new_level.instantiate()
+		current_level.add_child(player)
+		add_child(current_level)
 	player.global_position = player_position
-	current_level.add_child(player)
-	add_child(current_level)
+	main_camera.global_position = player_position
 	animation_player.play("fade_in")
 	animation_player.animation_finished.connect(_on_fade_in_finished, ConnectFlags.CONNECT_ONE_SHOT)
-	
 	_connect_level_teleporters()
 
 func _on_fade_in_finished(_name: String) -> void:

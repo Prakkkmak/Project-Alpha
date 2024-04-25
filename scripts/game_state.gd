@@ -23,7 +23,7 @@ func clear() -> void:
 
 
 func has_key(key: String) -> bool:
-	return _game_progress.find_key(key) != null
+	return _game_progress.get(key.to_lower()) != null
 
 
 func use_state(state: String) -> void:

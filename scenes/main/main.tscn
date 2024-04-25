@@ -25,7 +25,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_clg3t"]
 resource_name = "fade_in"
-length = 0.7
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,7 +33,7 @@ tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
@@ -41,7 +41,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_p6htq"]
 resource_name = "fade_off"
-length = 0.5
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -49,8 +49,8 @@ tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1.23114),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
@@ -66,9 +66,8 @@ _data = {
 process_mode = 3
 script = ExtResource("1_siyhi")
 end_screen = ExtResource("2_y14he")
-states_acquiered = Array[String](["-gold_acquired", "-edmund_help_gold_completed", "-edmund_help_monster_gold_completed", "-eldrin_help_completed", "-edmund_greeted", "-eldrin_help_completed", "dungeon_opened", "monster_encountered", "-flower_acquired", "violet_help_monster_completed", "edmund_greeted"])
-debug = null
-end_condition = null
+states_acquiered = Array[String](["gold_acquired", "-edmund_help_gold_completed", "-edmund_help_monster_gold_completed", "-eldrin_help_completed", "-edmund_greeted", "-eldrin_help_completed", "dungeon_opened", "monster_encountered", "-flower_acquired", "violet_help_monster_completed", "edmund_greeted"])
+debug = true
 
 [node name="Level" parent="." instance=ExtResource("3_50in6")]
 unique_name_in_owner = true
@@ -82,6 +81,7 @@ position = Vector2(12, -143)
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_e8vov")]
 unique_name_in_owner = true
+position = Vector2(12, -147)
 zoom = Vector2(8, 8)
 target = NodePath("../Player")
 drag_force = 8.0
@@ -107,10 +107,6 @@ color = Color(0, 0, 0, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = -40.0
-offset_right = -6.0
-offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50

@@ -1,12 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://blaq2x4aj3wiw"]
+[gd_scene load_steps=19 format=3 uid="uid://blaq2x4aj3wiw"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_k8f4a"]
 [ext_resource type="PackedScene" uid="uid://m55pahkmrv6b" path="res://scenes/entities/pickup/pickup.tscn" id="2_ihsyo"]
-[ext_resource type="Resource" uid="uid://ds0xroj021trv" path="res://resources/pickups/crown.tres" id="3_dtlwx"]
 [ext_resource type="PackedScene" uid="uid://drtht4cimvtrv" path="res://scenes/scene_teleporter/scene_teleporter.tscn" id="4_7iu6l"]
 [ext_resource type="PackedScene" uid="uid://cbq8v36wxld3d" path="res://scenes/entities/enemies/monter.tscn" id="5_yl4c7"]
 [ext_resource type="PackedScene" uid="uid://4cjdwuasfwmu" path="res://scenes/components/interactable_component.tscn" id="6_2d5ye"]
 [ext_resource type="Resource" uid="uid://dd1uaj63cwwr3" path="res://resources/pickups/book.tres" id="6_68bpc"]
+[ext_resource type="Texture2D" uid="uid://dhydn16v7pole" path="res://assets/packs/castle/Props/Props.png" id="6_pmixk"]
 [ext_resource type="Script" path="res://scripts/interactions/event_interaction.gd" id="7_ovhas"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/riddle_resolved.dtl" id="9_eslko"]
 [ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="9_ljiyr"]
@@ -15,6 +15,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mu1"]
 size = Vector2(26, 13.375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hijk"]
+atlas = ExtResource("6_pmixk")
+region = Rect2(80, 16, 8, 8)
 
 [sub_resource type="Resource" id="Resource_108c8"]
 script = ExtResource("9_ljiyr")
@@ -37,7 +41,7 @@ delete_on_resolve = true
 condition = ""
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t34is"]
-radius = 6.0
+radius = 3.60555
 
 [node name="DungeonLevel" type="Node2D"]
 
@@ -68,7 +72,6 @@ position = Vector2(40, 8)
 shape = SubResource("RectangleShape2D_y1mu1")
 
 [node name="SceneTeleporter2" parent="." instance=ExtResource("4_7iu6l")]
-new_level_path = "res://scenes/levels/dungeon/dungeon_level.tscn"
 starting_position = Vector2(588, -111)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter2"]
@@ -80,7 +83,6 @@ position = Vector2(42, -14)
 
 [node name="SceneTeleporter3" parent="." instance=ExtResource("4_7iu6l")]
 position = Vector2(12, 1)
-new_level_path = "res://scenes/levels/dungeon/dungeon_level.tscn"
 starting_position = Vector2(40, -161)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter3"]
@@ -93,21 +95,18 @@ position = Vector2(588, -111)
 [node name="Monster" parent="." instance=ExtResource("5_yl4c7")]
 position = Vector2(-43, -68)
 
-[node name="Crown" parent="." instance=ExtResource("2_ihsyo")]
-position = Vector2(588, -182)
-pickup = ExtResource("3_dtlwx")
-condition = "crown_unlocked"
-
 [node name="Book" parent="." instance=ExtResource("2_ihsyo")]
 position = Vector2(-53, -85)
 pickup = ExtResource("6_68bpc")
 condition = "monster_defeated_completed"
 
-[node name="CrownImpossible" type="Node2D" parent="."]
+[node name="CrownImpossible" type="Sprite2D" parent="."]
+position = Vector2(588, -182)
+texture = SubResource("AtlasTexture_3hijk")
 
 [node name="InteractableComponent" parent="CrownImpossible" instance=ExtResource("6_2d5ye")]
 interaction = SubResource("Resource_dhi6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrownImpossible/InteractableComponent"]
-position = Vector2(588, -181)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_t34is")

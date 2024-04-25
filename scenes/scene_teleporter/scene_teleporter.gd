@@ -14,11 +14,11 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 
-func teleport_to_scene() -> void:
+func teleport() -> void:
 	if !state_requirement || GameState.get_state(state_requirement):
 		player_teleport_requested.emit(new_level_scene, starting_position)
 
 
 func _on_body_entered(node: Node2D) -> void:
 	if node is Player:
-		teleport_to_scene()
+		teleport()
