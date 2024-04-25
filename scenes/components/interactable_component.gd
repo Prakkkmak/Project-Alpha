@@ -31,7 +31,6 @@ func _ready() -> void:
 	if interaction_condition:
 		is_active = false
 	GameState.state_changed.connect(_on_game_state_changed)
-	
 
 
 func set_condition(condition: String) -> void:

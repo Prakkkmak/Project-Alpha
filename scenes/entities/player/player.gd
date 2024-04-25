@@ -53,7 +53,7 @@ func _physics_process(_delta: float) -> void:
 	var ground_type: String = tile_data.get_custom_data("ground_type") as String
 	
 	if !ground_type:
-		return
+		ground_type = "stone"
 		
 	var step_sounds: Dictionary = {
 		"grass": grass_step_sounds,

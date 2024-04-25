@@ -1215,7 +1215,7 @@ radius = 2.0
 height = 4.0
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(-0.501712, -0.0752341)
+position = Vector2(-0.51871, -0.0759008)
 collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_apngc")
