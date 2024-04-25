@@ -20,7 +20,8 @@ var is_active: bool = true
 func _ready() -> void:
 	if interaction is EventInteraction:
 		for condition: TimelineCondition in (interaction as EventInteraction).resolve_conditions:
-			if GameState.has_key(condition.name):
+			print("state ? " + condition.name + " " + str(GameState.has_key(condition.name)))
+			if GameState.has_key(condition.name + "_completed"):
 				get_parent().queue_free()
 	if icon_sprite_texture:
 		icon.texture = icon_sprite_texture

@@ -22,7 +22,7 @@ value = true
 
 [sub_resource type="Resource" id="Resource_a7pat"]
 script = ExtResource("3_llwqi")
-name = ""
+name = "tree_destroyed"
 conditions = Array[ExtResource("3_ptnsq")]([SubResource("Resource_52s22")])
 timeline = ExtResource("5_pqn57")
 
