@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func wrote_text() -> void:
 	var tween: Tween = get_tree().create_tween()
-	tween.tween_property(label, "text", original_text, 2)
+	tween.tween_property(label, "text", original_text, 4)
 	tween.tween_callback(continue_button.show)
 
 

@@ -42,4 +42,4 @@ autowrap_mode = 2
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_v6gus")
-text = "Commencer l'aventure !"
+text = "Begin the journey"
