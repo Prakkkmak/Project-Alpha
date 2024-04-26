@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c6qemvt56qj1q"]
+[gd_scene load_steps=18 format=3 uid="uid://c6qemvt56qj1q"]
 
 [ext_resource type="TileSet" uid="uid://cl28b0hok02yq" path="res://resources/tilesets/main.tres" id="1_fo3xp"]
 [ext_resource type="Script" path="res://scenes/levels/forest/forest_level.gd" id="1_ho3nr"]
@@ -24,6 +24,9 @@ stream_0/stream = ExtResource("11_cmcvb")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("13_stroe")
 stream_1/weight = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cr8pn"]
+size = Vector2(31, 18)
 
 [node name="ForestLevel" type="Node2D"]
 y_sort_enabled = true
@@ -107,3 +110,10 @@ position = Vector2(-275, 87)
 [node name="Flower" parent="." instance=ExtResource("7_cjbdj")]
 position = Vector2(-160, 169)
 pickup = ExtResource("13_7egmq")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(98, 226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_cr8pn")
