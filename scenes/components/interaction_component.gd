@@ -2,6 +2,8 @@ class_name InteractionComponent extends Area2D
 
 signal interaction_ended
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 var nearby_interactables: Array[Area2D] = []
 
 func _ready() -> void:
@@ -13,6 +15,7 @@ func interact() -> void:
 	if get_interacted_object():
 		(get_interacted_object() as InteractableComponent).interaction_ended.connect(_on_interationc_ended)
 		get_interacted_object().call("interact", self)
+		audio_stream_player.play()
 
 
 func get_interacted_object() -> Area2D:

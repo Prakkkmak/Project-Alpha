@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlwagqapwcgn1"]
+[gd_scene load_steps=6 format=3 uid="uid://dlwagqapwcgn1"]
 
 [ext_resource type="Script" path="res://scenes/ui/screens/intro/intro.gd" id="1_s00xa"]
+[ext_resource type="PackedScene" uid="uid://chfr7ci6d1w0k" path="res://scenes/ui/button/custom_button.tscn" id="2_ime1d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4l5p"]
 
@@ -41,7 +42,8 @@ text = "Welcome to Mestria, where each inhabitant possesses a unique power. As t
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="ContinueButton" parent="PanelContainer/VBoxContainer" instance=ExtResource("2_ime1d")]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_v6gus")

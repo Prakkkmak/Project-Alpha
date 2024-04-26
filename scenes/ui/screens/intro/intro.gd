@@ -5,7 +5,7 @@ extends CanvasLayer
 
 @onready var label: Label = %IntroLabel
 @onready var original_text: String = ""
-@onready var continue_button: Button = $PanelContainer/VBoxContainer/ContinueButton
+@onready var continue_button: CustomButton = %ContinueButton
 
 func _ready() -> void:
 	original_text = label.text
