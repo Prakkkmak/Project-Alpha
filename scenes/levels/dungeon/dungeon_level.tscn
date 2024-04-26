@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/game_state_condition.gd" id="9_ljiyr"]
 [ext_resource type="Script" path="res://scripts/timeline_conditions.gd" id="10_2x8dw"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/riddle_encounter.dtl" id="11_ti2ij"]
-[ext_resource type="AudioStream" uid="uid://ufkaqi8mytsk" path="res://assets/sounds/Blackmoor Colossus.mp3" id="13_ky2lh"]
+[ext_resource type="AudioStream" uid="uid://d2xrqyct7od3g" path="res://assets/sounds/Imminent Threat.mp3" id="13_3322o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mu1"]
 size = Vector2(26, 13.375)
@@ -113,6 +113,6 @@ position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_t34is")
 
 [node name="MainMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_ky2lh")
+stream = ExtResource("13_3322o")
 autoplay = true
 bus = &"Music"
