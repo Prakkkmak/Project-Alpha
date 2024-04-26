@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://bkgynmwlm472u" path="res://assets/sounds/voices-of-nature_birds_nature-sound-201923.mp3" id="13_stroe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6xwr"]
-size = Vector2(41, 13.375)
+size = Vector2(60.25, 13.375)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1h40h"]
 streams_count = 2
@@ -76,7 +76,7 @@ new_level_path = "res://scenes/levels/castle_bedroom/castle_bedroom_level.tscn"
 starting_position = Vector2(-4, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CastleTeleporter"]
-position = Vector2(242.5, 73)
+position = Vector2(241, 101)
 shape = SubResource("RectangleShape2D_x6xwr")
 
 [node name="DungeonTeleporter" parent="." instance=ExtResource("9_ysoya")]
@@ -85,7 +85,7 @@ starting_position = Vector2(42, -14)
 state_requirement = "dungeon_opened"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonTeleporter"]
-position = Vector2(-274, 64)
+position = Vector2(-274, 67)
 shape = SubResource("RectangleShape2D_x6xwr")
 
 [node name="Marker2D" type="Marker2D" parent="."]

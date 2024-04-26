@@ -8,7 +8,7 @@ extends Node
 @export_category("conditions")
 @export var end_condition: String = "crown_acquired_completed"
 
-@onready var current_level: Node2D = %Level
+@onready var current_level: Node2D = %ForestLevel
 @onready var player: Player = %Player
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var level_displayer: LevelDisplayer = %LevelDisplayer
@@ -31,6 +31,7 @@ func _ready() -> void:
 			GameState.set_state(state_acquiered, true)
 	else:
 		debug_panel.hide()
+	level_displayer.display_level(current_level.name)
 
 
 func end_game() -> void:

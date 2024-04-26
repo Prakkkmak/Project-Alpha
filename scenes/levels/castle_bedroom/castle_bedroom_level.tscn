@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://bthf417ysau0o" path="res://resources/pickups/gold.tres" id="5_gu28h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_df5nj"]
-size = Vector2(20, 6.5)
+size = Vector2(89, 6.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8jgp"]
 size = Vector2(9, 12)
@@ -35,7 +35,7 @@ new_level_path = "res://scenes/levels/forest/forest_level.tscn"
 starting_position = Vector2(243, 140)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTeleporter"]
-position = Vector2(0, 28.25)
+position = Vector2(2, 32)
 shape = SubResource("RectangleShape2D_df5nj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

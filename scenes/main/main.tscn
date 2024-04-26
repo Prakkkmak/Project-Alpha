@@ -68,7 +68,7 @@ script = ExtResource("1_siyhi")
 end_screen = ExtResource("2_y14he")
 states_acquiered = Array[String](["gold_acquired", "-edmund_help_gold_completed", "-edmund_help_monster_gold_completed", "-eldrin_help_completed", "-edmund_greeted", "-eldrin_help_completed", "dungeon_opened", "monster_encountered", "-flower_acquired", "violet_help_monster_completed", "edmund_greeted"])
 
-[node name="Level" parent="." instance=ExtResource("3_50in6")]
+[node name="ForestLevel" parent="." instance=ExtResource("3_50in6")]
 unique_name_in_owner = true
 process_mode = 1
 position = Vector2(5, 5)

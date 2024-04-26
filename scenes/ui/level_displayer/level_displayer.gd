@@ -6,16 +6,15 @@ class_name LevelDisplayer extends PanelContainer
 
 @onready var level_name: Label = %LevelName
 
-var levels: Dictionary = {
+var level_labels: Dictionary = {
 	"ForestLevel": "Forest",
 	"CastleBedroomLevel": "Little King Bedroom",
 	"DungeonLevel": "Tower of Trials"
 }
 
 func display_level(level_name_text: String) -> void:
-	level_name.text = level_name_text
+	level_name.text = level_labels[level_name_text]
 	modulate = Color.TRANSPARENT
-	
 	var tween: Tween = get_tree().create_tween()
 
 	tween.tween_property(self, "modulate", Color.WHITE, transition_duration)\
