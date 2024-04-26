@@ -2,8 +2,8 @@ edmund: Halt! Who goes there? Please state your purpose.
 little_king: It's me, your king. What's the news at this hour?
 edmund: All is secure, Your Majesty. However, I must inform you that entry to the tower is restricted
 - How's the guard?
-	edmund: All is calm, sire. We’ve had no disturbances and the men are alert.
-	little_king: Excellent. Your diligence ensures the kingdom’s peace. Continue with the good efforts.
+	edmund: All is calm, sire. We've had no disturbances and the men are alert.
+	little_king: Excellent. Your diligence ensures the kingdom's peace. Continue with the good efforts.
 	edmund: Thank you, Your Majesty. We'll always stand watchful to protect the realm and keep it safe under your rule.
 - any recent issues?
 	edmund: The night has been quiet so far, sire, but we remain on high alert. We've increased our patrols around the castle walls.
